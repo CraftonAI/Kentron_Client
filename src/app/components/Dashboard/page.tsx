@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import "./dashboard.css";
 import Navbar from '../Navbar/page';
 import Sidebar from '../Sidebar/page';
+import Allworkspace from "./Allworkspaces/page";
+import Singleworkspace from './Singleworkspace';
 
 const page = () => {
   return (
@@ -9,7 +11,10 @@ const page = () => {
         <Navbar/>
         <div className="dashboardbody">
            <Sidebar/>
-           <div className="contentbox"></div>
+           <div className="contentbox">
+            {/* <Allworkspace/> */}
+            <Singleworkspace/>
+           </div>
         </div>
     </main>
   )
