@@ -1,7 +1,7 @@
 import React from 'react';
 import "./dashboard.css";
 import Navbar from '../Navbar/page';
-import Sidebar from '../Sidebar/page';
+import Sidebar from '../Sidebar/Sidebar';
 // import Allworkspace from "./Allworkspaces/page";
 import Singleworkspace from './Workspaces/Singleworkspace';
 

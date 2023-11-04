@@ -10,7 +10,7 @@ import close from "../Assets/close.png";
 import Image from 'next/image';
 
 
-const page = () => {
+const Sidebar = () => {
   const [createbox, setcreatebox] = useState(false);
   const createboxshow = ()=>{
     setcreatebox(true);
@@ -67,4 +67,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Sidebar
