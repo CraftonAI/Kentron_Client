@@ -222,7 +222,7 @@ const Home = () => {
                 <p><MdOutlineCalendarMonth className="icons"/> Created Date : <span>12/05/2023</span> | <Image src={share} width={15}  alt="none" className='icon' /> Shared Externally : <span>Yes</span></p>
               </div>
             </div>
-            <div className="headedit"> <Image src={edit} width={100} alt="none" className='edits' onClick={()=>{editboxopen()}}/></div>
+            <div className="headedit"> <Image src={edit} width={60} alt="none" className='edits' onClick={()=>{editboxopen()}}/></div>
           </div>
           <p className='homebodytxt'>{description}</p>
         </div>
