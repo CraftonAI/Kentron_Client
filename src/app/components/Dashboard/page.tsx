@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./dashboard.css";
 import Navbar from '../Navbar/page';
 import Sidebar from '../Sidebar/page';
-import Allworkspace from "./Allworkspaces/page";
-import Singleworkspace from './Singleworkspace';
+// import Allworkspace from "./Allworkspaces/page";
+import Singleworkspace from './Workspaces/Singleworkspace';
 
 const page = () => {
   return (
