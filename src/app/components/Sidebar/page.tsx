@@ -21,30 +21,30 @@ const page = () => {
   return (
     <nav className='sidebar'>
       <div className="sideadd" onClick={()=>{createboxshow()}}>
-         <Image src={add} width={30} height={20} alt="none" className='adds'/>
+         <Image src={add} width={30}  alt="none" className='adds'/>
          <p>Create Workspace</p>
       </div>
       <div className="sideitems">
-        <Image src={copy} width={30} height={20} alt="none" className='sideicon'/>
+        <Image src={copy} width={30}  alt="none" className='sideicon'/>
         <p>All Workspaces</p>
       </div>
       <div className="sideitems">
-        <Image src={share} width={30} height={20} alt="none" className='sideicon'/>
+        <Image src={share} width={30}  alt="none" className='sideicon'/>
         <p>Share with me</p>
       </div>
       <div className="sideitems">
-        <Image src={ungroup} width={30} height={20} alt="none" className='sideicon expicon'/>
+        <Image src={ungroup} width={30}  alt="none" className='sideicon expicon'/>
         <p>My Exports</p>
       </div>
       <div className="sideitems">
-        <Image src={settings} width={30} height={20} alt="none" className='sideicon'/>
+        <Image src={settings} width={30}  alt="none" className='sideicon'/>
         <p>Admin</p>
       </div>
       <div className={(createbox)?"workspacecreation":"createworkspacehid"}>
         <div className="createbox">
           <div className="createhead">
             <h1>Create Workspace</h1>
-            <Image src={close} width={20} height={20} alt="none" className='icon' onClick={()=>{createboxclose()}}/>
+            <Image src={close} width={20}  alt="none" className='icon' onClick={()=>{createboxclose()}}/>
           </div>
 
           <div className="createboxinputs">

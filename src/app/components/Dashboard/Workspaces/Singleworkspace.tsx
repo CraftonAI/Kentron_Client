@@ -1,7 +1,7 @@
 "use client";
 import React, {useRef, useState} from 'react';
-import Image from 'next/image';
 import "./singleworkspace.css";
+import Image from 'next/image';
 import { GoHome } from "react-icons/go";
 import { BsDiagram2 } from "react-icons/bs";
 import { MdContentPasteSearch,MdOutlineSettings,MdOutlineCalendarMonth} from "react-icons/md";
@@ -16,6 +16,8 @@ import google from "../../Assets/google.png";
 import jira from "../../Assets/jira.png";
 import confluence from "../../Assets/confluence.png";
 import microsoft from "../../Assets/microsoft.png";
+import arrowbtn from "../../Assets/arrowbtn.png";
+import imports from "../../Assets/import.png";
 
 
 const Singleworkspace = () => {
@@ -101,10 +103,63 @@ const DataSource = () => {
   return (
     <div className='datasource'>
       <div className='enterprise'>
-        <h1>Enterprise</h1>
+        <h1>Enterprise Sources</h1>
         <div className="enterpriseproducts">
+        <div className='product'>
+            <Image src={slack} width={100} alt="none" className='dataicons'/>
+            <p>Slack Enterprise</p>
+            <button><Image src={arrowbtn} width={15}  alt="none" className='connectbtnicon'/>Connect</button>
+          </div>
           <div className='product'>
-          <Image src={google} width={60} height={60} style={{'width':'auto'}} alt="none" />
+            <Image src={google} width={100} alt="none" className='dataicons'/>
+            <p>Google Workspace</p>
+            <button><Image src={arrowbtn} width={15}   alt="none" className='connectbtnicon'/>Connect</button>
+          </div>
+          <div className='product'>
+            <Image src={jira} width={100} alt="none" className='dataicons'/>
+            <p>Jira</p>
+            <button><Image src={arrowbtn} width={15}   alt="none" className='connectbtnicon'/>Connect</button>
+          </div>
+          <div className='product'>
+            <Image src={confluence} width={100} alt="none" className='dataicons'/>
+            <p>Confluence</p>
+            <button><Image src={arrowbtn} width={15}   alt="none" className='connectbtnicon'/>Connect</button>
+          </div>
+          <div className='product'>
+            <Image src={microsoft} width={100} alt="none" className='dataicons'/>
+            <p>Microsoft 365</p>
+            <button><Image src={arrowbtn} width={15}   alt="none" className='connectbtnicon'/>Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div className='enterprise'>
+        <h1>Non-Enterprise Sources</h1>
+        <div className="enterpriseproducts">
+        <div className='product'>
+            <Image src={slack} width={100} alt="none" className='dataicons'/>
+            <p>Slack Enterprise</p>
+            <button><Image src={imports} width={15}   alt="none" className='btnimporticon'/>Import</button>
+          </div>
+          <div className='product'>
+            <Image src={google} width={100} alt="none" className='dataicons'/>
+            <p>Google Workspace</p>
+            <button><Image src={imports} width={15}   alt="none" className='btnimporticon'/>Import</button>
+          </div>
+          <div className='product'>
+            <Image src={jira} width={100} alt="none" className='dataicons'/>
+            <p>Jira</p>
+            <button><Image src={imports} width={15}   alt="none" className='btnimporticon'/>Import</button>
+          </div>
+          <div className='product'>
+            <Image src={confluence} width={100} alt="none" className='dataicons'/>
+            <p>Confluence</p>
+            <button><Image src={imports} width={15}   alt="none" className='btnimporticon'/>Import</button>
+          </div>
+          <div className='product'>
+            <Image src={microsoft} width={100} alt="none" className='dataicons'/>
+            <p>Microsoft 365</p>
+            <button><Image src={imports} width={15}   alt="none" className='btnimporticon'/>Import</button>
           </div>
         </div>
       </div>
@@ -161,13 +216,13 @@ const Home = () => {
       <div className="homebody">
           <div className="homebodyheader">
             <div className="headtexts">
-              <Image src={bodylogo} width={60} height={60} style={{'width':'auto'}} alt="none" />
+              <Image src={bodylogo} width={60} style={{'width':'auto'}} alt="none" />
               <div className="headbodytexts">
                 <h1>{workspacename}<span>{status}</span></h1>
-                <p><MdOutlineCalendarMonth className="icons"/> Created Date : <span>12/05/2023</span> | <Image src={share} width={15} height={15} alt="none" className='icon' /> Shared Externally : <span>Yes</span></p>
+                <p><MdOutlineCalendarMonth className="icons"/> Created Date : <span>12/05/2023</span> | <Image src={share} width={15}  alt="none" className='icon' /> Shared Externally : <span>Yes</span></p>
               </div>
             </div>
-            <div className="headedit"> <Image src={edit} width={60} height={15} alt="none" className='edits' onClick={()=>{editboxopen()}}/></div>
+            <div className="headedit"> <Image src={edit} width={100} alt="none" className='edits' onClick={()=>{editboxopen()}}/></div>
           </div>
           <p className='homebodytxt'>{description}</p>
         </div>
@@ -177,7 +232,7 @@ const Home = () => {
         <div className="editbox">
           <div className="createhead">
             <h1>Edit Workspace</h1>
-            <Image src={close} width={20} height={20} alt="none" className='icon' onClick={()=>{editboxclose()}}/>
+            <Image src={close} width={100} alt="none" className='icon' onClick={()=>{editboxclose()}}/>
           </div>
 
           <div className="createboxinputs">

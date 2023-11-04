@@ -10,9 +10,9 @@ const page = () => {
     <nav className='Navbar'>
         <div className="logo"><span className='logoicon'>k</span><span className='cname'>Kentron</span></div>
         <div className="items">
-           <Image src={navitem2} width={30} height={20} alt="none" className='comma'/>
-           <Image src={navitem1} width={20} height={20} alt="none" className='notifications'/>
-           <Image src={user} width={40} height={40} alt="none" className='user'/>
+           <Image src={navitem2} width={30} alt="none" className='comma'/>
+           <Image src={navitem1} width={20}  alt="none" className='notifications'/>
+           <Image src={user} width={40}  alt="none" className='user'/>
         </div>   
     </nav>
   )

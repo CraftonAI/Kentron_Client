@@ -5,12 +5,14 @@
     background-color: #f4f4f4;
     font-family: 'Roboto', sans-serif;
     position: relative;
+    overflow: hidden
 }
 .dashboardbody{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
 }
 .contentbox{
     width: 85%;
+    /* overflow: scroll; */
 }
