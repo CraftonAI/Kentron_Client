@@ -1,0 +1,81 @@
+
+/* datasource */
+/* @media screen and (max-width:1200px) {
+    .datasource{
+        height: 1000px;
+        overflow-y: hidden;
+    }
+} */
+.datasource{
+    width: 100%;
+    /* overflow-x: scroll; */
+    height: 75vh;
+    padding-bottom: 40px ;
+    overflow-y: scroll;
+}
+.enterprise{
+    width: 900px;
+}
+.enterpriseproducts{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.enterprise h1{
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    /* overflow: hidden; */
+}
+.product{
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(233, 233, 233, 1);
+    border-radius: 8px;
+    margin-right: 18px;
+}
+/* .product Image{
+    width: 00px;
+} */
+.dataicons{
+    width: 85px;
+    margin-bottom: 4px;
+    margin-right: 5px;
+}
+.connectbtnicon{
+    margin-right: 5px;
+}
+.btnimporticon{
+    margin-right: 5px;
+    font-size: 5px;
+}
+.product button{
+    display: flex;
+    color: #ffffff;
+    background-color: #6528F7;
+    align-items: center;
+    font-size: 10px;
+    padding: 5px 46px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f4f4f4;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6528F7;
+    border-radius: 8px;
+  }
