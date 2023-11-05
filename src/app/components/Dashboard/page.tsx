@@ -3,7 +3,7 @@ import "./dashboard.css";
 import Navbar from '../Navbar/page';
 import Sidebar from '../Sidebar/Sidebar';
 // import Allworkspace from "./Allworkspaces/page";
-import Singleworkspace from './Workspaces/WorkspaceHeadets/Singleworkspace';
+import Singleworkspace from './Workspaces/WorkspaceHeaders/Singleworkspace';
 
 const page = () => {
   return (
