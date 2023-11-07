@@ -172,7 +172,6 @@ export const DataSource = () => {
             </div>
           </div>
         </section>
-        <MdOutlinePersonAddAlt/>
       </div>
     )
   }
