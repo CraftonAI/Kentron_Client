@@ -79,3 +79,231 @@
     background: #6528F7;
     border-radius: 8px;
   }
+
+
+  /* Slack Enterprise */
+.slackenterprise{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #0000007e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+.slackhid{
+    display: none;
+}
+.enterprisecont{
+    width: 720px;
+    height: 535px;
+    border-radius: 15px;
+    background: #fff;
+    padding: 20px 30px;
+}
+.SEheadercont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SEheader{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.SEheader p{
+    font-size: 18px;
+    font-weight: 800;
+    margin-left: 7px;
+}
+.close{
+    cursor: pointer;
+}
+.enterpriseroadmap{
+    background: rgba(243, 243, 243, 1);
+    width: 100%;
+    border-radius: 10px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+.Enterprisebody{
+    display: flex;
+    flex-direction: column;
+}
+.datecont{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.datecont .createboxinputs{
+    width: 48.5%;
+}
+.slackenterprisebtn{
+    padding: 15px 0;
+}
+.nextbtn{
+    margin-right: 0;
+}
+
+
+.roadmapicon{
+    display: flex;
+    position: relative;
+}
+.roadmapicon .roadiconcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75px;
+    padding: 0;
+    background-color: #f4f4f4;
+    margin: 0 20px;
+}
+.roadmapicon .roadiconcont p{
+    color: #6528F7;
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 5px;
+    /* position: absolute; */
+}
+.purbg{
+    color: #6528F7;
+    font-size: 6px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 14px;
+    background-color: rgba(237, 228, 255, 1);
+}
+.whitebg{
+    color: #0f0f0f;
+    font-size: 6px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    background-color: #ffffff;
+}
+.roadmapicon .purline1{
+    background: rgba(237, 228, 255, 1);
+    width: 57px;
+    height: 2px;
+    margin-top: 27px;
+    position: absolute;
+    z-index: 100000;
+    left: 70px;
+}
+
+.roadmapicon .purline2{
+    background: #ffffff;
+    width: 84px;
+    height: 2px;
+    margin-top: 27px;
+    position: absolute;
+    z-index: 100000;
+    left:87px;
+}
+.roadmapicon .purline3{
+    background: #ffffff;
+    width: 64px;
+    height: 2px;
+    margin-top: 27px;
+    position: absolute;
+    z-index: 100000;
+    left: 95px;
+}
+.roadmapicon .purline4{
+    background: #ffffff;
+    width: 52px;
+    height: 2px;
+    margin-top: 27px;
+    position: absolute;
+    z-index: 100000;
+    left: 70px;
+}
+.closehid{
+    display: none;
+}
+.closeback{
+    display: none;
+}
+
+
+
+
+
+
+
+
+.Synchronization{
+    padding-left: 20px ;
+    padding-top: 10px;
+    margin-bottom: 22px;
+}
+
+.Synchronization p{
+    color: rgb(145, 145, 145);
+    font-size: 14px;
+}
+.Synchronization .radiobuttons{
+    display: flex;
+    align-items: center;
+}
+.radiobuttons{
+    padding-left: 15px ;
+    margin-top: 7px;
+}
+.radiobuttons .radioicons{
+    margin: 0 5px 0 10px;
+    color: #6528F7;
+}
+
+.radiobuttons input[type="radio"] { 
+   color: #6528F7; 
+   background-color: #6528F7;
+}
+.radiobuttons p{
+    color: #0f0f0f;
+    font-size: 14px;
+} 
+.checkboxheader{
+    margin-top: 25px;
+}
+.checkbox{
+    display: flex;
+    margin-top: 8px;
+}
+.checkbox p{
+    color: #0f0f0f;
+    margin-left: 8px;
+}
+.checkbox input[type="checkbox"]{
+    background-color: #6528F7;
+    color: #6528F7;
+}
+
+.component{
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 80px;
+}
+
+.component .checkbox{
+    display: flex;
+    align-items: center;
+}
+.checkicons{
+    color: #0f0f0f;
+    font-size: 14px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+}
