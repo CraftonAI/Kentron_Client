@@ -167,8 +167,7 @@ export const DataSource = () => {
                   <button onClick={()=>{slackboxclose()}} className={(roadicon>0)?'closehid':''}>Close</button>
                   <button onClick={()=>{setroadicon(roadicon-1)}} className={(roadicon>0)?'openback':'closeback'}>Back</button>
                   <button className='savebtn nextbtn' onClick={()=>{setroadicon(roadicon+1)}}>Next</button>
-                </div>
-             
+                </div> 
             </div>
           </div>
         </section>
@@ -244,13 +243,26 @@ export const DataSource = () => {
     )
   }
 
+
+
+
+
+
   const Adduser = ()=>{
     return(
       <div className="Adduser">
-        Add User
+           <div className="createboxinputs">
+              <p>Add User <span>| Required</span></p>
+              <input type="email" placeholder='user@example.com'/>
+              <div className='addusertext'>Enter email address of user</div>
+           </div>
       </div>
     )
   }
+
+
+
+
 
   const Addchannel = ()=>{
     return(
@@ -260,32 +272,38 @@ export const DataSource = () => {
     )
   }
 
+
+
+
+
+
+
   const ConnectBody = ()=>{
     return(
       <>
       <div className="createboxinputs">
-                <p>Name <span>| Required</span></p>
-                <input type="text" placeholder='Enter workspace name'/>
-              </div>
-              <div className="createboxinputs">
-                <p>Syncronization mode <span>| Required</span></p>
-                <select name="status" id="status">
-                  <option value="">Select Mode</option>
-                  <option value="mode1">Not active mode</option>
-                  <option value="mode1">Active mode</option>
-                </select>
+        <p>Name <span>| Required</span></p>
+        <input type="text" placeholder='Enter workspace name'/>
+      </div>
+      <div className="createboxinputs">
+        <p>Syncronization mode <span>| Required</span></p>
+        <select name="status" id="status">
+          <option value="">Select Mode</option>
+          <option value="mode1">Not active mode</option>
+          <option value="mode1">Active mode</option>
+        </select>
 
-                <div className="datecont">
-                    <div className="createboxinputs">
-                      <p>From Date <span>| Required</span></p>
-                      <input type="text" placeholder='Select date'/>
-                    </div>
-                    <div className="createboxinputs">
-                      <p>To Date <span>| Required</span></p>
-                      <input type="text" placeholder='Select date'/>
-                    </div>
-                </div>
-                </div>
+        <div className="datecont">
+            <div className="createboxinputs">
+              <p>From Date <span>| Required</span></p>
+              <input type="text" placeholder='Select date'/>
+            </div>
+            <div className="createboxinputs">
+              <p>To Date <span>| Required</span></p>
+              <input type="text" placeholder='Select date'/>
+            </div>
+        </div>
+        </div>
       </>
     )
   }
