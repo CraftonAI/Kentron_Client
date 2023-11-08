@@ -13,7 +13,7 @@ import close from "../../../Assets/close.png";
 import {MdOutlinePersonAddAlt } from "react-icons/md";
 import { TbTopologyStar3 } from "react-icons/tb";
 import { BiGroup, BiSend, BiSync, } from "react-icons/bi";
-import { BsUnity} from 'react-icons/bs';
+import { BsArchive, BsUnity} from 'react-icons/bs';
 import radioicon from "../../../Assets/workspaces.png";
 import { CiUser } from "react-icons/ci";
 import { AiOutlineLock } from "react-icons/ai";
@@ -21,14 +21,17 @@ import { AiOutlineLock } from "react-icons/ai";
 
 export const DataSource = () => {
   const [slackbox, setslackbox] = useState(false);
+  const [roadicon, setroadicon] = useState(0);
   const slackboxopen = ()=>{
     setslackbox(true);
   }
   const slackboxclose = ()=>{
     setslackbox(false);
   }
-  const [roadicon, setroadicon] = useState(0);
-
+  const submit = () =>{
+    setslackbox(false);
+    setroadicon(0);
+  }
   return (
       <div className='datasource'>
         <div className='enterprise'>
@@ -116,42 +119,43 @@ export const DataSource = () => {
               <Image src={close} width={12} alt="none"  className='close' onClick={()=>{slackboxclose()}} />
             </div>
             <div className="enterpriseroadmap">
-              <div className="roadmapicon">
+
+              <div className="roadmapicon"> 
                 <div className="roadiconcont">
-                  <BiSend className="purbg"/>
-                  <p>Connect</p>
+                  <BiSend className={(roadicon===0)?'purbg':(roadicon>0?'greenbg':'whitebg')}/>
+                  <p className={(roadicon===0)?'purptext':(roadicon>0?'greentext':'whitetext')}>Connect</p>
                 </div>
-                <div className='purline1'></div>
+                <div className={(roadicon===0)?'purline1 purpline':(roadicon>0?'purline1 greenline':'purline1 whiteline')}></div>
               </div>
 
               <div className="roadmapicon">
                 <div className="roadiconcont">
-                  <BiSync className="whitebg"/>
-                  <p>Synchronization</p>
+                  <BiSync className={(roadicon===1)?'purbg':(roadicon>1?'greenbg':'whitebg')}/>
+                  <p className={(roadicon===1)?'purptext':(roadicon>1?'greentext':'whitetext')}>Synchronization</p>
                 </div>
-                <div className='purline2'></div>
+                <div className={(roadicon===1)?'purline2 purpline':(roadicon>1?'purline2 greenline':'purline2 whiteline')}></div>
               </div>
 
               <div className="roadmapicon">
                 <div className="roadiconcont">
-                  <BsUnity className="whitebg"/>
-                  <p>Select Component</p>
+                  <BsUnity className={(roadicon===2)?'purbg':(roadicon>2?'greenbg':'whitebg')}/>
+                  <p className={(roadicon===2)?'purptext':(roadicon>2?'greentext':'whitetext')}>Select Component</p>
                 </div>
-                <div className='purline3'></div>
+                <div  className={(roadicon===2)?'purline3 purpline':(roadicon>2?'purline3 greenline':'purline3 whiteline')}></div>
               </div>
 
               <div className="roadmapicon">
                 <div className="roadiconcont">
-                  <MdOutlinePersonAddAlt className="whitebg"/>
-                  <p>Add User</p>
+                  <MdOutlinePersonAddAlt className={(roadicon===3)?'purbg':(roadicon>3?'greenbg':'whitebg')}/>
+                  <p className={(roadicon===3)?'purptext':(roadicon>3?'greentext':'whitetext')}>Add User</p>
                 </div>
-                <div className='purline4'></div>
+                <div className={(roadicon===3)?'purline4 purpline':(roadicon>3?'purline4 greenline':'purline3 whiteline')}></div>
               </div>
 
               <div className="roadmapicon">
                 <div className="roadiconcont">
-                  <TbTopologyStar3 className="whitebg"/>
-                  <p>Add Channels</p>
+                  <TbTopologyStar3 className={(roadicon===4)?'purbg':(roadicon>4?'greenbg':'whitebg')}/>
+                  <p className={(roadicon===4)?'purptext':(roadicon>3?'greentext':'whitetext')}>Add Channels</p>
                 </div>
               </div>
             </div>
@@ -161,12 +165,13 @@ export const DataSource = () => {
             <div className={(roadicon===2)?'':'closehid'}><Selectcomponent/></div>
             <div className={(roadicon===3)?'':'closehid'}><Adduser/></div>
             <div className={(roadicon===4)?'':'closehid'}><Addchannel/></div>
-
+ 
             <div className="Enterprisebody">
                 <div className="createboxbtn slackenterprisebtn">
                   <button onClick={()=>{slackboxclose()}} className={(roadicon>0)?'closehid':''}>Close</button>
                   <button onClick={()=>{setroadicon(roadicon-1)}} className={(roadicon>0)?'openback':'closeback'}>Back</button>
-                  <button className='savebtn nextbtn' onClick={()=>{setroadicon(roadicon+1)}}>Next</button>
+                  <button className={(roadicon<4)?'savebtn nextbtn':'closehid'} onClick={()=>{setroadicon(roadicon+1)}}>Next</button>
+                  <button className={(roadicon===4)?'savebtn nextbtn':'closehid'} onClick={()=>{submit()}}>Submit</button>
                 </div> 
             </div>
           </div>
@@ -214,6 +219,10 @@ export const DataSource = () => {
       </div>
     )
   }
+
+
+
+
 
   const Selectcomponent = ()=>{
     return(
@@ -264,13 +273,49 @@ export const DataSource = () => {
 
 
 
-  const Addchannel = ()=>{
-    return(
-      <div className="Addchannel">
-        Add Channel
-      </div>
-    )
-  }
+const Addchannel = ()=>{
+  return(
+    <div className="Addchannel">
+      <div className="createboxinputs">
+            <p>Filter</p>
+            <input type="email" placeholder='Search Channel name'/>
+            <div className="filterhead">
+               <div className='addusertext'>Search channels to sync</div>
+               <div className='channeltypes'>
+                  <div className="channel1">
+                    <span>#</span>Public
+                  </div>
+                  <div className="channel1">
+                    <span><AiOutlineLock/></span>Private
+                  </div>
+                  <div className="channel1">
+                    <span><BsArchive/></span>Archieved
+                  </div>
+               </div>
+            </div>
+          </div>
+          <div className='checkbox'>
+            <input type="checkbox"/>
+            <p>Select All</p>
+          </div>
+          <div className='checkbox'>
+            <input type="checkbox"/>
+            <p>#</p>
+            <p>Channel01</p>
+          </div>
+          <div className='checkbox'>
+            <input type="checkbox"/>
+            <AiOutlineLock className="checkicons"/>
+            <p>Channel02</p>
+          </div>
+          <div className='checkbox'>
+            <input type="checkbox"/>
+            <BsArchive className="checkicons"/>
+            <p>Channel03</p>
+          </div>
+    </div>
+  )
+}
 
 
 
