@@ -1,5 +1,5 @@
 import React from 'react';
-import "./components/signup/signup.css";
+import "./globals.css";
 import Link from 'next/link';
 
 export default function Home() {
