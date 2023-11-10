@@ -2,7 +2,7 @@ import React from 'react';
 import "./signup.css";
 import Link from 'next/link';
 
-const Signup = () => {
+const Signupbox = () => {
   return (
     <section className='Signup'>
       <div className="logocontainer">
@@ -32,4 +32,4 @@ const Signup = () => {
   )
 }
 
-export default Signup;
+export default Signupbox;

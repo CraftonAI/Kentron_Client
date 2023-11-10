@@ -1,10 +1,9 @@
-import Image from 'next/image';
-import Signup from './components/signup/Signup';
+import Signupbox from './components/signup/Signuppage';
 
 export default function Home() {
   return (
     <>
-      <Signup/>
+      <Signupbox/>
     </>
   )
 }
