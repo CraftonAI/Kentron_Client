@@ -22,6 +22,7 @@ import { AiOutlineLock } from "react-icons/ai";
 export const DataSource = () => {
   const [slackbox, setslackbox] = useState(false);
   const [roadicon, setroadicon] = useState(0);
+  const [importslack, setimportslack] = useState(false);
   const slackboxopen = ()=>{
     setslackbox(true);
   }
@@ -71,7 +72,7 @@ export const DataSource = () => {
           <div className='product'>
               <Image src={slack} width={100} alt="none" className='dataicons'/>
               <p>Slack Enterprise</p>
-              <button><Image src={imports} width={15}   alt="none" className='btnimporticon'/>Import</button>
+              <button onClick={()=>{setimportslack(true)}}><Image src={imports} width={15}   alt="none" className='btnimporticon'/>Import</button>
             </div>
             <div className='product'>
               <Image src={google} width={100} alt="none" className='dataicons'/>
@@ -105,7 +106,33 @@ export const DataSource = () => {
 
 
 
+        <section className={(importslack)?'slackenterprise':'slackenterprise slackhid'}>
+          <div className="nonenterprisecont">
+            <div className="SEheadercont">
+              <div className="SEheader">
+                <Image src={slack} width={55} alt="none" />
+                <p>Import Slack Data</p>
+              </div>
+              <Image src={close} width={12} alt="none"  className='close' onClick={()=>{setimportslack(false)}} />
+            </div>
+            <div className="createboxinputs">
+              <p>Name <span>| Required</span></p>
+              <input type="text" placeholder='Enter workspace name'/>
+            </div>
+            <div className="createboxinputs">
+              <p>Import file<span>| Required</span></p>
+              <input type="file" placeholder='Choose file'/>
+            </div>
 
+            <div className="Enterprisebody">
+                <div className="createboxbtn slackenterprisebtn">
+                  <button onClick={()=>{setimportslack(false)}}>Close</button>
+                  <button className='savebtn nextbtn'>Next</button>  
+                </div>
+            </div>
+            
+          </div>
+        </section>
 
 
 
@@ -179,6 +206,27 @@ export const DataSource = () => {
       </div>
     )
   }
+
+
+
+
+
+
+const ImportSlack = ()=>{
+  return(
+    <div className='ImportSlackbox'>
+       <div className="SEheadercont">
+        <div className="SEheader">
+          <Image src={slack} width={55} alt="none" />
+          <p>Slack Enterprise</p>
+        </div>
+        <Image src={close} width={12} alt="none"  className='close'  />
+      </div>
+       
+    
+    </div>
+  )
+}
 
 
 
@@ -341,11 +389,11 @@ const Addchannel = ()=>{
         <div className="datecont">
             <div className="createboxinputs">
               <p>From Date <span>| Required</span></p>
-              <input type="text" placeholder='Select date'/>
+              <input type="date" placeholder='Select date'/>
             </div>
             <div className="createboxinputs">
               <p>To Date <span>| Required</span></p>
-              <input type="text" placeholder='Select date'/>
+              <input type="date" placeholder='Select date'/>
             </div>
         </div>
         </div>

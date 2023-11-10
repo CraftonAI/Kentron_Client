@@ -379,3 +379,16 @@
     color: #000;
     margin-right: 2px;
 }
+
+
+
+.nonenterprisecont{
+    width: 650px;
+    height: 350px;
+    border-radius: 15px;
+    background: #fff;
+    padding: 20px 30px;
+}
+input[type="file"]{
+    color: #6528F7;
+}
