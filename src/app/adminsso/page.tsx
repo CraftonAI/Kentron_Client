@@ -1,12 +1,26 @@
+"use client";
 import Header from "@/app/Admin/header";
 import SideBar from "@/app/Admin/sidebar";
+import SsoPopup from '@/app/Admin/popups/sso';
+import {useState} from "react";
+
 
 const SetupSso = () => {
+
+  const [isPopupVisible, setPopupVisible] = useState(false);
+
+  const openPopup = () => {
+    setPopupVisible(true);
+  };
+
+  const closePopup = () => {
+    setPopupVisible(false);
+  };
   return (
-    <div className="flex text-black flex-col bg-[#ede4ff] h-[100vh] justify-between w-full">
-      <div className="flex h-20 bg-black text-white">
+    <div className={`flex text-black flex-col bg-[#ede4ff] h-screen justify-between`}>
+      <span className={`flex h-20 bg-black text-white ${isPopupVisible ? 'filter blur-sm' : ''}`}>
         <Header />
-      </div>
+      </span>
       <div className="flex w-full flex-1">
         <div className="flex w-[16%]">
           <SideBar />
@@ -15,8 +29,10 @@ const SetupSso = () => {
           <div className="flex w-full flex-col">
             <span className="flex h-[8vh] justify-between font-bold items-center mx-7 text-lg">
               SSO Setting{" "}
-              <button className="flex bg-[#6528F7] text-white font-bold text-sm justify-center items-center w-[8vw] h-10 rounded-lg">Add SSO</button>
+              <button onClick={openPopup} className="flex bg-[#6528F7] text-white font-bold text-sm justify-center items-center w-[8vw] h-10 rounded-lg">Add SSO</button>
             </span>
+                  {isPopupVisible && <SsoPopup onClose={closePopup} />}
+
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
                 <div className="flex flex-1">

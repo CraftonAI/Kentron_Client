@@ -1,3 +1,5 @@
+"use client"
+
 import Admin from "@/app/Admin";
 
 const Ad = () => {

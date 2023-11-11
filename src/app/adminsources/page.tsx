@@ -1,3 +1,5 @@
+"use client"
+
 import Header from "@/app/Admin/header";
 import SideBar from "@/app/Admin/sidebar";
 
