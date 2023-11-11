@@ -8,6 +8,7 @@ import ungroup from "../Assets/ungroup.png";
 import settings from "../Assets/settings_account_box.png";
 import close from "../Assets/close.png";
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const Sidebar = () => {
@@ -36,10 +37,12 @@ const Sidebar = () => {
         <Image src={ungroup} width={30}  alt="none" className='sideicon expicon'/>
         <p>My Exports</p>
       </div>
-      <div className="sideitems">
+     <Link href="/adminhome">
+     <div className="sideitems">
         <Image src={settings} width={30}  alt="none" className='sideicon'/>
         <p>Admin</p>
       </div>
+     </Link>
       <div className={(createbox)?"workspacecreation":"createworkspacehid"}>
         <div className="createbox">
           <div className="createhead">
