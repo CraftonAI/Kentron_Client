@@ -1,24 +1,8 @@
 "use client";
-
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import Header from "../Admin/header";
 import {BsPersonFillAdd} from "react-icons/bs";
 import SideBar from "../Admin/sidebar";
 
-const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 70 },
-  { field: "name", headerName: "Name", width: 330 },
-  { field: "email", headerName: "Email", width: 330 },
-  { field: "signin", headerName: "Sign-in Status", width: 330 },
-  { field: "action", headerName: "Action", width: 330 }
-];
-
-const rows = [
-  { id: 1, name: "username", email: "user@example.com", signin: "12/02/2023 11:00 AM", action:"Deactivate"},
-  { id: 2, name: "username", email: "user@example.com", signin: "12/02/2023 11:00 AM", action:"Deactivate"},
-  { id: 3, name: "username", email: "user@example.com", signin: "12/02/2023 11:00 AM", action:"Deactivate"},
-  { id: 4, name: "username", email: "user@example.com", signin: "12/02/2023 11:00 AM", action:"Deactivate"},
-];
 
 const ActiveGuest = () => {
   return (
@@ -36,18 +20,7 @@ const ActiveGuest = () => {
               Guest Users
             </span>
             <div className="flex items-center w-[95%] mx-10 justify-center h-[40vh] bg-white">
-              <DataGrid
-               className="flex font-semibold"
-                rows={rows}
-                columns={columns}
-                initialState={{
-                  pagination: {
-                    paginationModel: { page: 0, pageSize: 5 },
-                  },
-                }}
-                pageSizeOptions={[5, 10]}
-                checkboxSelection
-              />
+             Admin Guest
             </div>
           </div>
         </div>
