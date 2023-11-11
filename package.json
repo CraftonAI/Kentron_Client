@@ -11,14 +11,17 @@
   "dependencies": {
     "@mui/icons-material": "^5.14.16",
     "@mui/lab": "^5.0.0-alpha.151",
-    "@mui/material": "^5.14.16",
+    "@mui/material": "^5.14.17",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.5",
+    "@mui/x-data-grid": "^6.18.1",
     "@nextui-org/react": "^2.1.13",
     "next": "14.0.1",
     "primereact": "^10.0.9",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
-    "react-table": "^7.8.0"
+    "react-table": "^7.8.0",
+    "styled-components": "^6.1.1"
   },
   "devDependencies": {
     "@types/node": "^20",
