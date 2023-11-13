@@ -52,21 +52,21 @@ const SideBar = () => {
           <div className="flex flex-col">
             <Link href="/adminactive">
               <span className="flex justify-end mx-4 xl:mx-0 xl:w-[11vw] my-1 h-10 rounded-lg items-center">
-                <div className="flex w-11/12 2xl:w-10/12 h-12 text-sm xl:text-base  rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-11/12 2xl:w-10/12 h-10 text-sm xl:text-base  rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Active users
                 </div>
               </span>
             </Link>
             <Link href="/adminguest">
               <span className="flex justify-end mx-4 xl:mx-0 xl:w-[11vw] my-1 h-10 rounded-lg items-center">
-                <div className="flex w-11/12 2xl:w-10/12 h-12 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-11/12 2xl:w-10/12 h-10 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Guest users
                 </div>
               </span>
             </Link>
             <Link href="/admindeactivate">
               <span className="flex justify-end mx-4 xl:mx-0 xl:w-[11vw] my-1 h-10 rounded-lg items-center">
-                <div className="flex w-11/12 2xl:w-10/12 h-12 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-11/12 2xl:w-10/12 h-10 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Deactivated users
                 </div>
               </span>
@@ -89,7 +89,7 @@ const SideBar = () => {
           <div className="flex flex-col">
             <Link href="/adminusage">
               <span className="flex justify-end mx-4 xl:mx-0 xl:w-[11vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-12 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Usage
                 </div>
               </span>
@@ -109,28 +109,28 @@ const SideBar = () => {
           <div className="flex flex-col">
             <Link href="/admininfo">
               <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-12 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Organization Info
                 </div>
               </span>
             </Link>
             <Link href="/adminpolicies">
               <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-12 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Organization policies
                 </div>
               </span>
             </Link>
             <Link href="/adminsso">
               <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-12 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Setup SSO
                 </div>
               </span>
             </Link>
             <Link href="/adminsources">
               <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-12 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-sm xl:text-base rounded-md hover:text-[#6528F7] hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Manage sources
                 </div>
               </span>
