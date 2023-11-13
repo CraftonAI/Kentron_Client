@@ -11,11 +11,11 @@ const ActiveGuest = () => {
         <Header />
       </div>
       <div className="flex w-full flex-1">
-        <div className="flex w-[20%] xl:w-[16%]">
+        <div className="flex w-[20%] 2xl:w-[16%]">
           <SideBar />
         </div>
         <div className="flex flex-col flex-1">
-         <div className="flex h-20 w-ful justify-between items-center mx-5">
+         <div className="flex h-20 w-full justify-between items-center mx-5">
             <div className="flex text-xl font-bold">Guest Users</div>
          </div>
          <div className="flex w-full h-full">
