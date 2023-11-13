@@ -8,7 +8,7 @@ interface UserPopupProps {
 
 const UserPopup: React.FC<UserPopupProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2 bg-white w-[35%] h-[38vh] p-2 z-50">
+    <div className="fixed top-1/2 left-1/2 border rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2 bg-white w-[35%] h-[38vh] p-2 z-50">
     <div className="flex w-full flex-col h-full">
       <div className="flex w-full justify-between my-4">
         <span className="flex font-bold text-lg mx-4 w-full h-full items-center">

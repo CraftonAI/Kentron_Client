@@ -15,7 +15,7 @@ const ManageSources = () => {
         </div>
         <div className="flex flex-1 justify-start flex-col">
           <div className="flex w-full flex-col">
-            <span className="flex h-[8vh] font-bold items-center mx-7 text-lg">
+            <span className="flex h-[8vh] font-bold items-center mx-7 text-xl">
               Organization Policies{" "}
             </span>
             <div className="flex justify-center h-24">
@@ -24,7 +24,7 @@ const ManageSources = () => {
                   <div className="flex w-[18vw] items-center h-16 border-r px-7 mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
-                      <p className="flex text-[16px]  font-bold">
+                      <p className="flex text-sm font-bold">
                         Slack Enterprise
                       </p>
                     </div>
@@ -46,7 +46,7 @@ const ManageSources = () => {
                   <div className="flex w-[18vw] items-center h-16 border-r px-7 mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
-                      <p className="flex text-[16px]  font-bold">
+                      <p className="flex text-sm font-bold">
                         Google Workspace
                       </p>
                     </div>
@@ -68,7 +68,7 @@ const ManageSources = () => {
                   <div className="flex w-[18vw] items-center h-16 border-r px-7 mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
-                      <p className="flex text-[16px]  font-bold">
+                      <p className="flex text-sm font-bold">
                         Jira
                       </p>
                     </div>
@@ -90,7 +90,7 @@ const ManageSources = () => {
                   <div className="flex w-[18vw] items-center h-16 border-r px-7 mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
-                      <p className="flex text-[16px]  font-bold">
+                      <p className="flex text-sm font-bold">
                         Confluence
                       </p>
                     </div>
@@ -112,7 +112,7 @@ const ManageSources = () => {
                   <div className="flex w-[18vw] items-center h-16 border-r px-7 mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
-                      <p className="flex text-[16px]  font-bold">
+                      <p className="flex text-sm font-bold">
                         Microsoft 365
                       </p>
                     </div>

@@ -39,7 +39,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">User</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12,000</p>
+                    <p className="flex text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -48,7 +48,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Workspace</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12,000</p>
+                    <p className="flex text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -57,7 +57,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Connectors</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12,000</p>
+                    <p className="flex text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -66,7 +66,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Total process Data</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12 GB</p>
+                    <p className="flex text-base font-bold">12 GB</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 px-7 ">
@@ -75,7 +75,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Total Work storage</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12 GB</p>
+                    <p className="flex text-base font-bold">12 GB</p>
                   </div>
                 </div>
               </div>
@@ -94,7 +94,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Slack Enterprise</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12,000</p>
+                    <p className="flex text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -104,7 +104,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Google Workspace</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12,000</p>
+                    <p className="flex text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -114,7 +114,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Jira</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12,000</p>
+                    <p className="flex text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -124,7 +124,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Confluence</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12,000</p>
+                    <p className="flex text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 px-7 ">
@@ -134,7 +134,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">Microsoft 365</p>
-                    <p className="flex -mt-1 text-[16px] font-bold">12,000</p>
+                    <p className="flex text-base font-bold">12,000</p>
                   </div>
                 </div>
               </div>

@@ -16,7 +16,7 @@ const ActiveGuest = () => {
         </div>
         <div className="flex flex-col flex-1">
          <div className="flex h-20 w-ful justify-between items-center mx-5">
-            <div className="flex text-lg font-bold">Guest Users</div>
+            <div className="flex text-xl font-bold">Guest Users</div>
          </div>
          <div className="flex w-full h-full">
          <div className="w-full mx-5">
@@ -41,25 +41,25 @@ const ActiveGuest = () => {
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Name
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Email
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Sign-in status
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium tracking-wider text-left"
                           >
                             Action
                           </th>
@@ -85,7 +85,7 @@ const ActiveGuest = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium ">
+                          <td className="py-4 px-6 text-xs font-medium ">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -114,7 +114,7 @@ const ActiveGuest = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium">
+                          <td className="py-4 px-6 text-xs font-medium">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -143,7 +143,7 @@ const ActiveGuest = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium">
+                          <td className="py-4 px-6 text-xs font-medium">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -172,7 +172,7 @@ const ActiveGuest = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium ">
+                          <td className="py-4 px-6 text-xs font-medium ">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">

@@ -27,9 +27,11 @@ const ActiveUsers = () => {
         </div>
         <div className="flex flex-col flex-1">
          <div className="flex h-20 w-ful justify-between items-center mx-5">
-            <div className="flex text-lg font-bold">Active Users</div>
-            <button className="flex bg-[#6528F7] h-11 rounded-lg items-center justify-center text-white font-bold w-[9vw]">Add User</button>
+            <div className="flex text-xl font-bold">Active Users</div>
+            <button onClick={openPopup} className="flex bg-[#6528F7] h-11 rounded-lg items-center text-sm justify-center text-white font-bold w-[9vw]">Add User</button>
          </div>
+         {isPopupVisible && <UserPopup onClose={closePopup} />}
+
          <div className="flex w-full h-full">
          <div className="w-full mx-5">
             <div className="flex flex-col w-full">
@@ -53,25 +55,25 @@ const ActiveUsers = () => {
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Name
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Email
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Role
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Action
                           </th>
@@ -97,7 +99,7 @@ const ActiveUsers = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium ">
+                          <td className="py-4 px-6 text-xs font-medium ">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -126,7 +128,7 @@ const ActiveUsers = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium">
+                          <td className="py-4 px-6 text-xs font-medium">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -155,7 +157,7 @@ const ActiveUsers = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium">
+                          <td className="py-4 px-6 text-xs font-medium">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -184,7 +186,7 @@ const ActiveUsers = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium ">
+                          <td className="py-4 px-6 text-xs font-medium ">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">

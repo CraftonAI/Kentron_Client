@@ -16,22 +16,22 @@ const OrganizationPolicies = () => {
         </div>
         <div className="flex flex-1 justify-start flex-col">
           <div className="flex w-full flex-col">
-            <span className="flex h-[8vh] font-bold items-center mx-7 text-lg">
+            <span className="flex h-[8vh] font-bold items-center mx-7 text-xl">
               Organization Policies{" "}
             </span>
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
                 <div className="flex flex-1">
-                <div className="flex font-bold w-[14vw] items-center h-16 border-r px-7 mx-5">
+                <div className="flex font-bold text-base w-[14vw] items-center h-16 border-r px-7 mx-5">
                   Guest Access
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 mx-7 ">
                   <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[16px]  font-bold">
+                    <p className="flex text-sm font-bold">
                       Slack Enterprise
                     </p>
-                    <p className="flex -mt-1 text-[12px] text-[#1616168A]">
+                    <p className="flex -mt-1 text-xs text-[#1616168A]">
                       example@example.com
                     </p>
                   </div>
@@ -48,16 +48,16 @@ const OrganizationPolicies = () => {
              <div className="flex justify-center my-6 h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
                 <div className="flex flex-1">
-                <div className="flex font-bold w-[14vw] items-center h-16 border-r px-7 mx-5">
+                <div className="flex font-bold w-[14vw] text-base items-center h-16 border-r px-7 mx-5">
                   Guest Access
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 mx-7 ">
                   <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[16px]  font-bold">
+                    <p className="flex text-sm font-bold">
                       Slack Enterprise
                     </p>
-                    <p className="flex -mt-1 text-[12px] text-[#1616168A]">
+                    <p className="flex -mt-1 text-xs text-[#1616168A]">
                       example@example.com
                     </p>
                   </div>

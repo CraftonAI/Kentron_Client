@@ -39,25 +39,25 @@ const DeactiveUser = () => {
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Name
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Email
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Deactivated on
                           </th>
                           <th
                             scope="col"
-                            className="py-3 px-6 text-md font-medium tracking-wider text-left"
+                            className="py-3 px-6 text-sm font-medium text-left"
                           >
                             Action
                           </th>
@@ -83,7 +83,7 @@ const DeactiveUser = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium ">
+                          <td className="py-4 px-6 text-xs font-medium ">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -112,7 +112,7 @@ const DeactiveUser = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium">
+                          <td className="py-4 px-6 text-xs font-medium">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -141,7 +141,7 @@ const DeactiveUser = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium">
+                          <td className="py-4 px-6 text-xs font-medium">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
@@ -170,7 +170,7 @@ const DeactiveUser = () => {
                           <td className="py-4 px-6 text-sm font-medium ">
                             User Name
                           </td>
-                          <td className="py-4 px-6 text-sm font-medium ">
+                          <td className="py-4 px-6 text-xs font-medium ">
                             example@gmail.com
                           </td>
                           <td className="py-4 px-6 text-sm font-medium">
