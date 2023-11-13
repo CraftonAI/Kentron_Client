@@ -10,18 +10,18 @@ const ManageSources = () => {
         <Header />
       </div>
       <div className="flex w-full flex-1">
-        <div className="flex w-[16%]">
+        <div className="flex w-[20%] xl:w-[16%]">
           <SideBar />
         </div>
         <div className="flex flex-1 justify-start flex-col">
           <div className="flex w-full flex-col">
             <span className="flex h-[8vh] font-bold items-center mx-7 text-xl">
-              Organization Policies{" "}
+              Organization Sources{" "}
             </span>
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
               <div className="flex flex-1">
-                  <div className="flex w-[18vw] items-center h-16 border-r px-7 mx-7 ">
+                  <div className="flex items-center h-16 border-r px-7 mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
                       <p className="flex text-sm font-bold">
@@ -43,7 +43,7 @@ const ManageSources = () => {
             <div className="flex justify-center my-4 h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
                 <div className="flex flex-1">
-                  <div className="flex w-[18vw] items-center h-16 border-r px-7 mx-7 ">
+                  <div className="flex items-center h-16 border-r px-7 mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
                       <p className="flex text-sm font-bold">

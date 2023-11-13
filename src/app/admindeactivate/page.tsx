@@ -9,7 +9,7 @@ const DeactiveUser = () => {
         <Header />
       </div>
       <div className="flex w-full flex-1">
-        <div className="flex w-[16%]">
+        <div className="flex w-[20%] xl:w-[16%]">
           <SideBar />
         </div>
         <div className="flex flex-col flex-1">
