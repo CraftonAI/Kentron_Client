@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mui/material": "^5.14.17",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.5",
     "@nextui-org/react": "^2.1.13",
     "next": "14.0.1",
     "primereact": "^10.0.9",

@@ -6,7 +6,7 @@ import SideBar from "../Admin/sidebar";
 
 const ActiveGuest = () => {
   return (
-    <div className="flex text-black flex-col bg-[#ede4ff] h-[100vh] justify-between w-full">
+    <div className="flex text-black flex-col bg-[#ede4ff] overflow-y-scroll h-[100vh] justify-between w-full">
       <div className="flex h-20 bg-black text-white">
         <Header />
       </div>

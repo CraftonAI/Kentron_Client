@@ -19,7 +19,7 @@ const SetupSso = () => {
     setPopupVisible(false);
   };
   return (
-    <div className={`flex text-black flex-col bg-[#ede4ff] h-screen justify-between`}>
+    <div className={`flex text-black flex-col bg-[#ede4ff] h-screen overflow-y-scroll justify-between`}>
       <span className={`flex h-20 bg-black text-white ${isPopupVisible ? 'filter blur-sm' : ''}`}>
         <Header />
       </span>
