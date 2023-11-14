@@ -24,14 +24,14 @@ const AdminUsage = () => {
         </div>
         <div className="flex flex-1 justify-start flex-col">
           <div className="flex w-full flex-col">
-            <span className="flex h-[8vh] font-bold items-center mx-7 text-lg">
+            <span className="flex h-[8vh] font-bold items-center mx-3 2xl:mx-7 text-lg">
               Platform Usage Metrics
             </span>
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-lg justify-around w-full items-center mx-7">
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
-                  <div className="flex rounded-md text-lg h-10 w-10 font-bold justify-center items-center -mr-1">
-                    <Image src={user} width={30} alt="none" className="adds" />
+                  <div className="flex rounded-md overflow-hidden text-lg h-10 w-10 font-bold justify-center items-center -mr-1">
+                    <Image src={user} width={30} alt="none" className="object-cover rounded-full" />
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">User</p>
@@ -99,15 +99,15 @@ const AdminUsage = () => {
             <span className="flex h-[8vh] font-bold items-center mx-7 text-lg">
               Application Usage Metrics
             </span>
-            <div className="flex justify-center h-24">
-              <div className="flex bg-white rounded-lg justify-around w-full items-center mx-7">
-                <div className="flex xl:w-[14vw] items-center h-16 border-r px-7 ">
-                  <div className="flex rounded-full border text-lg xl:h-10 xl:w-10 font-bold justify-center items-center -mr-1">
+            <div className="flex justify-center h-24 w-full">
+              <div className="flex bg-white rounded-lg justify-around w-full items-center mx-3 2xl:mx-7">
+                <div className="flex 2xl:w-[14vw] items-center h-16 border-r px-7 ">
+                  <div className="flex rounded-full border text-lg 2xl:h-10 2xl:w-10 font-bold justify-center items-center -mr-1">
                     <Image src={slack} width={30} alt="none" className="adds" />
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">
-                      Slack Enterprise
+                      Slack
                     </p>
                     <p className="flex text-base font-bold">12,000</p>
                   </div>
@@ -123,7 +123,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[12px] text-[#1616168A]">
-                      Google Workspace
+                      Google
                     </p>
                     <p className="flex text-base font-bold">12,000</p>
                   </div>

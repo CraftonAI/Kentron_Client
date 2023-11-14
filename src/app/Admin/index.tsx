@@ -8,11 +8,11 @@ const Admin = () => {
       <div className="flex h-20 bg-black text-white">
         <Header />
       </div>
-      <div className="flex w-full flex-1">
-        <div className="flex w-[20%] 2xl:w-[16%]">
+      <div className="flex w-full flex-1 overflow-y-scroll">
+        <div className="flex w-[20%] 2xl:w-[16%] overflow-y-scroll">
           <SideBar />
         </div>
-        <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col h-full overflow-y-scroll">
           <div className="flex h-16 border-b font-Helvetica text-xl border-b-gray-300 mx-7 items-center">
             <span className="flex font-bold">Welcome back,</span> Jennifer steve
           </div>

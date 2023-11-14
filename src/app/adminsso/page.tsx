@@ -3,6 +3,8 @@ import Header from "@/app/Admin/header";
 import SideBar from "@/app/Admin/sidebar";
 import SsoPopup from '@/app/Admin/popups/sso';
 import {useState} from "react";
+import Toggle from "../Admin/switch/toggle";
+
 
 
 const SetupSso = () => {
@@ -27,7 +29,7 @@ const SetupSso = () => {
         </div>
         <div className="flex flex-1 justify-start flex-col">
           <div className="flex w-full flex-col">
-            <span className="flex h-[8vh] justify-between font-bold items-center mx-7 text-xl">
+            <span className="flex h-[8vh] justify-between font-bold items-center mx-7 my-3 text-xl">
               SSO Setting{" "}
               <button onClick={openPopup} className="flex bg-[#6528F7] text-white font-bold text-sm justify-center items-center w-[8vw] h-10 rounded-lg">Add SSO</button>
             </span>
@@ -52,11 +54,8 @@ const SetupSso = () => {
                   </div>
                 </div>
                 <div className="flex mx-10">
-                  <div className="flex w-24 items-center justify-between h-8 rounded-2xl border">
-                    <span className="flex flex-1 items-center mx-2">
-                      Disable
-                    </span>
-                    <span className="flex h-5 w-5 rounded-full bg-gray-400 mr-1"></span>
+                  <div className="flex w-28 items-center justify-between h-10 rounded-2xl">
+                  <Toggle label="sso" />
                   </div>
                 </div>
               </div>
