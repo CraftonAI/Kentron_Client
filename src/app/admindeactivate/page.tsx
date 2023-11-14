@@ -43,14 +43,14 @@ const DeactiveUser = () => {
                 <div className="overflow-x-auto shadow-md sm:rounded-lg">
                   <div className="inline-block w-full align-middle">
                     <div className="overflow-hidden w-full">
-                      <div className="bg-white shadow-md h-full rounded my-6">
+                    <div className="bg-white shadow-md h-full rounded my-6">
                         <table className="min-w-max bg-white w-full h-full table-auto">
                           <thead>
                             <tr className="border-b uppercase py-4 text-sm font-bold leading-normal">
                               <th className="py-3 px-6 text-left">Name</th>
                               <th className="py-3 px-6 text-left">Email</th>
                               <th className="py-3 px-6 flex mx-3 text-center">
-                                Deactivated on
+                                Role
                               </th>
                               <th className="py-3 px-5 justify-start">
                                 Action
@@ -75,7 +75,6 @@ const DeactiveUser = () => {
                                 <td className="py-3 px-6 text-center">
                                   <span className="flex justify-between text-[#161616] font-medium py-2 px-3 rounded-full text-xs">
                                     {user.deactive}
-}
                                     <RiArrowDropDownLine size={20} />
                                   </span>
                                 </td>
