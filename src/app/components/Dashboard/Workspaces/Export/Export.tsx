@@ -7,7 +7,7 @@ import { GrStatusGood } from "react-icons/gr";
 
 
 export const Export = () => {
-  // New data source
+  // New data sourcee
   const data = new Array(50).fill(null).map((_, index) => ({
     name: `Export search - - 2023-10-12 ${index + 1}`,
     comment: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
