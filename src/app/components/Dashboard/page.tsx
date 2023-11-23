@@ -17,8 +17,6 @@ const Page = () => {
     setCurrentView('singleWorkspace');
   };
 
-
-
   return (
       <main className='dashboard'>
       <Navbar />
