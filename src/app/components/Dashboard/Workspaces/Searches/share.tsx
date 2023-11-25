@@ -10,7 +10,7 @@ interface ShareProps {
 
 const SharePopup: React.FC<ShareProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 border rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] h-[45vh] p-2 z-50">
+    <div className="fixed top-1/2 left-1/2 border rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] h-[35vh] 2xl:h-[45vh] p-2 z-50">
       <div className="flex w-full flex-col h-full">
         <div className="flex w-full justify-between my-2 2xl:my-4">
           <span className="flex font-normal text-sm mx-4 w-full h-full items-center">

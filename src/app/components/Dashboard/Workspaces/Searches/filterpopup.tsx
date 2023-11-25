@@ -8,7 +8,7 @@ interface FilterProps {
 
 const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] 2xl:w-[40%] h-[72vh] rounded-lg p-2 shadow-md z-50">
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[55%] lg:w-[40%] 2xl:w-[40%] 2xl:h-[72vh] rounded-lg p-2 shadow-md z-50">
       <div className="flex w-full flex-col h-full">
         <div className="flex w-full border-b shadow-md py-2 items-center justify-between my-1 2xl:my-4">
           <span className="flex h-full items-center font-bold text-sm 2xl:text-sm mx-4">
@@ -22,7 +22,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
           </span>
         </div>
         <div className="flex text-black border-b flex-col w-full">
-          <div className="flex font-normal text-sm mx-4">Source Type</div>
+          <div className="flex font-normal text-sm mx-4 my-2">Source Type</div>
           <div className="flex font-normal justify-between text-xs items-center h-12">
             <span className="flex px-2">
               <input

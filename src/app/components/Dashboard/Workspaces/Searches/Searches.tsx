@@ -16,6 +16,17 @@ import ExportPopup from "./exportpopup";
 
 export const Searches = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
+  const [isFilPopupVisible, setFilPopupVisible] = useState(false);
+
+  const openFilPopup = () => {
+    setFilPopupVisible(true);
+  };
+
+  const closeFilPopup = () => {
+    setFilPopupVisible(false);
+  };
+  
+
 
   const openPopup = () => {
     setPopupVisible(true);
@@ -27,12 +38,12 @@ export const Searches = () => {
   return (
     <div className="flex h-[76vh] overflow-y-scroll w-full flex-col">
       <div className="flex flex-col w-full">
-        <div className="flex w-[15%] justify-around py-4">
+        <div className="flex w-[25%] xl:w-[22%] 2xl:w-[15%] justify-around py-4">
           Showing<span className="flex font-semibold">16,456</span> search
           results,
         </div>
-        <div className="flex w-[100%]">
-          <div className="flex w-[15%]">
+        <div className="flex w-[100%] my-1 2xl:my-0">
+          <div className="flex px-2 2xl:w-[15%]">
             <span className="flex w-full px-2 shadow-lg justify-around bg-green-200 h-9 items-center rounded-full">
               <div className="flex">
                 <Image src={check} width={30} alt="none" className="h-6 w-6" />
@@ -48,10 +59,10 @@ export const Searches = () => {
               <div className="flex text-xs mx-4 h-full items-center font-bold">
                 Data collection contains :{" "}
               </div>
-              <div className="flex w-9/12 justify-around items-center h-full">
+              <div className="flex 2xl:w-9/12 w-auto justify-around items-center h-full">
                 {" "}
-                <div className="flex h-full items-center">
-                  <div className="flex">
+                <div className="flex h-full text-center items-center">
+                  <div className="flex px-1">
                     <Image
                       src={check}
                       width={30}
@@ -62,7 +73,7 @@ export const Searches = () => {
                   <div className="flex text-xs">PII</div>
                 </div>
                 <div className="flex h-full items-center">
-                  <div className="flex">
+                  <div className="flex px-1">
                     <Image
                       src={check}
                       width={30}
@@ -73,7 +84,7 @@ export const Searches = () => {
                   <div className="flex text-xs">Sensitive Words</div>
                 </div>
                 <div className="flex h-full items-center">
-                  <div className="flex">
+                  <div className="flex px-1">
                     <Image
                       src={check}
                       width={30}
@@ -84,7 +95,7 @@ export const Searches = () => {
                   <div className="flex text-xs">HIPAA</div>
                 </div>
                 <div className="flex h-full items-center">
-                  <div className="flex">
+                  <div className="flex px-1">
                     <Image
                       src={check}
                       width={30}
@@ -95,7 +106,7 @@ export const Searches = () => {
                   <div className="flex text-xs">Contracts</div>
                 </div>
                 <div className="flex h-full items-center">
-                  <div className="flex">
+                  <div className="flex px-1">
                     <Image
                       src={check}
                       width={30}
@@ -106,7 +117,7 @@ export const Searches = () => {
                   <div className="flex text-xs">Address</div>
                 </div>
                 <div className="flex h-full items-center">
-                  <div className="flex">
+                  <div className="flex px-1">
                     <Image
                       src={check}
                       width={30}
@@ -117,7 +128,7 @@ export const Searches = () => {
                   <div className="flex text-xs">US Social Security Number</div>
                 </div>
                 <div className="flex h-full items-center">
-                  <div className="flex">
+                  <div className="flex px-1">
                     <Image
                       src={check}
                       width={30}
@@ -128,7 +139,7 @@ export const Searches = () => {
                   <div className="flex text-xs">Phone Number</div>
                 </div>
                 <div className="flex h-full items-center">
-                  <div className="flex">
+                  <div className="flex px-1">
                     <Image
                       src={check}
                       width={30}
@@ -145,12 +156,12 @@ export const Searches = () => {
         <div className="flex w-full">
           <div className="flex h-full justify-center items-center w-16">
             <span
-              onClick={openPopup}
+              onClick={openFilPopup}
               className="flex cursor-pointer h-10 justify-center items-center w-full rounded-md bg-[#6528F7] text-white"
             >
               <RiFilter2Line size={18} />
             </span>
-            {isPopupVisible && <FilterPopup onClose={closePopup} />}
+            {isFilPopupVisible && <FilterPopup onClose={closeFilPopup} />}
           </div>
           <div className="flex flex-1 mx-3 items-center">
             <input
@@ -172,19 +183,19 @@ export const Searches = () => {
       </div>
       <div className="flex h-[60vh] scrollmain">
         <div className="flex flex-1 flex-col justify-between overflow-y-scroll scrollsemi">
-          <span className="flex flex-col border shadow-md rounded-md bg-[#FFFFFFBF] xl:w-[900px] 2xl:w-[96%] my-1 h-[169px]">
-            <div className="flex w-full px-4 h-24 items-center">
+        <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
+            <div className="flex w-full px-4 h-auto 2xl:h-24 items-center">
               <span className="flex w-12 h-12 rounded-full items-center justify-center border mx-2 shadow-lg">
                 <Image src={work} width={30} alt="none" className="h-6 w-6" />
               </span>
-              <span className="flex h-14 justify-center flex-col flex-1">
-                <div className="flex font-bold text-md mx-3 underline underline-offset-1">
-                  Personal messages john and jennifer - 2023-10-01
+              <span className="flex 2xl:h-14 justify-center flex-col flex-1">
+                <div className="flex w-full font-bold lg:text-sm 2xl:text-base mx-3 2xl:my-1 my-2 underline underline-offset-1">
+                  Personal messages john and jennifer - 2023-10-01 
                 </div>
-                <div className="flex w-9/12 h-full items-center justify-around">
+                <div className="flex 2xl:w-9/12 w-full h-full items-center justify-around">
                   <div className="flex px-3 h-full items-center text-sm">
                     {" "}
-                    <FaRegCalendarDays className="flex h-full mr-1" /> Created
+                    <FaRegCalendarDays className="flex h-full mr-1 text-center" /> Created
                     date :
                   </div>
                   <div className="flex justify-around h-full items-center text-[#363636] text-sm font-bold">
@@ -194,7 +205,7 @@ export const Searches = () => {
                   <div className="flex flex-1 px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 -mr-1 text-md" />
+                    <FiUser className="ml-2 -mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
@@ -217,19 +228,19 @@ export const Searches = () => {
               and typesetting industry.
             </span>
           </span>
-          <span className="flex flex-col border shadow-md rounded-md bg-[#FFFFFFBF] xl:w-[900px] 2xl:w-[96%] my-1 h-[169px]">
-            <div className="flex w-full px-4 h-24 items-center">
+          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
+            <div className="flex w-full px-4 h-auto 2xl:h-24 items-center">
               <span className="flex w-12 h-12 rounded-full items-center justify-center border mx-2 shadow-lg">
                 <Image src={work} width={30} alt="none" className="h-6 w-6" />
               </span>
-              <span className="flex h-14 justify-center flex-col flex-1">
-                <div className="flex font-bold text-md mx-3 underline underline-offset-1">
-                  Personal messages john and jennifer - 2023-10-01
+              <span className="flex 2xl:h-14 justify-center flex-col flex-1">
+                <div className="flex w-full font-bold lg:text-sm 2xl:text-base mx-3 2xl:my-1 my-2 underline underline-offset-1">
+                  Personal messages john and jennifer - 2023-10-01 
                 </div>
-                <div className="flex w-9/12 h-full items-center justify-around">
+                <div className="flex 2xl:w-9/12 w-full h-full items-center justify-around">
                   <div className="flex px-3 h-full items-center text-sm">
                     {" "}
-                    <FaRegCalendarDays className="flex h-full mr-1" /> Created
+                    <FaRegCalendarDays className="flex h-full mr-1 text-center" /> Created
                     date :
                   </div>
                   <div className="flex justify-around h-full items-center text-[#363636] text-sm font-bold">
@@ -239,7 +250,7 @@ export const Searches = () => {
                   <div className="flex flex-1 px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 -mr-1 text-md" />
+                    <FiUser className="ml-2 -mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
@@ -262,19 +273,19 @@ export const Searches = () => {
               and typesetting industry.
             </span>
           </span>
-          <span className="flex flex-col border shadow-md rounded-md bg-[#FFFFFFBF] xl:w-[900px] 2xl:w-[96%] my-1 h-[169px]">
-            <div className="flex w-full px-4 h-24 items-center">
+          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF]  2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
+            <div className="flex w-full px-4 h-auto 2xl:h-24 items-center">
               <span className="flex w-12 h-12 rounded-full items-center justify-center border mx-2 shadow-lg">
                 <Image src={work} width={30} alt="none" className="h-6 w-6" />
               </span>
-              <span className="flex h-14 justify-center flex-col flex-1">
-                <div className="flex font-bold text-md mx-3 underline underline-offset-1">
-                  Personal messages john and jennifer - 2023-10-01
+              <span className="flex 2xl:h-14 justify-center flex-col flex-1">
+                <div className="flex w-full font-bold lg:text-sm 2xl:text-base mx-3 2xl:my-1 my-2 underline underline-offset-1">
+                  Personal messages john and jennifer - 2023-10-01 
                 </div>
-                <div className="flex w-9/12 h-full items-center justify-around">
+                <div className="flex 2xl:w-9/12 w-full h-full items-center justify-around">
                   <div className="flex px-3 h-full items-center text-sm">
                     {" "}
-                    <FaRegCalendarDays className="flex h-full mr-1" /> Created
+                    <FaRegCalendarDays className="flex h-full mr-1 text-center" /> Created
                     date :
                   </div>
                   <div className="flex justify-around h-full items-center text-[#363636] text-sm font-bold">
@@ -284,7 +295,7 @@ export const Searches = () => {
                   <div className="flex flex-1 px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 -mr-1 text-md" />
+                    <FiUser className="ml-2 -mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
@@ -307,19 +318,19 @@ export const Searches = () => {
               and typesetting industry.
             </span>
           </span>
-          <span className="flex flex-col border shadow-md rounded-md bg-[#FFFFFFBF] xl:w-[900px] 2xl:w-[96%] my-1 h-[169px]">
-            <div className="flex w-full px-4 h-24 items-center">
+          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
+            <div className="flex w-full px-4 h-auto 2xl:h-24 items-center">
               <span className="flex w-12 h-12 rounded-full items-center justify-center border mx-2 shadow-lg">
                 <Image src={work} width={30} alt="none" className="h-6 w-6" />
               </span>
-              <span className="flex h-14 justify-center flex-col flex-1">
-                <div className="flex font-bold text-md mx-3 underline underline-offset-1">
-                  Personal messages john and jennifer - 2023-10-01
+              <span className="flex 2xl:h-14 justify-center flex-col flex-1">
+                <div className="flex w-full font-bold lg:text-sm 2xl:text-base mx-3 2xl:my-1 my-2 underline underline-offset-1">
+                  Personal messages john and jennifer - 2023-10-01 
                 </div>
-                <div className="flex w-9/12 h-full items-center justify-around">
+                <div className="flex 2xl:w-9/12 w-full h-full items-center justify-around">
                   <div className="flex px-3 h-full items-center text-sm">
                     {" "}
-                    <FaRegCalendarDays className="flex h-full mr-1" /> Created
+                    <FaRegCalendarDays className="flex h-full mr-1 text-center" /> Created
                     date :
                   </div>
                   <div className="flex justify-around h-full items-center text-[#363636] text-sm font-bold">
@@ -329,7 +340,7 @@ export const Searches = () => {
                   <div className="flex flex-1 px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 -mr-1 text-md" />
+                    <FiUser className="ml-2 -mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
@@ -367,13 +378,13 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   size
                 </div>
-                <div className="flex font-normal text-md">58.23 KB</div>
+                <div className="flex font-normal text-base">58.23 KB</div>
               </span>
               <span className="flex flex-1 px-6 py-3 flex-col">
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Last modified
                 </div>
-                <div className="flex font-normal text-md">10/25/2023</div>
+                <div className="flex font-normal text-base">10/25/2023</div>
               </span>
             </div>
             <div className="flex">
@@ -381,13 +392,13 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Type
                 </div>
-                <div className="flex font-normal text-md">Conversational</div>
+                <div className="flex font-normal text-base">Conversational</div>
               </span>
               <span className="flex flex-1 px-6 py-3 flex-col">
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   File creation
                 </div>
-                <div className="flex font-normal text-md">10/25/2023</div>
+                <div className="flex font-normal text-base">10/25/2023</div>
               </span>
             </div>
             <div className="flex">
@@ -395,7 +406,7 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Title
                 </div>
-                <div className="flex font-normal text-md">
+                <div className="flex font-normal text-base">
                   Personal messages john and Jennifer - 2023-10-01
                 </div>
               </span>
@@ -405,7 +416,7 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Active Participant
                 </div>
-                <div className="flex font-normal text-md">Jennifer stark</div>
+                <div className="flex font-normal text-base">Jennifer stark</div>
               </span>
             </div>
             <div className="flex">
@@ -413,7 +424,7 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Active Participant
                 </div>
-                <div className="flex font-normal text-md">Jennifer stark</div>
+                <div className="flex font-normal text-base">Jennifer stark</div>
               </span>
             </div>
             <div className="flex">
@@ -421,7 +432,7 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Member
                 </div>
-                <div className="flex font-normal text-md">
+                <div className="flex font-normal text-base">
                   Jennifer stark, Jennifer stark
                 </div>
               </span>
@@ -431,7 +442,7 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Thread
                 </div>
-                <div className="flex font-normal text-md">Direct message</div>
+                <div className="flex font-normal text-base">Direct message</div>
               </span>
             </div>
             <div className="flex">
@@ -439,7 +450,7 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Modifications
                 </div>
-                <div className="flex font-normal text-md">Yes</div>
+                <div className="flex font-normal text-base">Yes</div>
               </span>
             </div>
             <div className="flex">
@@ -447,7 +458,7 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Language
                 </div>
-                <div className="flex font-normal text-md">English</div>
+                <div className="flex font-normal text-base">English</div>
               </span>
             </div>
             <div className="flex">
@@ -455,7 +466,7 @@ export const Searches = () => {
                 <div className="flex font-normal text-sm text-[#1616168A]">
                   Duplicates
                 </div>
-                <div className="flex font-normal text-md">02</div>
+                <div className="flex font-normal text-base">02</div>
               </span>
             </div>
           </div>

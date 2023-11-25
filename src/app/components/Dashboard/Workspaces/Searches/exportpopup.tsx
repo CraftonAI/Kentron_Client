@@ -8,7 +8,7 @@ interface ExportProps {
 
 const ExportPopup: React.FC<ExportProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] 2xl:w-[40%] h-[77vh] rounded-lg p-2 shadow-md z-50">
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white xl:w-[40%] 2xl:w-[40%] 2xl:h-[77vh] rounded-lg p-2 shadow-md z-50">
       <div className="flex w-full flex-col h-full">
         <div className="flex w-full border-b shadow-md py-2 items-center justify-between my-1 2xl:my-4">
           <span className="flex h-full items-center font-bold text-sm 2xl:text-sm mx-4">
@@ -22,7 +22,7 @@ const ExportPopup: React.FC<ExportProps> = ({ onClose }) => {
           </span>
         </div>
         <div className="flex text-black border-b flex-col w-full">
-          <div className="flex text-base mx-4 font-semibold">
+          <div className="flex text-base mx-4 my-2 font-semibold">
             Define your export
           </div>
           <div className="flex font-normal text-xs mx-5 my-4">
