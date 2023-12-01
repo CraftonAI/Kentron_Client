@@ -87,6 +87,14 @@ const Sidebar: React.FC<SidebarProps> = ({
             <textarea rows={7} placeholder="Enter description" />
           </div>
 
+          <div className="flex text-black flex-col py-2 h-20">
+              <p>Status <span>| Required</span></p>
+              <select className="flex h-10 rounded-md px-1" name="status" id="status">
+                <option value="active">Active</option>
+                <option value="noactive">Not active</option>
+              </select>
+            </div>
+
           <div className="createboxbtn">
             <button className="savebtn">Save</button>
             <button

@@ -1,5 +1,5 @@
 .sidebar{
-    width: 13%;
+    width: 9%;
     height: 88vh;
     /* height: 88vh; */
     display: flex;
@@ -72,7 +72,7 @@
 }
 .createbox{
     width: 550px;
-    height: 390px;
+    height: 460px;
     background-color: #ffffff;
     justify-self: center;
     margin-left: 45%;

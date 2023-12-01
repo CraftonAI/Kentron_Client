@@ -3,6 +3,7 @@
 
 import Header from "@/app/Admin/header";
 import SideBar from "@/app/Admin/sidebar";
+import Toggle from "../Admin/switch/toggle";
 
 const OrganizationPolicies = () => {
   return (
@@ -39,8 +40,7 @@ const OrganizationPolicies = () => {
                 </div>
                 <div className="flex mx-10">
                   <div className="flex w-24 items-center justify-between h-8 rounded-2xl border">
-                    <span className="flex flex-1 items-center mx-2">Disable</span>
-                    <span className="flex h-5 w-5 rounded-full bg-gray-400 mr-1"></span>
+                  <Toggle label="slack"/>
                   </div>
                 </div>
               </div>
@@ -65,8 +65,7 @@ const OrganizationPolicies = () => {
                 </div>
                 <div className="flex mx-10">
                   <div className="flex w-24 items-center justify-between h-8 rounded-2xl border">
-                    <span className="flex flex-1 items-center mx-2">Disable</span>
-                    <span className="flex h-5 w-5 rounded-full bg-gray-400 mr-1"></span>
+                  <Toggle label="slack"/>
                   </div>
                 </div>
               </div>

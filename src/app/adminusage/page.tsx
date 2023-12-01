@@ -24,7 +24,7 @@ const AdminUsage = () => {
         </div>
         <div className="flex flex-1 justify-start flex-col">
           <div className="flex w-full flex-col">
-            <span className="flex h-[8vh] font-bold items-center mx-3 2xl:mx-7 text-lg">
+            <span className="flex h-[8vh] font-bold items-center mx-7 text-lg">
               Platform Usage Metrics
             </span>
             <div className="flex justify-center h-24">
@@ -100,7 +100,7 @@ const AdminUsage = () => {
               Application Usage Metrics
             </span>
             <div className="flex justify-center h-24 w-full">
-              <div className="flex bg-white rounded-lg justify-around w-full items-center mx-3 2xl:mx-7">
+              <div className="flex bg-white rounded-lg justify-around w-full items-center mx-7">
                 <div className="flex 2xl:w-[14vw] items-center h-16 border-r px-7 ">
                   <div className="flex rounded-full border text-lg 2xl:h-10 2xl:w-10 font-bold justify-center items-center -mr-1">
                     <Image src={slack} width={30} alt="none" className="adds" />

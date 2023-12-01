@@ -55,7 +55,7 @@ const Singleworkspace = () => {
   };
   return (
     <section className="singleworkspace">
-      <h1>Workspace Name</h1>
+      <p className="flex font-extrabold items-center h-12 text-xl">Workspace Name</p>
       <div className="workspaceheaders">
         <div
           className={home ? "headitems headbold" : "headitems"}

@@ -6,6 +6,7 @@ import navitem1 from "../Assets/notifications.png";
 import navitem2 from "../Assets/contact_support.png";
 import Link from "next/link";
 import user from "../Assets/user.png";
+import { BiCommentDetail } from "react-icons/bi";
 import { GrStatusGood } from "react-icons/gr";
 
 const Page = () => {
@@ -23,7 +24,8 @@ const Page = () => {
       </div>
       <div className="items">
         <Image src={navitem2} width={30} alt="none" className="comma" />
-        <Image src={navitem1} width={20} alt="none" className="notifications" />
+        <BiCommentDetail className="notifications" size={25}/>
+        {/* <Image src={navitem1} width={20} alt="none" className="notifications" /> */}
         <div className="user-container cursor-pointer" onClick={togglePopup}>
           <Image src={user} width={40} alt="none" className="user" />
           {isPopupVisible && (

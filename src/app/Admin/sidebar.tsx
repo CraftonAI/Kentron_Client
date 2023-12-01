@@ -26,6 +26,8 @@ const SideBar = () => {
     setshowSetting(!showSetting);
   };
 
+
+
   return (
     <div className="flex w-[110%] xl:w-full flex-col items-end bg-white h-[100vh]">
       <div className="flex flex-col h-full w-full xl:w-[87%] text-base my-5">

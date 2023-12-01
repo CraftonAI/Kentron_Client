@@ -5,6 +5,8 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { RxCrossCircled } from "react-icons/rx";
 import React, { useState } from "react";
 import UserPopup from "../Admin/popups/userpop";
+import { IoCloseCircleSharp } from "react-icons/io5";
+import { MdPersonAddAlt } from "react-icons/md";
 
 const ActiveUsers = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -54,7 +56,7 @@ const ActiveUsers = () => {
               onClick={openPopup}
               className="flex bg-[#6528F7] h-11 rounded-lg items-center text-sm justify-center text-white font-bold w-[9vw]"
             >
-              Add User
+            <MdPersonAddAlt size={22} className="mx-1" />  Add User
             </button>
           </div>
           {isPopupVisible && <UserPopup onClose={closePopup} />}
@@ -102,10 +104,12 @@ const ActiveUsers = () => {
                                   </span>
                                 </td>
                                 <td className="py-3 px-6 text-center">
-                                  <div className="flex item-center justify-center mr-8">
+                                  <div className="flex h-full items-center item-center justify-center mr-8">
+                                  <IoCloseCircleSharp className="flex mt-1 mx-1"/>
                                     <div className="w-4 transform hover:scale-110">
+                                    
                                       {/* Icon or button for action */}
-                                      <button className="text-[#161616] font-medium text-xs">
+                                      <button className="text-[#161616] h-full items-center font-medium text-xs">
                                         Deactivate
                                       </button>
                                     </div>

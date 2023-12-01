@@ -16,7 +16,7 @@ const ManageSources = () => {
         <div className="flex flex-1 justify-start flex-col">
           <div className="flex w-full flex-col">
             <span className="flex h-[8vh] font-bold items-center mx-7 text-xl">
-              Organization Sources{" "}
+              Manage Sources{" "}
             </span>
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
