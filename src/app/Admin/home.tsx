@@ -49,7 +49,7 @@ const HomeMain = () => {
                     size={15}
                     style={{ display: "flex", marginRight: "2px" }}
                   />
-                  Total processes data
+                  Total processes data<span className='flex text-xs text-[#1616164D] mx-1 h-full items-end'>(All time)</span>
                 </div>
               </span>
               <span className="flex flex-col bg-white h-16 w-[14vw] border justify-center rounded-lg">

@@ -33,6 +33,7 @@ const ActiveUsers = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+  const [selectAll, setSelectAll] = useState(false); // Added state for "Select All" checkbox
 
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
@@ -40,6 +41,10 @@ const ActiveUsers = () => {
   // Replace 50 with your total number of users
   const pageCount = Math.ceil(data.length / itemsPerPage);
 
+  const handleSelectAllChange = () => {
+    setSelectAll(!selectAll);
+  };
+  const isAllChecked = currentItems.every((user) => selectAll);
   return (
     <div className="flex text-black flex-col bg-[#ede4ff] h-[100vh] overflow-y-scroll justify-between w-full">
       <div className="flex h-20 bg-black text-white">
@@ -56,7 +61,7 @@ const ActiveUsers = () => {
               onClick={openPopup}
               className="flex bg-[#6528F7] h-11 rounded-lg items-center text-sm justify-center text-white font-bold w-[9vw]"
             >
-            <MdPersonAddAlt size={22} className="mx-1" />  Add User
+              <MdPersonAddAlt size={22} className="mx-1" /> Add User
             </button>
           </div>
           {isPopupVisible && <UserPopup onClose={closePopup} />}
@@ -72,7 +77,17 @@ const ActiveUsers = () => {
                         <table className="min-w-max bg-white w-full h-full table-auto">
                           <thead>
                             <tr className="border-b uppercase py-4 text-sm font-bold leading-normal">
-                              <th className="py-3 px-6 text-left">Name</th>
+                              <th className="py-3 px-6 text-left">
+                                <input
+                                  id="selectAllCheckbox"
+                                  type="checkbox"
+                                  value=""
+                                  checked={isAllChecked}
+                                  onChange={handleSelectAllChange}
+                                  className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                />
+                                Name
+                              </th>
                               <th className="py-3 px-6 text-left">Email</th>
                               <th className="py-3 px-6 flex mx-3 text-center">
                                 Role
@@ -88,6 +103,14 @@ const ActiveUsers = () => {
                                 <td className="py-3 px-6 text-left whitespace-nowrap">
                                   <div className="flex items-center">
                                     <span className="font-bold">
+                                      <input
+                                        id={`checkbox-${index}`}
+                                        type="checkbox"
+                                        value=""
+                                        checked={selectAll}
+                                        onChange={() => {}}
+                                        className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                      />{" "}
                                       {user.name}
                                     </span>
                                   </div>
@@ -105,9 +128,8 @@ const ActiveUsers = () => {
                                 </td>
                                 <td className="py-3 px-6 text-center">
                                   <div className="flex h-full items-center item-center justify-center mr-8">
-                                  <IoCloseCircleSharp className="flex mt-1 mx-1"/>
+                                    <IoCloseCircleSharp className="flex mt-1 mx-1" />
                                     <div className="w-4 transform hover:scale-110">
-                                    
                                       {/* Icon or button for action */}
                                       <button className="text-[#161616] h-full items-center font-medium text-xs">
                                         Deactivate

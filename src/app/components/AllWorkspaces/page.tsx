@@ -26,7 +26,7 @@ const AllWorkspace = () => {
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
-  // Replace 50 with your total number of users
+  // Replace 50 with your total number of userss
   const pageCount = Math.ceil(data.length / itemsPerPage);
 
   const handleSelectAllChange = () => {

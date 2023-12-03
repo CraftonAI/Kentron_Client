@@ -4,6 +4,7 @@ import { BsPersonFillAdd } from "react-icons/bs";
 import SideBar from "../Admin/sidebar";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import React, { useState } from "react";
+import { IoCloseCircleSharp } from "react-icons/io5";
 
 const ActiveGuest = () => {
   const data = new Array(50).fill(null).map((_, index) => ({
@@ -19,12 +20,28 @@ const ActiveGuest = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+  const [selectAll, setSelectAll] = useState(false); // Added state for "Select All" checkbox
+  const [selectedItems, setSelectedItems] = useState(
+    Array(data.length).fill(false)
+  );
 
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   // Replace 50 with your total number of users
   const pageCount = Math.ceil(data.length / itemsPerPage);
+
+  const handleSelectAllChange = () => {
+    setSelectAll(!selectAll);
+  };
+  const handleSelectItemChange = (index: number) => {
+    const newSelectedItems = [...selectedItems];
+    newSelectedItems[index] = !newSelectedItems[index];
+    setSelectedItems(newSelectedItems);
+  };
+
+  const isAllChecked = currentItems.every((user) => selectAll);
+
   return (
     <div className="flex text-black flex-col bg-[#ede4ff] overflow-y-scroll h-[100vh] justify-between w-full">
       <div className="flex h-20 bg-black text-white">
@@ -47,8 +64,18 @@ const ActiveGuest = () => {
                       <div className="bg-white shadow-md h-full rounded my-6">
                         <table className="min-w-max bg-white w-full h-full table-auto">
                           <thead>
-                            <tr className="border-b uppercase py-4 text-sm font-bold leading-normal">
-                              <th className="py-3 px-6 text-left">Name</th>
+                            <tr className="border-b py-4 text-sm font-bold leading-normal">
+                              <th className="py-3 px-6 text-left">
+                                <input
+                                  id="selectAllCheckbox"
+                                  type="checkbox"
+                                  value=""
+                                  checked={isAllChecked}
+                                  onChange={handleSelectAllChange}
+                                  className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                />
+                                Name
+                              </th>
                               <th className="py-3 px-6 text-left">Email</th>
                               <th className="py-3 px-6 flex mx-3 text-center">
                                 Sign-in status
@@ -64,6 +91,16 @@ const ActiveGuest = () => {
                                 <td className="py-3 px-6 text-left whitespace-nowrap">
                                   <div className="flex items-center">
                                     <span className="font-bold">
+                                      <input
+                                        id={`checkbox-${index}`}
+                                        type="checkbox"
+                                        value=""
+                                        checked={selectedItems[index]}
+                                        onChange={() =>
+                                          handleSelectItemChange(index)
+                                        }
+                                        className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                      />
                                       {user.name}
                                     </span>
                                   </div>
@@ -80,10 +117,11 @@ const ActiveGuest = () => {
                                   </span>
                                 </td>
                                 <td className="py-3 px-6 text-center">
-                                  <div className="flex item-center justify-center mr-8">
+                                  <div className="flex h-full items-center item-center justify-center mr-8">
+                                    <IoCloseCircleSharp className="flex mt-1 mx-1" />
                                     <div className="w-4 transform hover:scale-110">
                                       {/* Icon or button for action */}
-                                      <button className="text-[#161616] font-medium text-xs">
+                                      <button className="text-[#161616] h-full items-center font-medium text-xs">
                                         Deactivate
                                       </button>
                                     </div>
