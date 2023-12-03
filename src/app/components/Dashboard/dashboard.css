@@ -16,3 +16,18 @@
     width: 86.4%;
     /* overflow: scroll; */
 }
+
+
+::-webkit-scrollbar {
+    height: 7px;
+  }
+  
+  /* Style for Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+  

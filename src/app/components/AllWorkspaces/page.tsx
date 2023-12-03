@@ -2,6 +2,16 @@
 import React, { useState } from "react";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { GrStatusGood } from "react-icons/gr";
+import { Pagination } from "@nextui-org/react";
+import { BiDotsVerticalRounded } from "react-icons/bi";
+import "../AllWorkspaces/workspace.css"
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+} from "@nextui-org/react";
 
 const AllWorkspace = () => {
   const data = new Array(20).fill(null).map((_, index) => ({
@@ -16,7 +26,7 @@ const AllWorkspace = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [selectAll, setSelectAll] = useState(false); // Added state for "Select All" checkbox
-  const itemsPerPage = 1; // Adjust as needed
+  const itemsPerPage = 10; // Adjust as needed
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -36,10 +46,18 @@ const AllWorkspace = () => {
   const isAllChecked = currentItems.every((user) => selectAll);
 
   return (
-    <div className="flex h-[76vh] overflow-y-scroll w-full flex-col">
-      <div className="h-full flex flex-col w-full">
+    <div className="flex h-[86vh] 2xl:w-full flex-col">
+      <div className="flex py-6 text-2xl mx-3 font-semibold text-black">All Workspaces </div>
+      <div className="2xl:h-[90%] lg:h-[90%] flex bg-white px-3 rounded-md flex-col 2xl:w-full mx-3">
+      <div className="flex py-3 2xl:w-full justify-end px-3 items-center text-black">
+      <input
+              className="flex h-10 shadow-md border rounded-md px-5"
+              type="search"
+              placeholder="Search here..."
+            />
+         </div>
         {/* <div>table</div> */}
-        <div className="sh-full my-6 shadow-md rounded-md border">
+        <div className="sh-full overflow-y-scroll lg:my-8 2xl:my-6 shadow-md rounded-md border">
           <table className="min-w-max w-full h-full table-auto rounded-md ">
             <thead>
               <tr className="border-b py-4 text-sm text-black font-bold leading-normal">
@@ -69,7 +87,7 @@ const AllWorkspace = () => {
                 <tr className="border-b" key={index}>
                   <td className="py-3 px-6 text-left whitespace-nowrap">
                     <div className="flex items-center">
-                      <span className="font-bold flex h-12 items-center">
+                      <span className="font-bold lg:w-auto justify-between flex h-12 items-center">
                         <input
                           id={`checkbox-${index}`}
                           type="checkbox"
@@ -80,6 +98,10 @@ const AllWorkspace = () => {
                         />
                         <FaShareFromSquare style={{ marginRight: "5px" }} />{" "}
                         {user.name}
+                        
+                          
+                            <BiDotsVerticalRounded className="mx-2" />
+                          
                       </span>
                     </div>
                   </td>
@@ -96,13 +118,6 @@ const AllWorkspace = () => {
 
                   <td className="py-3 px-6 text-center">
                     <div className="flex item-center justify-center mr-8">
-                      <GrStatusGood
-                        style={{
-                          marginRight: "3px",
-                          marginTop: "2px",
-                          Color: "green",
-                        }}
-                      />
                       {user.status}
                     </div>
                   </td>
@@ -126,7 +141,7 @@ const AllWorkspace = () => {
             </tbody>
           </table>
         </div>
-        <div className="flex justify-between overflow-x-scroll -mt-6 items-center px-5 py-5 rounded-md ">
+        <div className="flex justify-between -mt-6 bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
           <div className="flex">
             <span className="text-sm text-gray-700">
               Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
@@ -134,26 +149,12 @@ const AllWorkspace = () => {
             </span>
           </div>
           <div className="flex">
-            <nav aria-label="Page navigation example">
-              <ul className="inline-flex items-center -space-x-px">
-                {/* ... Pagination Buttons ... */}
-                {new Array(pageCount).fill(null).map((_, index) => (
-                  <li key={index}>
-                    <button
-                      onClick={() => paginate(index + 1)}
-                      className={`py-2 px-3 leading-tight ${
-                        currentPage === index + 1
-                          ? "text-blue-600 bg-blue-50"
-                          : "text-gray-500 border"
-                      } border border-gray-300 hover:bg-gray-100 hover:text-gray-700`}
-                    >
-                      {index + 1}
-                    </button>
-                  </li>
-                ))}
-                {/* ... */}
-              </ul>
-            </nav>
+            <Pagination
+              showControls
+              total={pageCount}
+              initialPage={currentPage}
+              onChange={(newPage) => paginate(newPage)}
+            />
           </div>
         </div>
       </div>

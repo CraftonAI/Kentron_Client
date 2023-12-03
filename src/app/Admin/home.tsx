@@ -13,8 +13,8 @@ const HomeMain = () => {
             </div>
             <div className="flex w-[97%] justify-around mx-3 2xl:mx-1 text-base">
               <span className="flex flex-col bg-white h-16 w-[14vw] border justify-center rounded-lg">
-                <div className="flex font-bold text-sm mx-3">12000</div>
-                <div className="flex items-center text-[#1616168A] text-sm mx-3">
+                <div className="flex font-bold text-xs 2xl:text-sm mx-3">12000</div>
+                <div className="flex items-center text-[#1616168A] text-xs 2xl:text-sm  mx-3">
                   <BiUserCircle
                     size={15}
                     style={{ display: "flex", marginRight: "2px" }}
@@ -23,8 +23,8 @@ const HomeMain = () => {
                 </div>
               </span>
               <span className="flex flex-col bg-white h-16 w-[14vw] border justify-center rounded-lg">
-                <div className="flex font-bold mx-3">12000</div>
-                <div className="flex items-center text-[#1616168A] text-sm mx-3">
+                <div className="flex font-bold text-xs 2xl:text-sm  mx-3">12000</div>
+                <div className="flex items-center text-[#1616168A] text-xs 2xl:text-sm  mx-3">
                   <BiUserCircle
                     size={15}
                     style={{ display: "flex", marginRight: "2px" }}
@@ -33,8 +33,8 @@ const HomeMain = () => {
                 </div>
               </span>
               <span className="flex flex-col bg-white h-16 w-[14vw] border justify-center rounded-lg">
-                <div className="flex font-bold mx-3">12000</div>
-                <div className="flex items-center text-[#1616168A] text-sm mx-3">
+                <div className="flex font-bold mx-3 text-xs 2xl:text-sm ">12000</div>
+                <div className="flex items-center text-[#1616168A] text-xs 2xl:text-sm  mx-3">
                   <BiUserCircle
                     size={15}
                     style={{ display: "flex", marginRight: "2px" }}
@@ -43,18 +43,23 @@ const HomeMain = () => {
                 </div>
               </span>
               <span className="flex flex-col bg-white h-16 w-[14vw] border justify-center rounded-lg">
-                <div className="flex font-bold mx-3">12 GB</div>
-                <div className="flex items-center text-[#1616168A] text-sm mx-3">
-                  <BiUserCircle
-                    size={15}
-                    style={{ display: "flex", marginRight: "2px" }}
-                  />
-                  Total processes data<span className='flex text-xs text-[#1616164D] mx-1 h-full items-end'>(All time)</span>
-                </div>
+                <div className="flex font-bold mx-3 text-xs 2xl:text-sm">12 GB</div>
+                <div className="flex items-center text-[#1616168A] h-auto lg:h-[3vh] text-[10px] 2xl:text-sm 2xl:mx-3 mx-0">
+  <BiUserCircle
+    size={15}
+    style={{ display: "flex", marginRight: "2px" }}
+  />
+  <span className="flex space-y-0 flex-wrap 2xl:mt-0 lg:mt-3">
+    Total processes data
+    <span className="flex text-[8px] text-[#1616164D] mx-1 items-end">
+      (All timee)
+    </span>
+  </span>
+</div>
               </span>
               <span className="flex flex-col bg-white h-16 w-[14vw] border justify-center rounded-lg">
-                <div className="flex font-bold mx-3">25 GB</div>
-                <div className="flex items-center text-[#1616168A] text-sm mx-3">
+                <div className="flex font-bold mx-3 text-xs 2xl:text-sm ">25 GB</div>
+                <div className="flex items-center text-[#1616168A] text-xs 2xl:text-sm 2xl:mx-3 lg:mx-1">
                   <BiUserCircle
                     size={15}
                     style={{ display: "flex", marginRight: "2px" }}

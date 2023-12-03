@@ -23,7 +23,7 @@ const OrganizationInfo = () => {
             </span>
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
-                <div className="flex text-base font-bold w-[14vw] items-center h-16 border-r px-7 mx-5">
+                <div className="flex text-sm 2xl:text-base font-bold w-[14vw] items-center h-16 border-r px-7 mx-5">
                   Detail
                 </div>
                 <div className="flex w-[25vw] items-center h-16 border-r px-7 mx-7 ">
@@ -46,7 +46,7 @@ const OrganizationInfo = () => {
             </span>
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-t-lg border-b justify-start w-full items-center mx-7">
-                <div className="flex font-bold w-[14vw] items-center h-16 border-r px-7 mx-5">
+                <div className="flex font-bold text-sm 2xl:text-base w-[14vw] items-center h-16 border-r px-7 mx-5">
                   Copany Info
                 </div>
                 <div className="flex lg:w-[42vw] xl:w-[32vw] items-center h-16 border-r px-7 mx-7 ">
@@ -63,7 +63,7 @@ const OrganizationInfo = () => {
             </div>
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-b-lg justify-start w-full items-center mx-7">
-                <div className="flex font-bold w-[14vw] text-base items-center h-16 border-r px-7 mx-5">
+                <div className="flex font-bold w-[14vw] text-sm 2xl:text-base items-center h-16 border-r px-7 mx-5">
                   Username
                 </div>
                 <div className="flex lg:w-[30vw] xl:w-[22vw] items-center h-16 border-r px-7 mx-7 ">

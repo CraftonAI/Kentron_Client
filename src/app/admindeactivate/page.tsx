@@ -5,6 +5,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import React, { useState } from "react";
 import { MdChevronRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { IoCloseCircleSharp } from "react-icons/io5";
+import { Pagination } from "@nextui-org/react";
 
 const DeactiveUser = () => {
   const data = new Array(50).fill(null).map((_, index) => ({
@@ -121,39 +122,22 @@ const DeactiveUser = () => {
                           </tbody>
                         </table>
                       </div>
-                      <div className="flex bg-white justify-between -mt-6 items-center px-5 py-5">
-                        <div className="flex">
-                          <span className="text-sm text-gray-700">
-                            Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
-                            {currentPage * itemsPerPage} of {data.length}{" "}
-                            entries
-                          </span>
-                        </div>
-                        <div className="flex">
-                          <nav aria-label="Page navigation example">
-                            <ul className="inline-flex items-center -space-x-px">
-                              {/* ... Pagination Buttons ... */}
-                              {new Array(pageCount)
-                                .fill(null)
-                                .map((_, index) => (
-                                  <li key={index}>
-                                    <button
-                                      onClick={() => paginate(index + 1)}
-                                      className={`py-2 px-3 leading-tight ${
-                                        currentPage === index + 1
-                                          ? "text-blue-600 bg-blue-50"
-                                          : "text-gray-500 bg-white"
-                                      } border border-gray-300 hover:bg-gray-100 hover:text-gray-700`}
-                                    >
-                                      {index + 1}
-                                    </button>
-                                  </li>
-                                ))}
-                              {/* ... */}
-                            </ul>
-                          </nav>
-                        </div>
-                      </div>
+                      <div className="flex justify-between -mt-6 bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
+          <div className="flex">
+            <span className="text-sm text-gray-700">
+              Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
+              {currentPage * itemsPerPage} of {data.length} entries
+            </span>
+          </div>
+          <div className="flex">
+            <Pagination
+              showControls
+              total={pageCount}
+              initialPage={currentPage}
+              onChange={(newPage) => paginate(newPage)}
+            />
+          </div>
+        </div>
                     </div>
                   </div>
                 </div>

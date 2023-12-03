@@ -6,6 +6,7 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 import Toggle from "../../../../Admin/switch/toggle";
 import { IoMdShare } from "react-icons/io";
 import SharePopup from "../Searches/share";
+import { Pagination } from "@nextui-org/react";
 
 export const Setting = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -40,9 +41,9 @@ export const Setting = () => {
   const pageCount = Math.ceil(data.length / itemsPerPage);
 
   return (
-    <div className="flex h-[76vh] overflow-y-scroll w-full flex-col">
-      <div className="flex h-[16vh] py-8 border shadow-md bg-white mx-2 rounded-md text-sm font-bold mt-5 flex-col">
-        <div className="flex flex-1 items-center text-sm border-b mx-6">
+    <div className="flex h-[76vh] w-full flex-col">
+      <div className="flex h-[16vh]  py-8 justify-around border shadow-md bg-white mx-2 rounded-md text-sm font-bold mt-5 flex-col">
+        <div className="flex flex-1  items-center text-sm border-b mx-6">
           <div className="flex flex-1 h-full justify-start">
             <span className="flex font-bold mx-5">External Sharing</span>
             <span className="flex mx-12 font-normal">
@@ -53,7 +54,7 @@ export const Setting = () => {
             <Toggle label="Enable" />
           </div>
         </div>
-        <div className="flex flex-1 items-center text-sm py-6 mx-6">
+        <div className="flex flex-1 items-center text-sm py-2 pt-2 2xl:pt-5 mx-6">
           <div className="flex flex-1 h-full justify-start">
             <span className="flex font-bold mx-5">Share Workspace</span>
             <span className="flex mx-12 font-normal">
@@ -74,9 +75,9 @@ export const Setting = () => {
       <div className="flex h-12 text-sm font-bold items-center mt-5">
         Users & Permissions
       </div>
-      <div className="h-full flex flex-col w-full">
+      <div className="h-[70%] flex flex-col w-full">
         {/* <div>table</div> */}
-        <div className="bg-white shadow-md h-full rounded my-6 shadow-md rounded-md border">
+        <div className="bg-white shadow-md h-[90%] overflow-y-scroll  my-6 rounded-md border">
           <table className="min-w-max bg-white w-full h-full table-auto rounded-md ">
             <thead>
               <tr className="border-b py-4 text-sm font-bold leading-normal">
@@ -136,7 +137,7 @@ export const Setting = () => {
             </tbody>
           </table>
         </div>
-        <div className="flex bg-white justify-between -mt-6 items-center px-5 py-5 rounded-md ">
+        <div className="flex justify-between -mt-2 bg-white lg:border py-2 2xl:border-none lg:mb-3 2xl:mb-1 items-center px-2  rounded-md ">
           <div className="flex">
             <span className="text-sm text-gray-700">
               Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
@@ -144,26 +145,12 @@ export const Setting = () => {
             </span>
           </div>
           <div className="flex">
-            <nav aria-label="Page navigation example">
-              <ul className="inline-flex items-center -space-x-px">
-                {/* ... Pagination Buttons ... */}
-                {new Array(pageCount).fill(null).map((_, index) => (
-                  <li key={index}>
-                    <button
-                      onClick={() => paginate(index + 1)}
-                      className={`py-2 px-3 leading-tight ${
-                        currentPage === index + 1
-                          ? "text-blue-600 bg-blue-50"
-                          : "text-gray-500 bg-white"
-                      } border border-gray-300 hover:bg-gray-100 hover:text-gray-700`}
-                    >
-                      {index + 1}
-                    </button>
-                  </li>
-                ))}
-                {/* ... */}
-              </ul>
-            </nav>
+            <Pagination
+              showControls
+              total={pageCount}
+              initialPage={currentPage}
+              onChange={(newPage) => paginate(newPage)}
+            />
           </div>
         </div>
       </div>

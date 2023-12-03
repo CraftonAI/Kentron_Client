@@ -34,8 +34,8 @@ const AdminUsage = () => {
                     <Image src={user} width={30} alt="none" className="object-cover rounded-full" />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">User</p>
-                    <p className="flex text-base font-bold">12,000</p>
+                    <p className="flex text-[10px] 2xl:text-[10px] text-[#1616168A]">User</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -48,10 +48,10 @@ const AdminUsage = () => {
                     />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">
+                    <p className="flex text-[10px] 2xl:text-[10px] text-[#1616168A]">
                       Workspace
                     </p>
-                    <p className="flex text-base font-bold">12,000</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -64,10 +64,10 @@ const AdminUsage = () => {
                     />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">
+                    <p className="flex text-[10px] text-[#1616168A]">
                       Connectors
                     </p>
-                    <p className="flex text-base font-bold">12,000</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
@@ -75,10 +75,10 @@ const AdminUsage = () => {
                     <Image src={data} width={30} alt="none" className="adds" />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">
+                    <p className="flex text-[10px] text-[#1616168A]">
                       Total process Data
                     </p>
-                    <p className="flex text-base font-bold">12 GB</p>
+                    <p className="flex text-xs 2xl:text-basefont-bold">12 GB</p>
                   </div>
                 </div>
                 <div className="flex w-[14vw] items-center h-16 px-7 ">
@@ -86,10 +86,10 @@ const AdminUsage = () => {
                     <Image src={drive} width={30} alt="none" className="adds" />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">
+                    <p className="flex text-[10px] text-[#1616168A]">
                       Total Work storage
                     </p>
-                    <p className="flex text-base font-bold">12 GB</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12 GB</p>
                   </div>
                 </div>
               </div>
@@ -106,10 +106,10 @@ const AdminUsage = () => {
                     <Image src={slack} width={30} alt="none" className="adds" />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">
+                    <p className="flex text-[10px] text-[#1616168A]">
                       Slack
                     </p>
-                    <p className="flex text-base font-bold">12,000</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex xl:w-[14vw] items-center h-16 border-r px-7 ">
@@ -122,10 +122,10 @@ const AdminUsage = () => {
                     />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">
+                    <p className="flex text-[10px] text-[#1616168A]">
                       Google
                     </p>
-                    <p className="flex text-base font-bold">12,000</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex xl:w-[14vw] items-center h-16 border-r px-7 ">
@@ -133,8 +133,8 @@ const AdminUsage = () => {
                     <Image src={jira} width={30} alt="none" className="adds" />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">Jira</p>
-                    <p className="flex text-base font-bold">12,000</p>
+                    <p className="flex text-[10px] text-[#1616168A]">Jira</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex xl:w-[14vw] items-center h-16 border-r px-7 ">
@@ -147,10 +147,10 @@ const AdminUsage = () => {
                     />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">
+                    <p className="flex text-[10px] text-[#1616168A]">
                       Confluence
                     </p>
-                    <p className="flex text-base font-bold">12,000</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
                 <div className="flex xl:w-[14vw] items-center h-16 px-7 ">
@@ -163,10 +163,10 @@ const AdminUsage = () => {
                     />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[12px] text-[#1616168A]">
+                    <p className="flex text-[10px] text-[#1616168A]">
                       Microsoft 365
                     </p>
-                    <p className="flex text-base font-bold">12,000</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
               </div>

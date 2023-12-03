@@ -65,7 +65,7 @@ const OrganizationPolicies = () => {
                 </div>
                 <div className="flex mx-10">
                   <div className="flex w-24 items-center justify-between h-8 rounded-2xl border">
-                  <Toggle label="slack"/>
+                  <Toggle label="slack."/>
                   </div>
                 </div>
               </div>

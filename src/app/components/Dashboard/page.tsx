@@ -7,7 +7,7 @@ import AllWorkspace from "../AllWorkspaces/page";
 import Singleworkspace from './Workspaces/WorkspaceHeaders/Singleworkspace';
 
 const Page = () => {
-  const [currentView, setCurrentView] = useState('singleWorkspace');
+  const [currentView, setCurrentView] = useState('allWorkspace');
 
   const switchToAllWorkspace = () => {
     setCurrentView('allWorkspace');
@@ -21,9 +21,9 @@ const Page = () => {
       <main className='dashboard'>
       <Navbar />
       <div className="dashboardbody">
-        <Sidebar switchToAllWorkspace={switchToAllWorkspace} switchToSingleWorkspace={switchToSingleWorkspace} />
+        <Sidebar switchToSingleWorkspace={switchToSingleWorkspace} switchToAllWorkspace={switchToAllWorkspace}  />
         <div className="contentbox">
-          {currentView === 'allWorkspace' ? <AllWorkspace /> : <Singleworkspace />}
+          {currentView === 'singleWorkspace' ? <Singleworkspace /> : <AllWorkspace />}
         </div>
       </div>
     </main>

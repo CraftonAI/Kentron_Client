@@ -9,8 +9,10 @@
 .datasource{
     width: 100%;
     /* overflow-x: scroll; */
-    height: 75vh;
+    height: 77vh;
     padding-bottom: 40px ;
+    display: flex;
+    flex-direction: column;
     overflow-y: scroll;
 }
 .enterprise{
@@ -66,7 +68,7 @@
     margin-top: 15px;
 }
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 2px;
   }
   
   /* Track */
@@ -76,9 +78,24 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #6528F7;
+    background: rgb(202, 201, 201);
     border-radius: 8px;
   }
+
+  /* General style for all browsers */
+::-webkit-scrollbar {
+    height: 7px;
+  }
+  
+  /* Style for Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+  
 
 
   /* Slack Enterprise */

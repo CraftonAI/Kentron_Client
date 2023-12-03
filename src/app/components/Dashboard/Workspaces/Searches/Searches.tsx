@@ -38,17 +38,17 @@ export const Searches = () => {
   return (
     <div className="flex h-[76vh] overflow-y-scroll w-full flex-col">
       <div className="flex flex-col w-full">
-        <div className="flex w-[25%] xl:w-[22%] 2xl:w-[15%] justify-around py-4">
+        <div className="flex w-[25%] xl:w-[22%] 2xl:w-[22%] justify-around py-4">
           Showing<span className="flex font-semibold">16,456</span> search
           results,
         </div>
         <div className="flex w-[100%] my-1 2xl:my-0">
           <div className="flex px-2 2xl:w-[15%]">
-            <span className="flex w-full px-2 shadow-lg justify-around bg-green-200 h-9 items-center rounded-full">
+            <span className="flex w-full px-2 shadow-lg justify-around h-9 items-center rounded-full">
               <div className="flex">
                 <Image src={check} width={30} alt="none" className="h-6 w-6" />
               </div>
-              <div className="flex text-xs">Data collection completed</div>
+              <div className="flex px-2 text-[10px] 2xl:text-xs">Data collection completed</div>
               <div className="flex h-full items-center">
                 <GiBiceps />
               </div>
@@ -56,7 +56,7 @@ export const Searches = () => {
           </div>
           <div className="flex flex-1 px-2">
             <span className="flex w-full px-2 shadow-lg justify-start h-9 items-center rounded-full">
-              <div className="flex text-xs mx-4 h-full items-center font-bold">
+              <div className="flex text-[9.4px] 2xl:text-xs mx-4 h-full items-center font-medium 2xl:font-bold">
                 Data collection contains :{" "}
               </div>
               <div className="flex 2xl:w-9/12 w-auto justify-around items-center h-full">
@@ -70,7 +70,7 @@ export const Searches = () => {
                       className="mx-1 h-5 w-5"
                     />
                   </div>
-                  <div className="flex text-xs">PII</div>
+                  <div className="flex text-[9.4px] 2xl:text-xs">PII</div>
                 </div>
                 <div className="flex h-full items-center">
                   <div className="flex px-1">
@@ -81,7 +81,7 @@ export const Searches = () => {
                       className="mx-1 h-5 w-5"
                     />
                   </div>
-                  <div className="flex text-xs">Sensitive Words</div>
+                  <div className="flex text-[9.4px] 2xl:text-xs">Sensitive Words</div>
                 </div>
                 <div className="flex h-full items-center">
                   <div className="flex px-1">
@@ -92,7 +92,7 @@ export const Searches = () => {
                       className="mx-1 h-5 w-5"
                     />
                   </div>
-                  <div className="flex text-xs">HIPAA</div>
+                  <div className="flex text-[9.4px] 2xl:text-xs">HIPAA</div>
                 </div>
                 <div className="flex h-full items-center">
                   <div className="flex px-1">
@@ -103,7 +103,7 @@ export const Searches = () => {
                       className="mx-1 h-5 w-5"
                     />
                   </div>
-                  <div className="flex text-xs">Contracts</div>
+                  <div className="flex text-[9.4px] 2xl:text-xs">Contracts</div>
                 </div>
                 <div className="flex h-full items-center">
                   <div className="flex px-1">
@@ -114,7 +114,7 @@ export const Searches = () => {
                       className="mx-1 h-5 w-5"
                     />
                   </div>
-                  <div className="flex text-xs">Address</div>
+                  <div className="flex text-[9.4px] 2xl:text-xs">Address</div>
                 </div>
                 <div className="flex h-full items-center">
                   <div className="flex px-1">
@@ -125,7 +125,7 @@ export const Searches = () => {
                       className="mx-1 h-5 w-5"
                     />
                   </div>
-                  <div className="flex text-xs">US Social Security Number</div>
+                  <div className="flex text-[9.4px] 2xl:text-xs">US Social Security Number</div>
                 </div>
                 <div className="flex h-full items-center">
                   <div className="flex px-1">
@@ -136,7 +136,7 @@ export const Searches = () => {
                       className="mx-1 h-5 w-5"
                     />
                   </div>
-                  <div className="flex text-xs">Phone Number</div>
+                  <div className="flex text-[9.4px] 2xl:text-xs">Phone Number</div>
                 </div>
                 <div className="flex h-full items-center">
                   <div className="flex px-1">
@@ -147,7 +147,7 @@ export const Searches = () => {
                       className="mx-1 h-5 w-5"
                     />
                   </div>
-                  <div className="flex text-xs">Passport</div>
+                  <div className="flex text-[9.4px] 2xl:text-xs">Passport</div>
                 </div>
               </div>
             </span>
@@ -183,7 +183,7 @@ export const Searches = () => {
       </div>
       <div className="flex h-[60vh] scrollmain">
         <div className="flex flex-1 flex-col justify-between overflow-y-scroll scrollsemi">
-        <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
+        <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] w-full 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
             <div className="flex w-full px-4 h-auto 2xl:h-24 items-center">
               <span className="flex w-12 h-12 rounded-full items-center justify-center border mx-2 shadow-lg">
                 <Image src={work} width={30} alt="none" className="h-6 w-6" />
@@ -202,15 +202,15 @@ export const Searches = () => {
                     {" "}
                     12/05/2023{" "}
                   </div>
-                  <div className="flex flex-1 px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
+                  <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 -mr-1 text-base" />
+                    <FiUser className="ml-2 xl:-mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
               </span>
-              <span className="flex flex-1 justify-end px-2 items-center">
+              <span className="flex 2xl:flex-1 justify-end 2xl:px-2 items-center">
                 <BiDownload className="mx-1" size={22} />
                 <PiStarBold classname="mx-1" size={20} />
                 <MdOutlineInfo className="ml-1" size={20} />
@@ -228,7 +228,7 @@ export const Searches = () => {
               and typesetting industry.
             </span>
           </span>
-          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
+          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] w-full 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
             <div className="flex w-full px-4 h-auto 2xl:h-24 items-center">
               <span className="flex w-12 h-12 rounded-full items-center justify-center border mx-2 shadow-lg">
                 <Image src={work} width={30} alt="none" className="h-6 w-6" />
@@ -247,15 +247,15 @@ export const Searches = () => {
                     {" "}
                     12/05/2023{" "}
                   </div>
-                  <div className="flex flex-1 px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
+                  <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 -mr-1 text-base" />
+                    <FiUser className="ml-2 xl:-mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
               </span>
-              <span className="flex flex-1 justify-end px-2 items-center">
+              <span className="flex 2xl:flex-1 justify-end 2xl:px-2 items-center">
                 <BiDownload className="mx-1" size={22} />
                 <PiStarBold classname="mx-1" size={20} />
                 <MdOutlineInfo className="ml-1" size={20} />
@@ -273,7 +273,7 @@ export const Searches = () => {
               and typesetting industry.
             </span>
           </span>
-          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF]  2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
+          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] w-full 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
             <div className="flex w-full px-4 h-auto 2xl:h-24 items-center">
               <span className="flex w-12 h-12 rounded-full items-center justify-center border mx-2 shadow-lg">
                 <Image src={work} width={30} alt="none" className="h-6 w-6" />
@@ -292,15 +292,15 @@ export const Searches = () => {
                     {" "}
                     12/05/2023{" "}
                   </div>
-                  <div className="flex flex-1 px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
+                  <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 -mr-1 text-base" />
+                    <FiUser className="ml-2 xl:-mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
               </span>
-              <span className="flex flex-1 justify-end px-2 items-center">
+              <span className="flex 2xl:flex-1 justify-end 2xl:px-2 items-center">
                 <BiDownload className="mx-1" size={22} />
                 <PiStarBold classname="mx-1" size={20} />
                 <MdOutlineInfo className="ml-1" size={20} />
@@ -318,7 +318,7 @@ export const Searches = () => {
               and typesetting industry.
             </span>
           </span>
-          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
+          <span className="flex flex-col lg:b border shadow-md rounded-md bg-[#FFFFFFBF] w-full 2xl:w-[96%] my-1 h-auto 2xl:h-[169px]">
             <div className="flex w-full px-4 h-auto 2xl:h-24 items-center">
               <span className="flex w-12 h-12 rounded-full items-center justify-center border mx-2 shadow-lg">
                 <Image src={work} width={30} alt="none" className="h-6 w-6" />
@@ -337,15 +337,15 @@ export const Searches = () => {
                     {" "}
                     12/05/2023{" "}
                   </div>
-                  <div className="flex flex-1 px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
+                  <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 -mr-1 text-base" />
+                    <FiUser className="ml-2 xl:-mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
               </span>
-              <span className="flex flex-1 justify-end px-2 items-center">
+              <span className="flex 2xl:flex-1 justify-end 2xl:px-2 items-center">
                 <BiDownload className="mx-1" size={22} />
                 <PiStarBold classname="mx-1" size={20} />
                 <MdOutlineInfo className="ml-1" size={20} />
