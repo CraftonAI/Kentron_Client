@@ -10,7 +10,7 @@ interface ShareProps {
 
 const SharePopup: React.FC<ShareProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 border rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] h-[35vh] 2xl:h-[45vh] p-2 z-50">
+    <div className="fixed top-1/2 left-1/2 border rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] h-[50vh] 2xl:h-[50vh] p-2 z-50">
       <div className="flex w-full flex-col h-full">
         <div className="flex w-full justify-between my-2 2xl:my-4">
           <span className="flex font-normal text-sm mx-4 w-full h-full items-center">
@@ -25,12 +25,12 @@ const SharePopup: React.FC<ShareProps> = ({ onClose }) => {
         </div>
         <div className="flex flex-col justify-around flex-1">
           {/* Name */}
-          <div className="flex w-full mx-6 my-2">
+          <div className="flex w-full mx-6">
             <span className="flex text-sm 2xl:text-sm h-full items-center">
               User or Group to share with
             </span>
           </div>
-          <div className="flex w-full">
+          <div className="flex w-full -my-1">
             <input
               placeholder="Add user.."
               type="text"
@@ -39,13 +39,13 @@ const SharePopup: React.FC<ShareProps> = ({ onClose }) => {
           </div>
 
           {/* Email ID */}
-          <div className="flex w-full mx-6 my-2">
+          <div className="flex w-full mx-6">
             <span className="flex text-sm 2xl:text-sm h-full items-center">
               Permission
             </span>
           </div>
 
-          <div className="flex w-full">
+          <div className="flex w-full -my-1">
             <input
               placeholder="Select permission"
               type="text"
@@ -53,13 +53,13 @@ const SharePopup: React.FC<ShareProps> = ({ onClose }) => {
             />
           </div>
 
-          <div className="flex w-full mx-6 my-2">
+          <div className="flex w-full mx-6">
             <span className="flex text-sm 2xl:text-sm h-full items-center">
               Message
             </span>
           </div>
 
-          <div className="flex w-full">
+          <div className="flex w-full -my-1">
             <input
               placeholder="Add a note to send with the email"
               type="text"

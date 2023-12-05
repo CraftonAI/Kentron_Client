@@ -4,7 +4,10 @@ import { FaShareFromSquare } from "react-icons/fa6";
 import { GrStatusGood } from "react-icons/gr";
 import { Pagination } from "@nextui-org/react";
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import "../AllWorkspaces/workspace.css"
+import "../AllWorkspaces/workspace.css";
+import { FaRegEdit } from "react-icons/fa";
+import { LuInfo } from "react-icons/lu";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import {
   Dropdown,
   DropdownTrigger,
@@ -32,6 +35,9 @@ const AllWorkspace = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
+    null
+  );
 
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
@@ -45,17 +51,23 @@ const AllWorkspace = () => {
 
   const isAllChecked = currentItems.every((user) => selectAll);
 
+  const handleDropdownClick = (index: number) => {
+    setOpenDropdownIndex(openDropdownIndex === index ? null : index);
+  };
+
   return (
     <div className="flex h-[86vh] 2xl:w-full flex-col">
-      <div className="flex py-6 text-2xl mx-3 font-semibold text-black">All Workspaces </div>
+      <div className="flex py-6 text-2xl mx-3 font-semibold text-black">
+        All Workspaces{" "}
+      </div>
       <div className="2xl:h-[90%] lg:h-[90%] flex bg-white px-3 rounded-md flex-col 2xl:w-full mx-3">
-      <div className="flex py-3 2xl:w-full justify-end px-3 items-center text-black">
-      <input
-              className="flex h-10 shadow-md border rounded-md px-5"
-              type="search"
-              placeholder="Search here..."
-            />
-         </div>
+        <div className="flex py-3 2xl:w-full justify-end px-3 items-center text-black">
+          <input
+            className="flex h-10 shadow-md border rounded-md px-5"
+            type="search"
+            placeholder="Search here..."
+          />
+        </div>
         {/* <div>table</div> */}
         <div className="sh-full overflow-y-scroll lg:my-8 2xl:my-6 shadow-md rounded-md border">
           <table className="min-w-max w-full h-full table-auto rounded-md ">
@@ -98,10 +110,21 @@ const AllWorkspace = () => {
                         />
                         <FaShareFromSquare style={{ marginRight: "5px" }} />{" "}
                         {user.name}
-                        
-                          
-                            <BiDotsVerticalRounded className="mx-2" />
-                          
+                        <BiDotsVerticalRounded
+                          className="mx-2"
+                          onClick={() => handleDropdownClick(index)}
+                        />
+                        {/* Render the dropdown conditionally based on the openDropdownIndex */}
+                        {openDropdownIndex === index && (
+                          <div className="absolute xl:right-[56.7%] 2xl:right-[62%] lg:right-[50%] z-10 rounded-md border w-[10vw] h-28 mt-16  lg:mt-10">
+                            {/* Dropdown content here */}
+                            <div className="flex w-full flex-col h-full rounded-md justify-around px-4 bg-white text-black shadow-md">
+                              <p className="flex flex-1 items-center"> <FaRegEdit className="mx-1"/>Edit</p>
+                              <p className="flex flex-1 items-center"><LuInfo className="mx-1"/>View detail</p>
+                              <p className="flex flex-1 items-center"><RiDeleteBin6Line className="mx-1"/>Delete</p>
+                            </div>
+                          </div>
+                        )}
                       </span>
                     </div>
                   </td>

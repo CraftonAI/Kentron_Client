@@ -47,7 +47,7 @@ export const DataSource = () => {
     }));
   
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 1; // Adjust as needed
+    const itemsPerPage = 10; // Adjust as needed
   
     // Get current items
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -62,13 +62,13 @@ export const DataSource = () => {
 
   return (
       <div className='datasource'>
-        <div className="flex h-[45vh] flex-col w-full border mb-2">
-          <div className="flex h-[7vh] border w-full bg-[#E6E6E6] px-2 justify-between px-2 items-center">Existing Connectors
+        <div className="flex h-[40vh] flex-col w-full border mb-2">
+          <div className="flex h-[7vh] border w-full bg-[#E6E6E6] justify-between px-2 items-center">Existing Connections
           <FaAngleDown /></div>
           <div className="flex w-full px-4 h-full flex-col overflow-y-scroll">
 
-          <div className="bg-white sh-full overflow-y-scroll my-6 shadow-md rounded-md border">
-        <table className="min-w-max bg-white w-full h-full table-auto rounded-md ">
+          <div className="bg-white h-full overflow-y-scroll my-6 shadow-md rounded-md border">
+        <table className="min-w-max bg-white w-full h- table-auto rounded-md ">
           <thead>
             <tr className="border-b py-4 text-sm font-bold leading-normal">
               <th className="py-3 px-6 flex h-12 items-center text-left">
@@ -136,7 +136,7 @@ export const DataSource = () => {
       </div>
     
      
-        <div className="flex justify-between -mt-6 overflow-x-hidden bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
+        <div className="flex justify-between -mt-5 overflow-x-hidden bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
           <div className="flex">
             <span className="text-sm text-gray-700">
               Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
@@ -192,7 +192,7 @@ export const DataSource = () => {
           </div>
         </div>
   
-        <div className='enterprise'>
+        <div className='enterprise px-4'>
           <h1>Non-Enterprise Sources</h1>
           <div className="enterpriseproducts">
           <div className='product'>

@@ -21,7 +21,7 @@ const ManageSources = () => {
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
               <div className="flex flex-1">
-                  <div className="flex items-center h-16 border-r px-7 mx-7 ">
+                  <div className="flex items-center h-16 border-r w-[18vw] px-7 mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
                       <p className="flex text-sm font-bold">
@@ -41,7 +41,7 @@ const ManageSources = () => {
             <div className="flex justify-center my-4 h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
                 <div className="flex flex-1">
-                  <div className="flex items-center h-16 border-r px-7 mx-7 ">
+                  <div className="flex items-center h-16 border-r px-7 w-[18vw] mx-7 ">
                     <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                     <div className="flex flex-col mx-3">
                       <p className="flex text-sm font-bold">

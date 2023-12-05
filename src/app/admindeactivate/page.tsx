@@ -70,7 +70,7 @@ const DeactiveUser = () => {
                               </th>
                               <th className="py-3 px-6 text-left">Email</th>
                               <th className="py-3 px-6 flex mx-3 text-center">
-                                Role
+                                Deactivated on
                               </th>
                               <th className="py-3 px-5 justify-start">
                                 Action

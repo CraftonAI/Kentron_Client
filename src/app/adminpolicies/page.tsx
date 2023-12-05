@@ -49,7 +49,7 @@ const OrganizationPolicies = () => {
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
                 <div className="flex flex-1">
                 <div className="flex font-bold w-[14vw] text-base items-center h-16 border-r px-7 mx-5">
-                  Guest Access
+                  Workspace Deletion
                 </div>
                 <div className="flex xl:w-[14vw] items-center h-16 border-r px-7 mx-7 ">
                   <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
