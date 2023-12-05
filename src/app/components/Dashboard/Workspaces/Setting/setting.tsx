@@ -75,9 +75,9 @@ export const Setting = () => {
       <div className="flex h-12 text-sm font-bold items-center mt-5">
         Users & Permissions
       </div>
-      <div className="h-[70%] flex flex-col w-full">
+      <div className="h-[70%] flex overflow-y-scroll  flex-col w-full">
         {/* <div>table</div> */}
-        <div className="bg-white shadow-md h-[90%] overflow-y-scroll  my-6 rounded-md border">
+        <div className="bg-white shadow-md h-[90%]  my-6 rounded-md border">
           <table className="min-w-max bg-white w-full h-full table-auto rounded-md ">
             <thead>
               <tr className="border-b py-4 text-sm font-bold leading-normal">

@@ -39,6 +39,15 @@ const AllWorkspace = () => {
     null
   );
 
+  const [createbox, setcreatebox] = useState(false);
+  const createboxshow = () => {
+    setcreatebox(true);
+  };
+  const createboxclose = () => {
+    setcreatebox(false);
+  };
+
+
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
@@ -60,7 +69,7 @@ const AllWorkspace = () => {
       <div className="flex py-6 text-2xl mx-3 font-semibold text-black">
         All Workspaces{" "}
       </div>
-      <div className="2xl:h-[90%] lg:h-[90%] flex bg-white px-3 rounded-md flex-col 2xl:w-full mx-3">
+      <div className="2xl:h-[90%] lg:h-[90%] overflow-y-scroll  flex bg-white px-3 rounded-md flex-col 2xl:w-full mx-3">
         <div className="flex py-3 2xl:w-full justify-end px-3 items-center text-black">
           <input
             className="flex h-10 shadow-md border rounded-md px-5"
@@ -69,10 +78,10 @@ const AllWorkspace = () => {
           />
         </div>
         {/* <div>table</div> */}
-        <div className="sh-full overflow-y-scroll lg:my-8 2xl:my-6 shadow-md rounded-md border">
+        <div className="sh-full lg:my-8 2xl:my-6 shadow-md rounded-md border">
           <table className="min-w-max w-full h-full table-auto rounded-md ">
             <thead>
-              <tr className="border-b py-4 text-sm text-black font-bold leading-normal">
+              <tr className="border-b border-gray-200 py-4 text-sm text-black font-bold leading-normal">
                 <th className="py-3 px-6 flex h-12 items-center text-left">
                   <input
                     id="selectAllCheckbox"
@@ -96,7 +105,7 @@ const AllWorkspace = () => {
             </thead>
             <tbody className="text-sm font-light text-black">
               {currentItems.map((user, index) => (
-                <tr className="border-b" key={index}>
+                <tr className="" key={index}>
                   <td className="py-3 px-6 text-left whitespace-nowrap">
                     <div className="flex items-center">
                       <span className="font-bold lg:w-auto justify-between flex h-12 items-center">
@@ -111,17 +120,17 @@ const AllWorkspace = () => {
                         <FaShareFromSquare style={{ marginRight: "5px" }} />{" "}
                         {user.name}
                         <BiDotsVerticalRounded
-                          className="mx-2"
+                          className="mx-2 cursor-pointer"
                           onClick={() => handleDropdownClick(index)}
                         />
                         {/* Render the dropdown conditionally based on the openDropdownIndex */}
                         {openDropdownIndex === index && (
-                          <div className="absolute xl:right-[56.7%] 2xl:right-[62%] lg:right-[50%] z-10 rounded-md border w-[10vw] h-28 mt-16  lg:mt-10">
+                          <div className="absolute pop lg:text-xs xl:text-sm rounded-md border w-[13vw] lg:w-[10vw] h-28 -mb-20">
                             {/* Dropdown content here */}
                             <div className="flex w-full flex-col h-full rounded-md justify-around px-4 bg-white text-black shadow-md">
-                              <p className="flex flex-1 items-center"> <FaRegEdit className="mx-1"/>Edit</p>
-                              <p className="flex flex-1 items-center"><LuInfo className="mx-1"/>View detail</p>
-                              <p className="flex flex-1 items-center"><RiDeleteBin6Line className="mx-1"/>Delete</p>
+                              <p className="flex flex-1 items-center cursor-pointer"> <FaRegEdit className="mx-1"/>Edit</p>
+                              <p className="flex flex-1 items-center cursor-pointer"><LuInfo className="mx-1"/>View detail</p>
+                              <p className="flex flex-1 items-center cursor-pointer"><RiDeleteBin6Line className="mx-1"/>Delete</p>
                             </div>
                           </div>
                         )}

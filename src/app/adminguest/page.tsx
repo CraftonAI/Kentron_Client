@@ -7,8 +7,6 @@ import React, { useState } from "react";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { Pagination } from "@nextui-org/react";
 
-
-
 const ActiveGuest = () => {
   const data = new Array(50).fill(null).map((_, index) => ({
     name: `User Name ${index + 1}`,
@@ -63,11 +61,11 @@ const ActiveGuest = () => {
               <div className="flex flex-col w-full">
                 <div className="overflow-x-auto shadow-md sm:rounded-lg">
                   <div className="inline-block w-full align-middle">
-                    <div className="overflow-hidden w-full">
+                    <div className="overflow-hidden overflow-y-scroll w-full">
                       <div className="bg-white shadow-md h-full rounded my-6">
                         <table className="min-w-max bg-white w-full h-full table-auto">
                           <thead>
-                            <tr className="border-b py-4 text-sm font-bold leading-normal">
+                            <tr className="border-b border-gray-200 py-4 text-sm font-bold leading-normal">
                               <th className="py-3 px-6 text-left">
                                 <input
                                   id="selectAllCheckbox"
@@ -90,7 +88,7 @@ const ActiveGuest = () => {
                           </thead>
                           <tbody className="text-gray-600 text-sm font-light">
                             {currentItems.map((user, index) => (
-                              <tr className="border-b" key={index}>
+                              <tr className="" key={index}>
                                 <td className="py-3 px-6 text-left whitespace-nowrap">
                                   <div className="flex items-center">
                                     <span className="font-bold">
@@ -136,21 +134,22 @@ const ActiveGuest = () => {
                         </table>
                       </div>
                       <div className="flex justify-between -mt-6 bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
-          <div className="flex">
-            <span className="text-sm text-gray-700">
-              Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
-              {currentPage * itemsPerPage} of {data.length} entries
-            </span>
-          </div>
-          <div className="flex">
-            <Pagination
-              showControls
-              total={pageCount}
-              initialPage={currentPage}
-              onChange={(newPage) => paginate(newPage)}
-            />
-          </div>
-        </div>
+                        <div className="flex">
+                          <span className="text-sm text-gray-700">
+                            Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
+                            {currentPage * itemsPerPage} of {data.length}{" "}
+                            entries
+                          </span>
+                        </div>
+                        <div className="flex">
+                          <Pagination
+                            showControls
+                            total={pageCount}
+                            initialPage={currentPage}
+                            onChange={(newPage) => paginate(newPage)}
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
