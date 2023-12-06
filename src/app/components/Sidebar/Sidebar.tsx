@@ -55,12 +55,13 @@ const Sidebar: React.FC<SidebarProps> = ({
         />
         <p>My Exports</p>
       </div>
-      <Link href="/adminhome">
-        <div className="sideitems">
-          <Image src={settings} width={30} alt="none" className="sideicon" />
-          <p>Admin</p>
-        </div>
-      </Link>
+      <Link href="/adminhome" target="_blank">
+  <div className="sideitems">
+    <Image src={settings} width={30} alt="none" className="sideicon" />
+    <p>Admin</p>
+  </div>
+</Link>
+
       <div className={createbox ? "workspacecreation" : "createworkspacehid"}>
         <div className="createbox">
           <div className="createhead">

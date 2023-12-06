@@ -8,6 +8,7 @@ import UserPopup from "../Admin/popups/userpop";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { MdPersonAddAlt } from "react-icons/md";
 import { Pagination } from "@nextui-org/react";
+import "../Admin/admin.css";
 
 const ActiveUsers = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -28,7 +29,7 @@ const ActiveUsers = () => {
   }));
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4; // Adjust as needed
+  const itemsPerPage = 10; // Adjust as needed
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -67,12 +68,12 @@ const ActiveUsers = () => {
           </div>
           {isPopupVisible && <UserPopup onClose={closePopup} />}
 
-          <div className="flex w-full h-full">
+          <div className="flex w-full h-[80vh] overflow-y-scroll">
             <div className="w-full mx-5">
               <div className="flex flex-col w-full">
-                <div className="overflow-x-auto shadow-md sm:rounded-lg">
+                <div className="overflow-x-auto h-full bg-white shadow-md sm:rounded-lg">
                   <div className="inline-block w-full align-middle">
-                    <div className="overflow-hidden overflow-y-scroll w-full">
+                    <div className="w-full">
                       {/* <div>table</div> */}
                       <div className="bg-white shadow-md h-full rounded my-6">
                         <table className="min-w-max bg-white w-full h-full table-auto">
@@ -143,7 +144,7 @@ const ActiveUsers = () => {
                           </tbody>
                         </table>
                       </div>
-                      <div className="flex justify-between -mt-6 bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
+                      <div className="flex justify-between -mt-6 bg-white py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
                         <div className="flex">
                           <span className="text-sm text-gray-700">
                             Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}

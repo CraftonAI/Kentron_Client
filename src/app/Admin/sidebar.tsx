@@ -7,6 +7,13 @@ import { CiMemoPad } from "react-icons/ci";
 import { BiSupport } from "react-icons/bi";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import user from "../components/Assets/1.png";
+import report from "../components/Assets/2.png";
+import setting from "../components/Assets/3.png";
+import support from "../components/Assets/4.png";
+import down from "../components/Assets/downn.png";
+
 
 const SideBar = () => {
   const [showUser, setshowUser] = useState(false);
@@ -45,30 +52,30 @@ const SideBar = () => {
           }`}
           onClick={toggleUser}
         >
-          <span className="flex mx-4 font-bold">
-            <HiUsers size={20} />
+          <span className="flex mx-4 font-bold h-6 w-6">
+            <Image src={user} width={20} className="" alt="user"/>
           </span>
           <span className="flex">Users</span>
         </span>
         {showUser && (
           <div className="flex flex-col">
             <Link href="/adminactive">
-              <span className="flex justify-end mx-4 xl:mx-0 xl:w-[11vw] my-1 h-10 rounded-lg items-center">
-                <div className="flex w-11/12 2xl:w-10/12 h-10 text-xs xl:text-base  rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+              <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-1 h-10 rounded-lg items-center">
+                <div className="flex w-11/12 2xl:w-10/12 h-10 text-xs xl:text-sm  rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Active users
                 </div>
               </span>
             </Link>
             <Link href="/adminguest">
-              <span className="flex justify-end mx-4 xl:mx-0 xl:w-[11vw] my-1 h-10 rounded-lg items-center">
-                <div className="flex w-11/12 2xl:w-10/12 h-10 text-xs xl:text-base rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+              <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-1 h-10 rounded-lg items-center">
+                <div className="flex w-11/12 2xl:w-10/12 h-10 text-xs xl:text-sm rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Guest users
                 </div>
               </span>
             </Link>
             <Link href="/admindeactivate">
-              <span className="flex justify-end mx-4 xl:mx-0 xl:w-[11vw] my-1 h-10 rounded-lg items-center">
-                <div className="flex w-11/12 2xl:w-10/12 h-10 text-xs xl:text-base rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+              <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-1 h-10 rounded-lg items-center">
+                <div className="flex w-11/12 2xl:w-10/12 h-10 text-xs xl:text-sm rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Deactivated users
                 </div>
               </span>
@@ -81,8 +88,8 @@ const SideBar = () => {
           }`}
           onClick={toggleReport}
         >
-          <span className="flex mx-4 font-bold">
-            <CiMemoPad size={20} />
+          <span className="flex mx-4 font-bold h-6 w-6">
+          <Image src={report} width={20} className="" alt="user"/>
           </span>
           <span className="flex">Report</span>
         </span>
@@ -102,8 +109,8 @@ const SideBar = () => {
             showUser ? "bg-white" : ""
           }`}
           onClick={toggleSetting}>
-          <span className="flex mx-4 font-bold">
-            <FiSettings size={20} />
+          <span className="flex mx-4 font-bold h-6 w-6">
+          <Image src={setting} width={20} className="" alt="setting"/>
           </span>
           <span className="flex">Settings</span>
         </span>
@@ -111,28 +118,28 @@ const SideBar = () => {
           <div className="flex flex-col">
             <Link href="/admininfo">
               <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-10 text-xs xl:text-base rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-xs xl:text-sm rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Organization Info
                 </div>
               </span>
             </Link>
             <Link href="/adminpolicies">
               <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-10 text-xs xl:text-base rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-xs xl:text-sm rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Organization policies
                 </div>
               </span>
             </Link>
             <Link href="/adminsso">
               <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-10 text-xs xl:text-base rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-xs xl:text-sm rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Setup SSO
                 </div>
               </span>
             </Link>
             <Link href="/adminsources">
               <span className="flex justify-center mx-4 xl:mx-0 xl:w-[14vw] my-2 h-10 rounded-lg items-center">
-                <div className="flex w-10/12 h-10 text-xs xl:text-base rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
+                <div className="flex w-10/12 h-10 text-xs xl:text-sm rounded-md hover:text-black hover:bg-[#E6E6E6] justify-start px-4 items-center hover:cursor-pointer">
                   Manage sources
                 </div>
               </span>
@@ -140,8 +147,8 @@ const SideBar = () => {
           </div>
         )}
         <span className="flex mx-4 xl:mx-0 xl:w-[11vw] text-sm xl:text-base hover:text-black my-2 hover:cursor-pointer hover:bg-[#E6E6E6] h-10 rounded-lg items-center">
-          <span className="flex mx-4 font-bold">
-            <BiSupport size={20} />
+          <span className="flex mx-4 h-6 w-6 font-bold">
+          <Image src={support} width={20} className="" alt="support"/>
           </span>
           <span className="flex">Support</span>
         </span>

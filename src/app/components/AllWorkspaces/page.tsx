@@ -8,6 +8,8 @@ import "../AllWorkspaces/workspace.css";
 import { FaRegEdit } from "react-icons/fa";
 import { LuInfo } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import wk from "../Assets/workspaces.png";
+import Image from "next/image";
 import {
   Dropdown,
   DropdownTrigger,
@@ -17,15 +19,17 @@ import {
 } from "@nextui-org/react";
 
 const AllWorkspace = () => {
-  const data = new Array(20).fill(null).map((_, index) => ({
-    name: `Workspace Name${index + 1}`,
-    size: 0.6,
-    external: "yes",
-    status: "Active",
-    date: "14/08/2022",
-    lastDate: "12/05/2023",
-    lastby: "John Deer",
-  }));
+  const [data, setData] = useState(
+    new Array(20).fill(null).map((_, index) => ({
+      name: `Workspace Name${index + 1}`,
+      size: 0.6,
+      external: "yes",
+      status: "Active",
+      date: "14/08/2022",
+      lastDate: "12/05/2023",
+      lastby: "John Deer",
+    }))
+  );
 
   const [currentPage, setCurrentPage] = useState(1);
   const [selectAll, setSelectAll] = useState(false); // Added state for "Select All" checkbox
@@ -64,6 +68,16 @@ const AllWorkspace = () => {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
 
+  const handleDelete = (index: number) => {
+    // Create a copy of the data array
+    const newData = [...data];
+    // Remove the selected row based on the index
+    newData.splice(indexOfFirstItem + index, 1);
+    // Update the state with the new data
+    setData(newData);
+    setOpenDropdownIndex(null);
+  };
+
   return (
     <div className="flex h-[86vh] 2xl:w-full flex-col">
       <div className="flex py-6 text-2xl mx-3 font-semibold text-black">
@@ -78,11 +92,11 @@ const AllWorkspace = () => {
           />
         </div>
         {/* <div>table</div> */}
-        <div className="sh-full lg:my-8 2xl:my-6 shadow-md rounded-md border">
+        <div className="sh-full lg:my-8 2xl:my-6 rounded-md">
           <table className="min-w-max w-full h-full table-auto rounded-md ">
             <thead>
-              <tr className="border-b border-gray-200 py-4 text-sm text-black font-bold leading-normal">
-                <th className="py-3 px-6 flex h-12 items-center text-left">
+              <tr className="border-b lg:text-[10px] xl:text-[13px] 2xl:text-base  border-gray-200 py-4 text-sm text-black font-bold leading-normal">
+                <th className="py-3 xl:px-6 flex h-12 items-center text-left">
                   <input
                     id="selectAllCheckbox"
                     type="checkbox"
@@ -93,20 +107,20 @@ const AllWorkspace = () => {
                   />
                   Name
                 </th>
-                <th className="py-3 px-6 text-left">Size (GB)</th>
-                <th className="py-3 px-6 flex mx-3 text-center">
+                <th className="py-3 xl:px-6 text-left">Size (GB)</th>
+                <th className="py-3 xl:px-6 flex mx-3 text-center">
                   Externally Shared
                 </th>
                 <th className="py-3 px-8 justify-start pl-0">Status</th>
-                <th className="py-3 px-5 justify-start">Created Date</th>
-                <th className="py-3 px-5 justify-start">Last Modify Date</th>
-                <th className="py-3 px-5 justify-start">Last Modify By</th>
+                <th className="py-3 xl:px-5 justify-start">Created Date</th>
+                <th className="py-3 xl:px-5 justify-start">Last Modify Date</th>
+                <th className="py-3 xl:px-5 justify-start">Last Modify By</th>
               </tr>
             </thead>
-            <tbody className="text-sm font-light text-black">
+            <tbody className="text-sm font-light lg:text-[10px] xl:text-sm 2xl:text-base  text-black">
               {currentItems.map((user, index) => (
                 <tr className="" key={index}>
-                  <td className="py-3 px-6 text-left whitespace-nowrap">
+                  <td className="py-3 xl:px-6 text-left whitespace-nowrap">
                     <div className="flex items-center">
                       <span className="font-bold lg:w-auto justify-between flex h-12 items-center">
                         <input
@@ -117,7 +131,7 @@ const AllWorkspace = () => {
                           onChange={() => {}}
                           className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                         />
-                        <FaShareFromSquare style={{ marginRight: "5px" }} />{" "}
+                        <Image src={wk} width={15} alt="wk" className="mr-[5px]" />
                         {user.name}
                         <BiDotsVerticalRounded
                           className="mx-2 cursor-pointer"
@@ -130,40 +144,40 @@ const AllWorkspace = () => {
                             <div className="flex w-full flex-col h-full rounded-md justify-around px-4 bg-white text-black shadow-md">
                               <p className="flex flex-1 items-center cursor-pointer"> <FaRegEdit className="mx-1"/>Edit</p>
                               <p className="flex flex-1 items-center cursor-pointer"><LuInfo className="mx-1"/>View detail</p>
-                              <p className="flex flex-1 items-center cursor-pointer"><RiDeleteBin6Line className="mx-1"/>Delete</p>
+                              <p onClick={() => handleDelete(index)} className="flex flex-1 items-center cursor-pointer"><RiDeleteBin6Line className="mx-1"/>Delete</p>
                             </div>
                           </div>
                         )}
                       </span>
                     </div>
                   </td>
-                  <td className="py-3 px-6 text-left">
+                  <td className="py-3 xl:px-6 text-left">
                     <div className="flex text-[#161616] font-medium mx-1 text-sm h-full justify-start items-center">
                       <span>{user.size}</span>
                     </div>
                   </td>
-                  <td className="py-3 px-6 text-center">
+                  <td className="py-3 xl:px-6 text-center">
                     <span className="flex text-[#161616] w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
                       {user.external}
                     </span>
                   </td>
 
-                  <td className="py-3 px-6 text-center">
+                  <td className="py-3 xl:px-6 text-center">
                     <div className="flex item-center justify-center mr-8">
                       {user.status}
                     </div>
                   </td>
-                  <td className="py-3 px-6 text-center">
+                  <td className="py-3 xl:px-6 text-center">
                     <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
                       {user.date}
                     </span>
                   </td>
-                  <td className="py-3 px-6 text-center">
+                  <td className="py-3 xl:px-6 text-center">
                     <span className="flex text-[#161616] w-10/12 justify-center  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
                       {user.lastDate}
                     </span>
                   </td>
-                  <td className="py-3 px-6 text-center">
+                  <td className="py-3 xl:px-6 text-center">
                     <span className="flex text-[#161616] justify-center w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
                       {user.lastby}
                     </span>

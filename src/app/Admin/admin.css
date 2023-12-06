@@ -1,7 +1,7 @@
 /* For WebKit browsers (Chrome, Safari) and Edge */
 /* This targets the entire document */
 body {
-    scrollbar-width: thin;
+    scrollbar-width: 3px;
     scrollbar-color: transparent transparent;
   }
   

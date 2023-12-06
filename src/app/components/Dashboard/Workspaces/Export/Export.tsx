@@ -32,55 +32,56 @@ export const Export = () => {
 
   return (
     <div className="flex h-[76vh]  2xl:w-full flex-col">
-      <div className="h-full flex overflow-y-scroll flex-col w-full">
+      <div className="h-full flex overflow-y-scroll overflow-x-hidden flex-col w-full">
         {/* <div>table</div> */}
-        <div className="bg-white sh-full  my-6 shadow-md rounded-md border">
+     <div className="flex flex-col flex-1 ">
+     <div className="bg-white h-full my-6 shadow-md rounded-md">
           <table className="min-w-max bg-white w-full h-full table-auto rounded-md ">
             <thead>
-              <tr className="border-b border-gray-200 py-4 text-sm font-bold leading-normal">
-                <th className="py-3 px-6 flex h-12 items-center text-left">
+              <tr className="border-b border-gray-200 py-4 lg:text-[10px] xl:text-[13px] 2xl:text-base font-bold leading-normal">
+                <th className="py-3 2xl:px-6 flex h-12 items-center text-left">
                   <input
                     id="default-checkbox"
                     type="checkbox"
                     value=""
-                    className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                    className="w-4 h-4 mx-2 2xl:mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                   />
                   Name
                 </th>
-                <th className="py-3 px-6 text-left">Size (GB)</th>
-                <th className="py-3 px-6 flex mx-3 text-center">Comment</th>
+                <th className="py-3 2xl:px-6 text-left">Size (GB)</th>
+                <th className="py-3 2xl:px-6 flex mx-3 text-center">Comment</th>
                 <th className="py-3 px-8 justify-start pl-0">Status</th>
-                <th className="py-3 px-5 justify-start">Created Date</th>
+                <th className="py-3 2xl:px-5 justify-start">Created Date</th>
               </tr>
             </thead>
-            <tbody className="text-sm font-light">
+            <tbody className="lg:text-[11px] xl:text-[13.4px] 2xl:text-base  font-light">
               {currentItems.map((user, index) => (
                 <tr className="" key={index}>
-                  <td className="py-3 px-6 text-left whitespace-nowrap">
+                  <td className="py-3 2xl:px-6 text-left whitespace-nowrap">
                     <div className="flex items-center">
                       <span className="font-bold flex h-12 items-center">
                         <input
                           id="default-checkbox"
                           type="checkbox"
                           value=""
-                          className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                          className="w-4 h-4 mx-2 2xl:mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                         />{" "}
                         <FaShareFromSquare style={{ marginRight: "5px" }} />{" "}
                         {user.name}
                       </span>
                     </div>
                   </td>
-                  <td className="py-3 px-6 text-left">
+                  <td className="py-3 2xl:px-6 text-left">
                     <div className="flex text-[#161616] font-medium mx-1 text-sm h-full justify-start items-center">
                       <span>{user.size}</span>
                     </div>
                   </td>
-                  <td className="py-3 px-6 text-center">
-                    <span className="flex text-[#161616] w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                  <td className="py-3 2xl:px-6 text-center">
+                    <span className="flex text-[#161616] w-9/12 2xl:w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
                       {user.comment}
                     </span>
                   </td>
-                  <td className="py-3 px-6 text-center">
+                  <td className="py-3 2xl:px-6 text-center">
                     <div className="flex item-center justify-end mr-8">
                       <GrStatusGood
                         style={{
@@ -92,7 +93,7 @@ export const Export = () => {
                       {user.status}
                     </div>
                   </td>
-                  <td className="py-3 px-6 text-center">
+                  <td className="py-3 2xl:px-6 text-center">
                     <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
                       {user.date}
                     </span>
@@ -103,7 +104,9 @@ export const Export = () => {
           </table>
         </div>
 
-        <div className="flex justify-between lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
+        
+     </div>
+     <div className="flex justify-between -mt-4 bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
           <div className="flex">
             <span className="text-sm text-gray-700">
               Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}

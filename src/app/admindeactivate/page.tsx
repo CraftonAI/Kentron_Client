@@ -15,7 +15,7 @@ const DeactiveUser = () => {
   }));
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4; // Adjust as needed
+  const itemsPerPage = 10; // Adjust as needed
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -47,10 +47,10 @@ const DeactiveUser = () => {
           <div className="flex h-20 w-ful justify-between items-center mx-5">
             <div className="flex text-lg font-bold">Deactivate Users</div>
           </div>
-          <div className="flex w-full h-full">
+          <div className="flex w-full h-[80vh] overflow-y-scroll">
             <div className="w-full mx-5">
               <div className="flex flex-col w-full">
-                <div className="overflow-x-auto shadow-md sm:rounded-lg">
+                <div className="overflow-x-auto shadow-md bg-white sm:rounded-lg">
                   <div className="inline-block w-full align-middle">
                     <div className="overflow-hidden overflow-y-scroll w-full">
                       <div className="bg-white shadow-md h-full rounded my-6">
