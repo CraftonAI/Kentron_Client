@@ -13,6 +13,8 @@ import { FiUser } from "react-icons/fi";
 import { RiCloseLine } from "react-icons/ri";
 import FilterPopup from "./filterpopup";
 import ExportPopup from "./exportpopup";
+import person from "../../../Assets/person.png";
+import body from "../../../Assets/Group.png";
 
 export const Searches = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -38,24 +40,25 @@ export const Searches = () => {
   return (
     <div className="flex h-[76vh] overflow-y-scroll w-full flex-col">
       <div className="flex flex-col w-full">
-        <div className="flex w-[25%] xl:w-[22%] 2xl:w-[22%] justify-around py-4">
+        <div className="flex w-[25%] xl:w-[22%] 2xl:w-[20%] justify-around py-4">
           Showing<span className="flex font-semibold">16,456</span> search
           results,
         </div>
         <div className="flex w-[100%] my-1 2xl:my-0">
-          <div className="flex px-2 2xl:w-[15%]">
-            <span className="flex w-full px-2 shadow-lg justify-around h-9 items-center rounded-full">
+          <div className="flex 2xl:w-[15%]">
+            <span className="flex bg-[#E7FFED] w-full px-2 shadow-lg justify-around h-9 items-center rounded-full">
               <div className="flex">
                 <Image src={check} width={30} alt="none" className="h-6 w-6" />
               </div>
               <div className="flex px-2 text-[10px] 2xl:text-xs">Data collection completed</div>
               <div className="flex h-full items-center">
-                <GiBiceps />
+               <Image src={body} width={20
+              } alt="biceps" />
               </div>
             </span>
           </div>
           <div className="flex flex-1 px-2">
-            <span className="flex w-full px-2 shadow-lg justify-start h-9 items-center rounded-full">
+            <span className="flex w-full px-2 shadow-lg justify-start mr-2 h-9 items-center rounded-full">
               <div className="flex text-[9.4px] 2xl:text-xs mx-4 h-full items-center font-medium 2xl:font-bold">
                 Data collection contains :{" "}
               </div>
@@ -205,15 +208,15 @@ export const Searches = () => {
                   <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 xl:-mr-1 text-base" />
+                    <Image src={person} width={20} alt='person' className="ml-2 xl:-mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
               </span>
               <span className="flex 2xl:flex-1 justify-end 2xl:px-2 items-center">
-                <BiDownload className="mx-1" size={22} />
-                <PiStarBold classname="mx-1" size={20} />
-                <MdOutlineInfo className="ml-1" size={20} />
+                <BiDownload className="mx-2" size={22} />
+                <PiStarBold classname="mx-2" size={20} />
+                <MdOutlineInfo className="ml-2" size={20} />
               </span>
             </div>
             <span className="flex w-full text-xs mx-2 font-normal p-5">
@@ -250,15 +253,15 @@ export const Searches = () => {
                   <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 xl:-mr-1 text-base" />
+                    <Image src={person} width={20} alt='person' className="ml-2 xl:-mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
               </span>
               <span className="flex 2xl:flex-1 justify-end 2xl:px-2 items-center">
-                <BiDownload className="mx-1" size={22} />
-                <PiStarBold classname="mx-1" size={20} />
-                <MdOutlineInfo className="ml-1" size={20} />
+              <BiDownload className="mx-2" size={22} />
+                <PiStarBold classname="mx-2" size={20} />
+                <MdOutlineInfo className="ml-2" size={20} />
               </span>
             </div>
             <span className="flex w-full text-xs mx-2 font-normal p-5">
@@ -295,15 +298,15 @@ export const Searches = () => {
                   <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 xl:-mr-1 text-base" />
+                    <Image src={person} width={20} alt='person' className="ml-2 xl:-mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
               </span>
               <span className="flex 2xl:flex-1 justify-end 2xl:px-2 items-center">
-                <BiDownload className="mx-1" size={22} />
-                <PiStarBold classname="mx-1" size={20} />
-                <MdOutlineInfo className="ml-1" size={20} />
+              <BiDownload className="mx-2" size={22} />
+                <PiStarBold classname="mx-2" size={20} />
+                <MdOutlineInfo className="ml-2" size={20} />
               </span>
             </div>
             <span className="flex w-full text-xs mx-2 font-normal p-5">
@@ -340,15 +343,15 @@ export const Searches = () => {
                   <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <FiUser className="ml-2 xl:-mr-1 text-base" />
+                    <Image src={person} width={20} alt='person' className="ml-2 xl:-mr-1 text-base" />
                     Direct Message
                   </div>
                 </div>
               </span>
               <span className="flex 2xl:flex-1 justify-end 2xl:px-2 items-center">
-                <BiDownload className="mx-1" size={22} />
-                <PiStarBold classname="mx-1" size={20} />
-                <MdOutlineInfo className="ml-1" size={20} />
+              <BiDownload className="mx-2" size={22} />
+                <PiStarBold classname="mx-2" size={20} />
+                <MdOutlineInfo className="ml-2" size={20} />
               </span>
             </div>
             <span className="flex w-full text-xs mx-2 font-normal p-5">
@@ -364,7 +367,7 @@ export const Searches = () => {
             </span>
           </span>
         </div>
-        <div className="flex flex-col w-80 border shadow-lg overflow-y-scroll mb-2 mx-3 rounded-md bg-[#FFFFFFBF] h-full">
+        <div className="flex flex-col w-80 border shadow-lg overflow-y-scroll mb-2 mx-4 rounded-md bg-[#FFFFFFBF] h-full">
           <div className="flex w-full justify-between items-center h-10 border-b">
             <span className="flex h-10 mx-4 font-bold text-sm items-center">
               <MdOutlineInfo className="mx-1" size={20} />

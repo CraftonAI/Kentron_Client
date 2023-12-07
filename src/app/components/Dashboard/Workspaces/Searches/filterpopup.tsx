@@ -8,23 +8,23 @@ interface FilterProps {
 
 const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[55%] lg:w-[40%] 2xl:w-[40%] 2xl:h-[72vh] rounded-lg p-2 shadow-md z-50">
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white lg:w-[50%] 2xl:w-[45%] 2xl:h-[72vh] rounded-lg p-2 shadow-md z-50">
       <div className="flex w-full flex-col h-full">
-        <div className="flex w-full border-b shadow-md py-2 items-center justify-between my-1 2xl:my-4">
-          <span className="flex h-full items-center font-bold text-sm 2xl:text-sm mx-4">
-            <span className="flex shadow-md mx-2 cursor-pointer h-10 justify-center items-center rounded-full w-10 bg-black text-white">
+        <div className="flex w-full border-b py-2 items-center justify-between my-1 2xl:my-4">
+          <span className="flex h-full items-center font-bold text-sm 2xl:text-sm">
+            <span className="flex shadow-md mx-2 cursor-pointer h-10 justify-center items-center rounded-full w-10 bg-white text-black">
               <RiFilter2Line className="mx-1" size={18} />
             </span>
             Filter Data Collection
           </span>
-          <span onClick={onClose} className="flex cursor-pointer mx-4">
+          <span onClick={onClose} className="flex cursor-pointer">
             <GrFormClose size={25} />
           </span>
         </div>
         <div className="flex text-black border-b flex-col w-full">
           <div className="flex font-normal text-sm mx-4 my-2">Source Type</div>
-          <div className="flex font-normal justify-between text-xs items-center h-12">
-            <span className="flex px-2">
+          <div className="flex font-normal  lg:text-[10px] 2xl:text-xs  border-b items-center h-12">
+            <span className="flex items-center px-2">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -33,7 +33,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Slack Enterprise
             </span>
-            <span className="flex px-2">
+            <span className="flex px-2 items-center">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -42,7 +42,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Slack Connector
             </span>
-            <span className="flex px-2">
+            <span className="flex px-2 items-center">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -51,7 +51,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Google Workspace
             </span>
-            <span className="flex px-2">
+            <span className="flex px-2 items-center">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -62,8 +62,8 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
             </span>
           </div>
           <div className="flex font-normal text-sm mx-4 my-3">File Type</div>
-          <div className="flex font-normal justify-between border-b text-xs w-full items-center h-24 flex-wrap">
-            <span className="flex px-4">
+          <div className="flex font-normal border-b lg:text-[10px] 2xl:text-xs  w-full items-center h-24 lg:flex-wrap">
+            <span className="flex px-4 lg:w-32 xl:w-auto">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -72,7 +72,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Conversation
             </span>
-            <span className="flex px-4">
+            <span className="flex px-4 lg:w-32 xl:w-auto">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -81,7 +81,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Image
             </span>
-            <span className="flex px-4">
+            <span className="flex px-4 lg:w-32 xl:w-auto">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -90,7 +90,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Email
             </span>
-            <span className="flex px-4">
+            <span className="flex px-4 lg:w-32 xl:w-auto">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -99,7 +99,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Document
             </span>
-            <span className="flex px-4">
+            <span className="flex px-4 lg:w-32 xl:w-auto">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -108,7 +108,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               System
             </span>
-            <span className="flex px-4">
+            <span className="flex px-4 lg:w-32 xl:w-auto">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -117,7 +117,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Canvas
             </span>
-            <span className="flex px-4">
+            <span className="flex px-4 lg:w-32 xl:w-auto">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -130,7 +130,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
           <div className="flex font-normal text-sm mx-4 my-4">
             Creation Date
           </div>
-          <div className="flex font-normal justify-start mx-4 text-xs items-start h-16">
+          <div className="flex font-normal justify-start mx-4 lg:text-[10px] 2xl:text-xs  items-start h-16">
             <button
               id="dropdownDefaultButton"
               data-dropdown-toggle="dropdown"
@@ -184,8 +184,8 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
             </button>{" "}
           </div>
           <div className="flex font-normal text-sm mx-4">Slack components</div>
-          <div className="flex font-normal justify-between text-xs items-center h-12">
-            <span className="flex px-2">
+          <div className="flex font-normal lg:text-[10px] 2xl:text-xs items-center h-12">
+            <span className="flex px-2 items-center">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -194,7 +194,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Group Message
             </span>
-            <span className="flex px-2">
+            <span className="flex px-2 items-center">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -203,7 +203,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Direct Message
             </span>
-            <span className="flex px-2">
+            <span className="flex px-2 items-center">
               <input
                 id="default-checkbox"
                 type="checkbox"
@@ -212,7 +212,7 @@ const FilterPopup: React.FC<FilterProps> = ({ onClose }) => {
               />
               Canvas Message
             </span>
-            <span className="flex px-2">
+            <span className="flex px-2 items-center">
               <input
                 id="default-checkbox"
                 type="checkbox"
