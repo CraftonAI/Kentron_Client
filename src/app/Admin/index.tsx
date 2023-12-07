@@ -1,6 +1,6 @@
 import { BiUserCircle } from "react-icons/bi";
 import SideBar from "./sidebar";
-import Header from "./header";
+import Header from "../components/Navbar/page";
 import HomeMain from "./home";
 import ActiveUsers from "../adminactive/page";
 import DeactiveUser from "../admindeactivate/page";

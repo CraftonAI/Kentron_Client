@@ -1,6 +1,6 @@
 "use client"
 import Toggle from "../Admin/switch/toggle";
-import Header from "@/app/Admin/header";
+import Header from "../components/Navbar/page";
 import SideBar from "@/app/Admin/sidebar";
 
 const ManageSources = () => {

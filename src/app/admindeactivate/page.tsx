@@ -1,5 +1,5 @@
 "use client";
-import Header from "../Admin/header";
+import Header from "../components/Navbar/page";
 import SideBar from "../Admin/sidebar";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import React, { useState } from "react";

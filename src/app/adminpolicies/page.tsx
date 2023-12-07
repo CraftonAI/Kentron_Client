@@ -1,7 +1,7 @@
 "use client"
 
 
-import Header from "@/app/Admin/header";
+import Header from "../components/Navbar/page";
 import SideBar from "@/app/Admin/sidebar";
 import Toggle from "../Admin/switch/toggle";
 

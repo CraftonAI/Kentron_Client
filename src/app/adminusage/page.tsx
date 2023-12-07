@@ -1,4 +1,4 @@
-import Header from "@/app/Admin/header";
+import Header from "../components/Navbar/page";
 import SideBar from "@/app/Admin/sidebar";
 import workspace from "../components/Assets/workspace.png";
 import Image from "next/image";

@@ -1,7 +1,7 @@
 "use client"
 
 
-import Header from "@/app/Admin/header";
+import Header from "../components/Navbar/page";
 import SideBar from "@/app/Admin/sidebar";
 
 
@@ -47,7 +47,7 @@ const OrganizationInfo = () => {
             <div className="flex justify-center h-24">
               <div className="flex bg-white rounded-t-lg border-b justify-start w-full items-center mx-7">
                 <div className="flex font-bold text-sm 2xl:text-base w-[14vw] items-center h-16 border-r px-7 mx-5">
-                  Copany Info
+                  Company Info
                 </div>
                 <div className="flex lg:w-[42vw] xl:w-[32vw] items-center h-16 border-r px-7 mx-7 ">
                   <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>

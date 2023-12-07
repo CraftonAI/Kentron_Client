@@ -8,7 +8,7 @@ interface ExportProps {
 
 const ExportPopup: React.FC<ExportProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white xl:w-[40%] 2xl:w-[40%] 2xl:h-[77vh] rounded-lg p-2 shadow-md z-50">
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white xl:w-[40%] 2xl:w-[40%] h-[93vh] overflow-y-scroll 2xl:h-[84vh] rounded-lg p-2 shadow-md z-50">
       <div className="flex w-full flex-col h-full">
         <div className="flex w-full border-b shadow-md py-2 items-center justify-between my-1 2xl:my-4">
           <span className="flex h-full items-center font-bold text-sm 2xl:text-sm mx-4">
