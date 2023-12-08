@@ -22,6 +22,19 @@ const ActiveGuest = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
   const [selectAll, setSelectAll] = useState(false); // Added state for "Select All" checkbox
+  const [selectedRows, setSelectedRows] = useState<number[]>([]);
+
+  const toggleSelectAll = () => {
+    setSelectAll(!selectAll);
+  };
+
+  const toggleCheckbox = (index: number) => {
+    if (selectedRows.includes(index)) {
+      setSelectedRows(selectedRows.filter((i) => i !== index));
+    } else {
+      setSelectedRows([...selectedRows, index]);
+    }
+  };
   const [selectedItems, setSelectedItems] = useState(
     Array(data.length).fill(false)
   );
@@ -68,12 +81,11 @@ const ActiveGuest = () => {
                             <tr className="border-b border-gray-200 py-4 text-sm font-bold leading-normal">
                               <th className="py-3 px-6 text-left">
                                 <input
-                                  id="selectAllCheckbox"
+                                  id="name-checkbox"
                                   type="checkbox"
-                                  value=""
-                                  checked={isAllChecked}
-                                  onChange={handleSelectAllChange}
-                                  className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                  checked={selectAll}
+                                  onChange={toggleSelectAll}
+                                  className="w-4 h-4 mx-2 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                                 />
                                 Name
                               </th>
@@ -95,12 +107,12 @@ const ActiveGuest = () => {
                                       <input
                                         id={`checkbox-${index}`}
                                         type="checkbox"
-                                        value=""
-                                        checked={selectedItems[index]}
-                                        onChange={() =>
-                                          handleSelectItemChange(index)
+                                        checked={
+                                          selectAll ||
+                                          selectedRows.includes(index)
                                         }
-                                        className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                        onChange={() => toggleCheckbox(index)}
+                                        className="w-4 h-4 mx-2 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                                       />
                                       {user.name}
                                     </span>
@@ -114,7 +126,7 @@ const ActiveGuest = () => {
                                 <td className="py-3 px-6 text-center">
                                   <span className="flex justify-between text-[#161616] font-medium py-2 px-3 rounded-full text-xs">
                                     {user.signin}
-                                    <RiArrowDropDownLine size={20} />
+                                    {/* <RiArrowDropDownLine size={20} /> */}
                                   </span>
                                 </td>
                                 <td className="py-3 px-6 text-center">

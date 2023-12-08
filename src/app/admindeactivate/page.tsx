@@ -16,6 +16,19 @@ const DeactiveUser = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10; // Adjust as needed
+  const [selectedRows, setSelectedRows] = useState<number[]>([]);
+
+  const toggleSelectAll = () => {
+    setSelectAll(!selectAll);
+  };
+
+  const toggleCheckbox = (index: number) => {
+    if (selectedRows.includes(index)) {
+      setSelectedRows(selectedRows.filter((i) => i !== index));
+    } else {
+      setSelectedRows([...selectedRows, index]);
+    }
+  };
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -59,12 +72,11 @@ const DeactiveUser = () => {
                             <tr className="border-b border-gray-200 py-4 text-sm font-bold leading-normal">
                               <th className="py-3 px-6 text-left">
                                 <input
-                                  id="selectAllCheckbox"
+                                  id="name-checkbox"
                                   type="checkbox"
-                                  value=""
-                                  checked={isAllChecked}
-                                  onChange={handleSelectAllChange}
-                                  className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                  checked={selectAll}
+                                  onChange={toggleSelectAll}
+                                  className="w-4 h-4 mx-2 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                                 />
                                 Name
                               </th>
@@ -86,10 +98,12 @@ const DeactiveUser = () => {
                                       <input
                                         id={`checkbox-${index}`}
                                         type="checkbox"
-                                        value=""
-                                        checked={selectAll}
-                                        onChange={() => {}}
-                                        className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                        checked={
+                                          selectAll ||
+                                          selectedRows.includes(index)
+                                        }
+                                        onChange={() => toggleCheckbox(index)}
+                                        className="w-4 h-4 mx-2 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                                       />
                                       {user.name}
                                     </span>
@@ -103,7 +117,7 @@ const DeactiveUser = () => {
                                 <td className="py-3 px-6 text-center">
                                   <span className="flex justify-between text-[#161616] font-medium py-2 px-3 rounded-full text-xs">
                                     {user.deactive}
-                                    <RiArrowDropDownLine size={20} />
+                                    {/* <RiArrowDropDownLine size={20} /> */}
                                   </span>
                                 </td>
                                 <td className="py-3 px-6 text-center">

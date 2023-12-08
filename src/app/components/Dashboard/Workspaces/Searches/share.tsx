@@ -3,12 +3,20 @@ import { GrFormClose } from "react-icons/gr";
 import { RiFilter2Line } from "react-icons/ri";
 import { BsPersonFillAdd } from "react-icons/bs";
 import { IoMdShare } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
+import { useState } from "react";
 
 interface ShareProps {
   onClose: () => void;
 }
 
 const SharePopup: React.FC<ShareProps> = ({ onClose }) => {
+  const [selectedPermission, setSelectedPermission] = useState<string>('');
+
+  // Function to handle permission selection
+  const handlePermissionSelect = (permission: string) => {
+    setSelectedPermission(permission);
+  };
   return (
     <div className="fixed top-1/2 left-1/2 border rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] h-[50vh] 2xl:h-[50vh] p-2 z-50">
       <div className="flex w-full flex-col h-full">
@@ -46,12 +54,36 @@ const SharePopup: React.FC<ShareProps> = ({ onClose }) => {
           </div>
 
           <div className="flex w-full -my-1">
-            <input
-              placeholder="Select permission"
-              type="text"
-              className="flex p-1 2xl:p-3 h-8 2xl:h-11 w-full mb-3 mx-5 rounded-lg border"
-            />
+        <div className="flex w-full">
+          <input
+            placeholder="Select permission"
+            type="text"
+            value={selectedPermission}
+            className="flex p-1 2xl:p-3 h-8 2xl:h-11 w-full mx-5 rounded-lg border"
+            readOnly
+          />
+          <div className="absolute top-6 2xl:top-7 right-8 h-full flex items-center">
+            <IoIosArrowDown size={18} className="mx-2 cursor-pointer" />
           </div>
+          {/* Dropdown */}
+          {selectedPermission && (
+            <div className="absolute top-full left-0 mt-1 w-full bg-white border rounded-lg shadow-lg">
+              <div
+                onClick={() => handlePermissionSelect('1')}
+                className="p-2 cursor-pointer hover:bg-gray-200"
+              >
+                Permission 1
+              </div>
+              <div
+                onClick={() => handlePermissionSelect('2')}
+                className="p-2 cursor-pointer hover:bg-gray-200"
+              >
+                Permission 2
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
 
           <div className="flex w-full mx-6">
             <span className="flex text-sm 2xl:text-sm h-full items-center">

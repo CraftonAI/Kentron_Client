@@ -19,6 +19,10 @@ import { CiUser } from "react-icons/ci";
 import { AiOutlineLock } from "react-icons/ai";
 import { FaAngleDown } from "react-icons/fa6";
 import { Pagination } from "@nextui-org/react";
+import sync from "../../../Assets/sync.png";
+import person from "../../../Assets/padd.png";
+import channel from "../../../Assets/chanl.png";
+import selectcom from "../../../Assets/selcom.png";
 
 export const DataSource = () => {
   const [slackbox, setslackbox] = useState(false);
@@ -33,6 +37,20 @@ export const DataSource = () => {
   const submit = () => {
     setslackbox(false);
     setroadicon(0);
+  };
+  const [selectAll, setSelectAll] = useState(false);
+  const [selectedRows, setSelectedRows] = useState<number[]>([]);
+
+  const toggleSelectAll = () => {
+    setSelectAll(!selectAll);
+  };
+
+  const toggleCheckbox = (index: number) => {
+    if (selectedRows.includes(index)) {
+      setSelectedRows(selectedRows.filter((i) => i !== index));
+    } else {
+      setSelectedRows([...selectedRows, index]);
+    }
   };
 
   // New data sourcee
@@ -66,93 +84,101 @@ export const DataSource = () => {
           Existing Connections
           <FaAngleDown />
         </div>
-        <div className="flex w-full px-4 h-full flex-col overflow-y-scroll">
-          <div className="bg-white h-full  my-6 shadow-md rounded-md border">
-            <table className="min-w-max bg-white w-full h- table-auto rounded-md ">
-              <thead>
-                <tr className="border-b border-gray-200 py-4 text-sm font-bold leading-normal">
-                  <th className="py-3 px-6 flex h-12 items-center text-left">
-                    <input
-                      id="default-checkbox"
-                      type="checkbox"
-                      value=""
-                      className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
-                    />
-                    Name
-                  </th>
-                  <th className="py-3 px-6 text-left">Sync mode</th>
-                  <th className="py-3 px-6 flex mx-3 text-center">
-                    Sync duration
-                  </th>
-                  <th className="py-3 px-8 justify-start pl-0">Status</th>
-                  <th className="py-3 px-5 justify-start">Total Size</th>
-                  <th className="py-3 px-5 justify-start">Components</th>
-                </tr>
-              </thead>
-              <tbody className="text-sm font-light">
-                {currentItems.map((user, index) => (
-                  <tr className="" key={index}>
-                    <td className="py-3 px-6 text-left whitespace-nowrap">
-                      <div className="flex items-center">
-                        <span className="font-bold flex h-12 items-center">
-                          <input
-                            id="default-checkbox"
-                            type="checkbox"
-                            value=""
-                            className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
-                          />{" "}
-                          {user.name}
-                        </span>
-                      </div>
-                    </td>
-                    <td className="py-3 px-6 text-left">
-                      <div className="flex text-[#161616] font-medium mx-1 text-sm h-full justify-start items-center">
-                        <span>{user.mode}</span>
-                      </div>
-                    </td>
-                    <td className="py-3 px-6 text-center">
-                      <span className="flex text-[#161616] w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
-                        {user.dur}
-                      </span>
-                    </td>
-                    <td className="py-3 px-6 text-center">
-                      <div className="flex item-center justify-end mr-8">
-                        {user.status}
-                      </div>
-                    </td>
-                    <td className="py-3 px-6 text-center">
-                      <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
-                        {user.size}
-                      </span>
-                    </td>
-                    <td className="py-3 px-6 text-center">
-                      <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
-                        {user.comp}
-                      </span>
-                    </td>
+        <div className="flex w-full h-full overflow-x-hidden overflow-y-scroll flex-col">
+          <div className="flex-col flex-1 ">
+            <div className="bg-white h-full  my-6 shadow-md rounded-md border">
+              <table className="min-w-max bg-white w-full h- table-auto rounded-md ">
+                <thead>
+                  <tr className="border-b border-gray-200 py-4 text-sm font-bold leading-normal">
+                    <th className="py-3 px-6 flex h-12 items-center text-left">
+                      <input
+                        id="name-checkbox"
+                        type="checkbox"
+                        checked={selectAll}
+                        onChange={toggleSelectAll}
+                        className="w-4 h-4 mx-2 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                      />
+                      Name
+                    </th>
+                    <th className="py-3 px-6 text-left">Sync mode</th>
+                    <th className="py-3 px-6 flex mx-3 text-center">
+                      Sync duration
+                    </th>
+                    <th className="py-3 px-8 justify-start pl-0">Status</th>
+                    <th className="py-3 px-5 justify-start">Total Size</th>
+                    <th className="py-3 px-5 justify-start">Components</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="text-sm font-light">
+                  {currentItems.map((user, index) => (
+                    <tr className="" key={index}>
+                      <td className="py-3 px-6 text-left whitespace-nowrap">
+                        <div className="flex items-center">
+                          <span className="font-bold flex h-12 items-center">
+                            <input
+                              id={`checkbox-${index}`}
+                              type="checkbox"
+                              checked={
+                                selectAll || selectedRows.includes(index)
+                              }
+                              onChange={() => toggleCheckbox(index)}
+                              className="w-4 h-4 mx-2 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                            />{" "}
+                            {user.name}
+                          </span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-6 text-left">
+                        <div className="flex text-[#161616] font-medium mx-1 text-sm h-full justify-start items-center">
+                          <span>{user.mode}</span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-6 text-center">
+                        <span className="flex text-[#161616] w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                          {user.dur}
+                        </span>
+                      </td>
+                      <td className="py-3 px-6 text-center">
+                        <div className="flex item-center justify-end mr-8">
+                          {user.status}
+                        </div>
+                      </td>
+                      <td className="py-3 px-6 text-center">
+                        <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
+                          {user.size}
+                        </span>
+                      </td>
+                      <td className="py-3 px-6 text-center">
+                        <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
+                          {user.comp}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-          <div className="flex justify-between -mt-5 overflow-x-hidden bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
-            <div className="flex">
-              <span className="text-sm text-gray-700">
-                Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
-                {currentPage * itemsPerPage} of {data.length} entries
-              </span>
-            </div>
-            <div className="flex">
-              <Pagination
-                showControls
-                total={pageCount}
-                initialPage={currentPage}
-                onChange={(newPage) => paginate(newPage)}
-              />
-            </div>
+           
           </div>
+          <div className="flex justify-between -mt-3 overflow-x-hidden bg-white lg:border py-4 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
+              <div className="flex">
+                <span className="text-sm text-gray-700">
+                  Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
+                  {currentPage * itemsPerPage} of {data.length} entries
+                </span>
+              </div>
+              <div className="flex">
+                <Pagination
+                  showControls
+                  total={pageCount}
+                  initialPage={currentPage}
+                  onChange={(newPage) => paginate(newPage)}
+                />
+              </div>
+            </div>
         </div>
+        
       </div>
       <div className="flex w-full overflow-y-scroll h-[40vh] flex-col">
         <div className="flex h-[50vh] flex-col w-full  border mb-2">
@@ -465,7 +491,7 @@ export const DataSource = () => {
 
             <div className="roadmapicon">
               <div className="roadiconcont">
-                <BiSync
+                <Image src={sync} width={15} alt="sync"
                   className={
                     roadicon === 1
                       ? "purbg"
@@ -499,7 +525,7 @@ export const DataSource = () => {
 
             <div className="roadmapicon">
               <div className="roadiconcont">
-                <BsUnity
+                <Image src={selectcom} width={15} alt="select"
                   className={
                     roadicon === 2
                       ? "purbg"
@@ -533,7 +559,7 @@ export const DataSource = () => {
 
             <div className="roadmapicon">
               <div className="roadiconcont">
-                <MdOutlinePersonAddAlt
+                <Image src={person} width={15} alt="padd"
                   className={
                     roadicon === 3
                       ? "purbg"
@@ -567,7 +593,7 @@ export const DataSource = () => {
 
             <div className="roadmapicon">
               <div className="roadiconcont">
-                <TbTopologyStar3
+                <Image src={channel} width={15} alt="chanl"
                   className={
                     roadicon === 4
                       ? "purbg"
@@ -684,13 +710,13 @@ const Synchronization = () => {
       </div>
 
       <p className="checkboxheader">Select additional channels types</p>
-      <div className="checkbox">
+      <div className="h-7 items-center text-base  flex">
         <input type="checkbox" />
-        <p>Include multi-workspace channels</p>
+        <p className="mx-2">Include multi-workspace channels</p>
       </div>
-      <div className="checkbox">
+      <div className="h-7 items-center text-base  flex">
         <input type="checkbox" />
-        <p>Include slack connect channels</p>
+        <p className="mx-2">Include slack connect channels</p>
       </div>
     </div>
   );

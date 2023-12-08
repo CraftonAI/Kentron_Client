@@ -34,7 +34,7 @@ const AdminUsage = () => {
                     <Image src={user} width={30} alt="none" className="object-cover rounded-full" />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[10px] 2xl:text-[10px] text-[#1616168A]">User</p>
+                    <p className="flex text-[10px] 2xl:text-[10px] text-[#1616168A]">Users</p>
                     <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
@@ -75,8 +75,8 @@ const AdminUsage = () => {
                     <Image src={data} width={30} alt="none" className="adds" />
                   </div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-[10px] text-[#1616168A]">
-                      Total process Data
+                    <p className="flex text-[10px] items-center text-[#1616168A]">
+                      Total process Data <span className="flex px-1 text-[8px]">(All time)</span>
                     </p>
                     <p className="flex text-xs 2xl:text-basefont-bold">12 GB</p>
                   </div>
@@ -87,7 +87,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[10px] text-[#1616168A]">
-                      Total Work storage
+                      Total current storage
                     </p>
                     <p className="flex text-xs 2xl:text-base font-bold">12 GB</p>
                   </div>
@@ -107,7 +107,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[10px] text-[#1616168A]">
-                      Slack
+                      Slack Enterprise
                     </p>
                     <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
@@ -123,7 +123,7 @@ const AdminUsage = () => {
                   </div>
                   <div className="flex flex-col mx-3">
                     <p className="flex text-[10px] text-[#1616168A]">
-                      Google
+                      Google Workspace
                     </p>
                     <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
@@ -166,7 +166,7 @@ const AdminUsage = () => {
                     <p className="flex text-[10px] text-[#1616168A]">
                       Microsoft 365
                     </p>
-                    <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
+                    <p className="flex text-xs 2xl:text-base font-bold">25 GB</p>
                   </div>
                 </div>
               </div>

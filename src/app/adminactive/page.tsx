@@ -21,6 +21,21 @@ const ActiveUsers = () => {
     setPopupVisible(false);
   };
 
+  const [selectAll, setSelectAll] = useState(false);
+  const [selectedRows, setSelectedRows] = useState<number[]>([]);
+
+  const toggleSelectAll = () => {
+    setSelectAll(!selectAll);
+  };
+
+  const toggleCheckbox = (index: number) => {
+    if (selectedRows.includes(index)) {
+      setSelectedRows(selectedRows.filter((i) => i !== index));
+    } else {
+      setSelectedRows([...selectedRows, index]);
+    }
+  };
+
   // New data source
   const data = new Array(50).fill(null).map((_, index) => ({
     name: `User Name ${index + 1}`,
@@ -35,7 +50,6 @@ const ActiveUsers = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-  const [selectAll, setSelectAll] = useState(false); // Added state for "Select All" checkbox
 
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
@@ -81,12 +95,11 @@ const ActiveUsers = () => {
                             <tr className="border-b border-gray-200 uppercase py-4 text-sm font-bold leading-normal">
                               <th className="py-3 px-6 text-left">
                                 <input
-                                  id="selectAllCheckbox"
+                                  id="name-checkbox"
                                   type="checkbox"
-                                  value=""
-                                  checked={isAllChecked}
-                                  onChange={handleSelectAllChange}
-                                  className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                  checked={selectAll}
+                                  onChange={toggleSelectAll}
+                                  className="w-4 h-4 mx-2 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                                 />
                                 Name
                               </th>
@@ -108,10 +121,12 @@ const ActiveUsers = () => {
                                       <input
                                         id={`checkbox-${index}`}
                                         type="checkbox"
-                                        value=""
-                                        checked={selectAll}
-                                        onChange={() => {}}
-                                        className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                                        checked={
+                                          selectAll ||
+                                          selectedRows.includes(index)
+                                        }
+                                        onChange={() => toggleCheckbox(index)}
+                                        className="w-4 h-4 mx-2 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                                       />{" "}
                                       {user.name}
                                     </span>

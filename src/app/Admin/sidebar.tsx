@@ -13,6 +13,7 @@ import report from "../components/Assets/2.png";
 import setting from "../components/Assets/3.png";
 import support from "../components/Assets/4.png";
 import down from "../components/Assets/downn.png";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 const SideBar = () => {
@@ -47,15 +48,22 @@ const SideBar = () => {
           </Link>{" "}
         </span>
         <span
-          className={`flex xl:w-[11vw] mx-4 xl:mx-0 hover:text-black my-2 hover:cursor-pointer hover:bg-[#E6E6E6] h-10 rounded-lg items-center ${
+          className={`flex xl:w-[11vw] justify-between mx-4 xl:mx-0 hover:text-black my-2 hover:cursor-pointer hover:bg-[#E6E6E6] h-10 rounded-lg items-center ${
             showUser ? "bg-white" : ""
           }`}
           onClick={toggleUser}
         >
+          <span className="flex flex-1">
           <span className="flex mx-4 font-bold h-6 w-6">
             <Image src={user} width={20} className="" alt="user"/>
           </span>
-          <span className="flex">Users</span>
+          <span className="flex">Users
+         
+          </span>
+          </span>
+          <span className="flex mr-2">
+            <IoIosArrowDown /> 
+          </span>
         </span>
         {showUser && (
           <div className="flex flex-col">
@@ -88,10 +96,17 @@ const SideBar = () => {
           }`}
           onClick={toggleReport}
         >
+          <span className="flex flex-1">
           <span className="flex mx-4 font-bold h-6 w-6">
-          <Image src={report} width={20} className="" alt="user"/>
+            <Image src={report} width={20} className="" alt="user"/>
           </span>
-          <span className="flex">Report</span>
+          <span className="flex">Reports
+         
+          </span>
+          </span>
+          <span className="flex mr-2">
+            <IoIosArrowDown /> 
+          </span>
         </span>
 
         {showReport && (

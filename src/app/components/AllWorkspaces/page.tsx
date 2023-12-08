@@ -28,6 +28,7 @@ const AllWorkspace = () => {
       date: "14/08/2022",
       lastDate: "12/05/2023",
       lastby: "John Deer",
+      isChecked: false, // New property for individual checkboxes
     }))
   );
 
@@ -50,7 +51,6 @@ const AllWorkspace = () => {
   const createboxclose = () => {
     setcreatebox(false);
   };
-
 
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
@@ -98,11 +98,18 @@ const AllWorkspace = () => {
               <tr className="border-b lg:text-[10px] xl:text-[13px] 2xl:text-base  border-gray-200 py-4 text-sm text-black font-bold leading-normal">
                 <th className="py-3 xl:px-6 flex h-12 items-center text-left">
                   <input
-                    id="selectAllCheckbox"
+                    id={`selectAllCheckbox`}
                     type="checkbox"
                     value=""
                     checked={isAllChecked}
-                    onChange={handleSelectAllChange}
+                    onChange={() => {
+                      const newData = [...data];
+                      newData.forEach(
+                        (item) => (item.isChecked = !isAllChecked)
+                      );
+                      setData(newData);
+                      setSelectAll(!isAllChecked);
+                    }}
                     className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                   />
                   Name
@@ -127,11 +134,22 @@ const AllWorkspace = () => {
                           id={`checkbox-${index}`}
                           type="checkbox"
                           value=""
-                          checked={selectAll}
-                          onChange={() => {}}
+                          checked={user.isChecked}
+                          onChange={() => {
+                            const newData = [...data];
+                            newData[indexOfFirstItem + index].isChecked =
+                              !newData[indexOfFirstItem + index].isChecked;
+                            setData(newData);
+                          }}
                           className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
                         />
-                        <Image src={wk} width={15} alt="wk" className="mr-[5px]" />
+
+                        <Image
+                          src={wk}
+                          width={15}
+                          alt="wk"
+                          className="mr-[5px]"
+                        />
                         {user.name}
                         <BiDotsVerticalRounded
                           className="mx-2 cursor-pointer"
@@ -142,9 +160,22 @@ const AllWorkspace = () => {
                           <div className="absolute pop lg:text-xs xl:text-sm rounded-md border w-[13vw] lg:w-[10vw] h-28 -mb-20">
                             {/* Dropdown content here */}
                             <div className="flex w-full flex-col h-full rounded-md justify-around px-4 bg-white text-black shadow-md">
-                              <p className="flex flex-1 items-center cursor-pointer"> <FaRegEdit className="mx-1"/>Edit</p>
-                              <p className="flex flex-1 items-center cursor-pointer"><LuInfo className="mx-1"/>View detail</p>
-                              <p onClick={() => handleDelete(index)} className="flex flex-1 items-center cursor-pointer"><RiDeleteBin6Line className="mx-1"/>Delete</p>
+                              <p className="flex flex-1 items-center cursor-pointer">
+                                {" "}
+                                <FaRegEdit className="mx-1" />
+                                Edit
+                              </p>
+                              <p className="flex flex-1 items-center cursor-pointer">
+                                <LuInfo className="mx-1" />
+                                View detail
+                              </p>
+                              <p
+                                onClick={() => handleDelete(index)}
+                                className="flex flex-1 items-center cursor-pointer"
+                              >
+                                <RiDeleteBin6Line className="mx-1" />
+                                Delete
+                              </p>
                             </div>
                           </div>
                         )}

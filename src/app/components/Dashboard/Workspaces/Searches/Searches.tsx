@@ -40,9 +40,9 @@ export const Searches = () => {
   return (
     <div className="flex h-[76vh] overflow-y-scroll w-full flex-col">
       <div className="flex flex-col w-full">
-        <div className="flex w-[25%] xl:w-[22%] 2xl:w-[20%] justify-around py-4">
-          Showing<span className="flex font-semibold">16,456</span> search
-          results,
+        <div className="flex justify-start ml-1 py-4">
+         <div className="flex lg:text-[12px] items-center h-6 w-[15vw]"> Showing<span className="flex mx-1 font-semibold">16,456</span> search
+          results,</div>
         </div>
         <div className="flex w-[100%] my-1 2xl:my-0">
           <div className="flex 2xl:w-[15%]">
@@ -195,7 +195,7 @@ export const Searches = () => {
                 <div className="flex w-full font-bold lg:text-sm 2xl:text-base mx-3 2xl:my-1 my-2 underline underline-offset-1">
                   Personal messages john and jennifer - 2023-10-01 
                 </div>
-                <div className="flex 2xl:w-9/12 w-full h-full items-center justify-around">
+                <div className="flex w-full h-full items-center justify-around">
                   <div className="flex px-3 h-full items-center text-sm">
                     {" "}
                     <FaRegCalendarDays className="flex h-full mr-1 text-center" /> Created
@@ -205,10 +205,10 @@ export const Searches = () => {
                     {" "}
                     12/05/2023{" "}
                   </div>
-                  <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
+                  <div className="flex flex-1 px-1 xl:px-2 justify-start h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <Image src={person} width={20} alt='person' className="ml-2 xl:-mr-1 text-base" />
+                    <Image src={person} width={20} alt='person' className="ml-2  mx-2 text-base" />
                     Direct Message
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export const Searches = () => {
                 <div className="flex w-full font-bold lg:text-sm 2xl:text-base mx-3 2xl:my-1 my-2 underline underline-offset-1">
                   Personal messages john and jennifer - 2023-10-01 
                 </div>
-                <div className="flex 2xl:w-9/12 w-full h-full items-center justify-around">
+                <div className="flex w-full h-full items-center justify-around">
                   <div className="flex px-3 h-full items-center text-sm">
                     {" "}
                     <FaRegCalendarDays className="flex h-full mr-1 text-center" /> Created
@@ -250,10 +250,10 @@ export const Searches = () => {
                     {" "}
                     12/05/2023{" "}
                   </div>
-                  <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
+                  <div className="flex flex-1 px-1 xl:px-2 justify-start h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <Image src={person} width={20} alt='person' className="ml-2 xl:-mr-1 text-base" />
+                    <Image src={person} width={20} alt='person' className="ml-2  mx-2 text-base" />
                     Direct Message
                   </div>
                 </div>
@@ -285,7 +285,7 @@ export const Searches = () => {
                 <div className="flex w-full font-bold lg:text-sm 2xl:text-base mx-3 2xl:my-1 my-2 underline underline-offset-1">
                   Personal messages john and jennifer - 2023-10-01 
                 </div>
-                <div className="flex 2xl:w-9/12 w-full h-full items-center justify-around">
+                <div className="flex w-full h-full items-center justify-around">
                   <div className="flex px-3 h-full items-center text-sm">
                     {" "}
                     <FaRegCalendarDays className="flex h-full mr-1 text-center" /> Created
@@ -295,10 +295,10 @@ export const Searches = () => {
                     {" "}
                     12/05/2023{" "}
                   </div>
-                  <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
+                  <div className="flex flex-1 px-1 xl:px-2 justify-start h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <Image src={person} width={20} alt='person' className="ml-2 xl:-mr-1 text-base" />
+                    <Image src={person} width={20} alt='person' className="ml-2  mx-2 text-base" />
                     Direct Message
                   </div>
                 </div>
@@ -330,7 +330,7 @@ export const Searches = () => {
                 <div className="flex w-full font-bold lg:text-sm 2xl:text-base mx-3 2xl:my-1 my-2 underline underline-offset-1">
                   Personal messages john and jennifer - 2023-10-01 
                 </div>
-                <div className="flex 2xl:w-9/12 w-full h-full items-center justify-around">
+                <div className="flex w-full h-full items-center justify-around">
                   <div className="flex px-3 h-full items-center text-sm">
                     {" "}
                     <FaRegCalendarDays className="flex h-full mr-1 text-center" /> Created
@@ -340,10 +340,10 @@ export const Searches = () => {
                     {" "}
                     12/05/2023{" "}
                   </div>
-                  <div className="flex flex-1 xl:px-2 justify-around h-full items-center text-[#363636] text-sm font-bold">
+                  <div className="flex flex-1 px-1 xl:px-2 justify-start h-full items-center text-[#363636] text-sm font-bold">
                     {" "}
                     |
-                    <Image src={person} width={20} alt='person' className="ml-2 xl:-mr-1 text-base" />
+                    <Image src={person} width={20} alt='person' className="ml-2  mx-2 text-base" />
                     Direct Message
                   </div>
                 </div>
