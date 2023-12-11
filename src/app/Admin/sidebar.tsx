@@ -14,13 +14,12 @@ import setting from "../components/Assets/3.png";
 import support from "../components/Assets/4.png";
 import down from "../components/Assets/downn.png";
 import { IoIosArrowDown } from "react-icons/io";
-
+import { IoIosArrowUp } from "react-icons/io";
 
 const SideBar = () => {
   const [showUser, setshowUser] = useState(false);
   const [showReport, setshowReport] = useState(false);
   const [showSetting, setshowSetting] = useState(false);
-
 
   const toggleUser = () => {
     setshowUser(!showUser);
@@ -33,8 +32,6 @@ const SideBar = () => {
   const toggleSetting = () => {
     setshowSetting(!showSetting);
   };
-
-
 
   return (
     <div className="flex w-[110%] xl:w-full flex-col items-end bg-white h-[100vh]">
@@ -54,15 +51,13 @@ const SideBar = () => {
           onClick={toggleUser}
         >
           <span className="flex flex-1">
-          <span className="flex mx-4 font-bold h-6 w-6">
-            <Image src={user} width={20} className="" alt="user"/>
-          </span>
-          <span className="flex">Users
-         
-          </span>
+            <span className="flex mx-4 font-bold h-6 w-6">
+              <Image src={user} width={20} className="" alt="user" />
+            </span>
+            <span className="flex">Users</span>
           </span>
           <span className="flex mr-2">
-            <IoIosArrowDown /> 
+            {showUser ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </span>
         </span>
         {showUser && (
@@ -97,15 +92,13 @@ const SideBar = () => {
           onClick={toggleReport}
         >
           <span className="flex flex-1">
-          <span className="flex mx-4 font-bold h-6 w-6">
-            <Image src={report} width={20} className="" alt="user"/>
-          </span>
-          <span className="flex">Reports
-         
-          </span>
+            <span className="flex mx-4 font-bold h-6 w-6">
+              <Image src={report} width={20} className="" alt="user" />
+            </span>
+            <span className="flex">Reports</span>
           </span>
           <span className="flex mr-2">
-            <IoIosArrowDown /> 
+            {showReport ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </span>
         </span>
 
@@ -120,14 +113,21 @@ const SideBar = () => {
             </Link>
           </div>
         )}
-        <span className={`flex mx-4 xl:mx-0 xl:w-[11vw] hover:text-black my-2 hover:cursor-pointer hover:bg-[#E6E6E6] h-10 rounded-lg items-center ${
+        <span
+          className={`flex xl:w-[11vw] mx-4 xl:mx-0 hover:text-black my-2 hover:cursor-pointer hover:bg-[#E6E6E6] h-10 rounded-lg items-center ${
             showUser ? "bg-white" : ""
           }`}
-          onClick={toggleSetting}>
+          onClick={toggleSetting}
+        >
+          <span className="flex flex-1">
           <span className="flex mx-4 font-bold h-6 w-6">
-          <Image src={setting} width={20} className="" alt="setting"/>
+            <Image src={setting} width={20} className="" alt="setting" />
           </span>
           <span className="flex">Settings</span>
+          </span>
+          <span className="flex mr-2">
+            {showSetting ? <IoIosArrowUp /> : <IoIosArrowDown />}
+          </span>
         </span>
         {showSetting && (
           <div className="flex flex-col">
@@ -163,7 +163,7 @@ const SideBar = () => {
         )}
         <span className="flex mx-4 xl:mx-0 xl:w-[11vw] text-sm xl:text-base hover:text-black my-2 hover:cursor-pointer hover:bg-[#E6E6E6] h-10 rounded-lg items-center">
           <span className="flex mx-4 h-6 w-6 font-bold">
-          <Image src={support} width={20} className="" alt="support"/>
+            <Image src={support} width={20} className="" alt="support" />
           </span>
           <span className="flex">Support</span>
         </span>

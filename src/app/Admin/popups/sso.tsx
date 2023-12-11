@@ -51,7 +51,7 @@ const SsoPopup: React.FC<SsoPopupProps> = ({ onClose }) => {
           <span className="flex h-full items-center text-[#8D8D8D] text-xs 2xl:text-sm mx-2">| Required</span>
         </div>
         <div className="flex w-full">
-          <input placeholder="Active" type="text" className="flex p-1 2xl:p-3 h-24 2xl:h-32 w-full mx-5 rounded-lg border" />
+          <textarea placeholder="Active" className="flex p-1 2xl:p-3 h-24 2xl:h-32 w-full mx-5 rounded-lg border" />
         </div>
 
         <div className="flex w-full mx-6 my-2">

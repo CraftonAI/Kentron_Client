@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { GrStatusGood } from "react-icons/gr";
 import { Pagination } from "@nextui-org/react";
@@ -9,7 +9,17 @@ import { FaRegEdit } from "react-icons/fa";
 import { LuInfo } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import wk from "../Assets/workspaces.png";
+import add from "../Assets/add.png";
+import copy from "../Assets/file_copy.png";
+import share from "../Assets/share.png";
+import ungroup from "../Assets/ungroup.png";
+import settings from "../Assets/settings_account_box.png";
+import close from "../Assets/close.png";
 import Image from "next/image";
+import Link from "next/link";
+import bodylogo from "../../../Assets/bogylogo.png";
+import edit from "../../../Assets/Edit.png";
+import { MdOutlineCalendarMonth } from "react-icons/md";
 import {
   Dropdown,
   DropdownTrigger,
@@ -51,7 +61,6 @@ const AllWorkspace = () => {
   const createboxclose = () => {
     setcreatebox(false);
   };
-
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
@@ -76,6 +85,31 @@ const AllWorkspace = () => {
     // Update the state with the new data
     setData(newData);
     setOpenDropdownIndex(null);
+  };
+
+  const [editbox, seteditbox] = useState(false);
+  const [workspacename, setworkspacename] = useState("Workspace Name");
+  const [status, setstatus] = useState("Active");
+  const [description, setdescription] = useState(
+    `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages`
+  );
+  const workspace = useRef(null);
+  const stats = useRef(null);
+  const desc = useRef(null);
+  const editboxopen = () => {
+    seteditbox(true);
+  };
+  const editboxclose = () => {
+    seteditbox(false);
+  };
+  const save = (a: any, b: any, c: any) => {
+    setworkspacename(a.current.value);
+    setdescription(c.current.value);
+    setstatus(b.current.value);
+    a.current.value = "";
+    b.current.value = "";
+    c.current.value = "";
+    seteditbox(false);
   };
 
   return (
@@ -160,12 +194,22 @@ const AllWorkspace = () => {
                           <div className="absolute pop lg:text-xs xl:text-sm rounded-md border w-[13vw] lg:w-[10vw] h-28 -mb-20">
                             {/* Dropdown content here */}
                             <div className="flex w-full flex-col h-full rounded-md justify-around px-4 bg-white text-black shadow-md">
-                              <p className="flex flex-1 items-center cursor-pointer">
+                              <p
+                                onClick={() => {
+                                  editboxopen();
+                                }}
+                                className="flex flex-1 items-center cursor-pointer"
+                              >
                                 {" "}
                                 <FaRegEdit className="mx-1" />
                                 Edit
                               </p>
-                              <p className="flex flex-1 items-center cursor-pointer">
+                              <p
+                                onClick={() => {
+                                  createboxshow();
+                                }}
+                                className="flex flex-1 items-center cursor-pointer"
+                              >
                                 <LuInfo className="mx-1" />
                                 View detail
                               </p>
@@ -232,6 +276,113 @@ const AllWorkspace = () => {
               initialPage={currentPage}
               onChange={(newPage) => paginate(newPage)}
             />
+          </div>
+        </div>
+        <div className={createbox ? "workspcreation" : "createworkspacehid"}>
+          <div className="crebox">
+            <div className="createhead">
+              <h1>Create Workspace</h1>
+              <Image
+                src={close}
+                width={20}
+                alt="none"
+                className="icon"
+                onClick={() => {
+                  createboxclose();
+                }}
+              />
+            </div>
+
+            <div className="createboxinputs">
+              <p>
+                Name <span>| Required</span>
+              </p>
+              <input type="text" placeholder="Enter workspace name" />
+            </div>
+
+            <div className="createboxinputs">
+              <p>Description</p>
+              <textarea rows={7} placeholder="Enter description" />
+            </div>
+
+            <div className="createboxbtn">
+              <button
+                onClick={() => {
+                  // switchToSingleWorkspace();
+                  createboxclose(); // Close the modal after switching
+                }}
+                className="savebtn"
+              >
+                Save
+              </button>
+              <button
+                onClick={() => {
+                  createboxclose();
+                }}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={editbox ? "workspaceedit" : "createworkspacehid"}>
+        <div className="editbox">
+          <div className="createhead">
+            <h1>Edit Workspace</h1>
+            <Image
+              src={close}
+              width={100}
+              alt="none"
+              className="icon"
+              onClick={() => {
+                editboxclose();
+              }}
+            />
+          </div>
+
+          <div className="createboxinputs">
+            <p>
+              Name <span>| Required</span>
+            </p>
+            <input
+              type="text"
+              placeholder="Enter workspace name"
+              ref={workspace}
+            />
+          </div>
+
+          <div className="createboxinputs">
+            <p>Description</p>
+            <textarea rows={4} placeholder="Enter description" ref={desc} />
+          </div>
+
+          <div className="createboxinputs">
+            <p>
+              Status <span>| Required</span>
+            </p>
+            <select name="status" id="status" ref={stats}>
+              <option value="active">Active</option>
+              <option value="noactive">Not active</option>
+            </select>
+          </div>
+
+          <div className="createboxbtn">
+            <button
+              className="savebtn"
+              onClick={() => {
+                save(workspace, stats, desc);
+              }}
+            >
+              Save
+            </button>
+            <button
+              onClick={() => {
+                editboxclose();
+              }}
+            >
+              Cancel
+            </button>
           </div>
         </div>
       </div>

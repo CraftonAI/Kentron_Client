@@ -27,6 +27,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     setcreatebox(false);
   };
 
+  //hi
+
   return (
     <nav className="sidebar">
       <div
@@ -56,11 +58,11 @@ const Sidebar: React.FC<SidebarProps> = ({
         <p>My Exports</p>
       </div>
       <Link href="/adminhome" target="_blank">
-  <div className="sideitems">
-    <Image src={settings} width={30} alt="none" className="sideicon" />
-    <p>Admin</p>
-  </div>
-</Link>
+        <div className="sideitems">
+          <Image src={settings} width={30} alt="none" className="sideicon" />
+          <p>Admin</p>
+        </div>
+      </Link>
 
       <div className={createbox ? "workspacecreation" : "createworkspacehid"}>
         <div className="createbox">
@@ -88,7 +90,6 @@ const Sidebar: React.FC<SidebarProps> = ({
             <p>Description</p>
             <textarea rows={7} placeholder="Enter description" />
           </div>
-
 
           <div className="createboxbtn">
             <button

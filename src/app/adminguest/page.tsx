@@ -69,12 +69,12 @@ const ActiveGuest = () => {
           <div className="flex h-20 w-full justify-between items-center mx-5">
             <div className="flex text-xl font-bold">Guest Users</div>
           </div>
-          <div className="flex w-full h-[80vh] overflow-y-scroll">
+          <div className="flex w-full h-[80vh]">
             <div className="w-full mx-5">
               <div className="flex flex-col w-full">
                 <div className="overflow-x-auto bg-white shadow-md sm:rounded-lg">
                   <div className="inline-block w-full align-middle">
-                    <div className="overflow-hidden overflow-y-scroll w-full">
+                    <div className="overflow-hidden w-full">
                       <div className="bg-white shadow-md h-full rounded my-6">
                         <table className="min-w-max bg-white w-full h-full table-auto">
                           <thead>

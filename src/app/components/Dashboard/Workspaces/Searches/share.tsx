@@ -55,15 +55,17 @@ const SharePopup: React.FC<ShareProps> = ({ onClose }) => {
 
           <div className="flex w-full -my-1">
         <div className="flex w-full">
+          <div className="flex items-center h-full w-full mx-6 rounded-lg  border">
           <input
             placeholder="Select permission"
             type="text"
             value={selectedPermission}
-            className="flex p-1 2xl:p-3 h-8 2xl:h-11 w-full mx-5 rounded-lg border"
+            className="flex p-1 2xl:p-3 h-8 2xl:h-11 w-full"
             readOnly
           />
-          <div className="absolute top-6 2xl:top-7 right-8 h-full flex items-center">
-            <IoIosArrowDown size={18} className="mx-2 cursor-pointer" />
+          <div className="flex items-center justify-center  2xl:top-7 right-8 h-full">
+          <IoIosArrowDown size={18} className="mx-2 cursor-pointer" />
+          </div>
           </div>
           {/* Dropdown */}
           {selectedPermission && (

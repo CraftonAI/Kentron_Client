@@ -18,7 +18,7 @@ const ManageSources = () => {
             <span className="flex h-[8vh] font-bold items-center mx-7 text-xl">
               Manage Sources{" "}
             </span>
-            <div className="flex justify-center h-24">
+            <div className="flex justify-center mb-4 h-24">
               <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
               <div className="flex flex-1">
                   <div className="flex items-center h-16 border-r w-[18vw] px-7 mx-7 ">

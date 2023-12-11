@@ -82,7 +82,7 @@ const ActiveUsers = () => {
           </div>
           {isPopupVisible && <UserPopup onClose={closePopup} />}
 
-          <div className="flex w-full h-[80vh] overflow-y-scroll">
+          <div className="flex w-full h-[80vh]">
             <div className="w-full mx-5">
               <div className="flex flex-col w-full">
                 <div className="overflow-x-auto h-full bg-white shadow-md sm:rounded-lg">
