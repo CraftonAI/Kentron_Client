@@ -491,7 +491,7 @@ export const DataSource = () => {
 
             <div className="roadmapicon">
               <div className="roadiconcont">
-                <Image src={sync} width={15} alt="sync"
+                <BiSync
                   className={
                     roadicon === 1
                       ? "purbg"
@@ -525,7 +525,7 @@ export const DataSource = () => {
 
             <div className="roadmapicon">
               <div className="roadiconcont">
-                <Image src={selectcom} width={15} alt="select"
+                <BsUnity
                   className={
                     roadicon === 2
                       ? "purbg"
@@ -559,7 +559,7 @@ export const DataSource = () => {
 
             <div className="roadmapicon">
               <div className="roadiconcont">
-                <Image src={person} width={15} alt="padd"
+                <MdOutlinePersonAddAlt
                   className={
                     roadicon === 3
                       ? "purbg"
@@ -593,7 +593,7 @@ export const DataSource = () => {
 
             <div className="roadmapicon">
               <div className="roadiconcont">
-                <Image src={channel} width={15} alt="chanl"
+                <TbTopologyStar3
                   className={
                     roadicon === 4
                       ? "purbg"
