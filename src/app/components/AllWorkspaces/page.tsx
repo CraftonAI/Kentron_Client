@@ -53,6 +53,11 @@ const AllWorkspace = () => {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
     null
   );
+  const storedEmail = localStorage.getItem("email");
+  const storedPassword = localStorage.getItem("password");
+
+  const isCredentialsMatched =
+    storedEmail === "nikhil73@gmail.com" && storedPassword === "niks123";
 
   const [createbox, setcreatebox] = useState(false);
   const createboxshow = () => {
@@ -159,106 +164,109 @@ const AllWorkspace = () => {
               </tr>
             </thead>
             <tbody className="text-sm font-light lg:text-[10px] xl:text-sm 2xl:text-base  text-black">
-              {currentItems.map((user, index) => (
-                <tr className="" key={index}>
-                  <td className="py-3 xl:px-6 text-left whitespace-nowrap">
-                    <div className="flex items-center">
-                      <span className="font-bold lg:w-auto justify-between flex h-12 items-center">
-                        <input
-                          id={`checkbox-${index}`}
-                          type="checkbox"
-                          value=""
-                          checked={user.isChecked}
-                          onChange={() => {
-                            const newData = [...data];
-                            newData[indexOfFirstItem + index].isChecked =
-                              !newData[indexOfFirstItem + index].isChecked;
-                            setData(newData);
+               {/* Step 3: Render tbody content conditionally */}
+        {isCredentialsMatched ? null : (
+          currentItems.map((user, index) => (
+            <tr className="" key={index}>
+            <td className="py-3 xl:px-6 text-left whitespace-nowrap">
+              <div className="flex items-center">
+                <span className="font-bold lg:w-auto justify-between flex h-12 items-center">
+                  <input
+                    id={`checkbox-${index}`}
+                    type="checkbox"
+                    value=""
+                    checked={user.isChecked}
+                    onChange={() => {
+                      const newData = [...data];
+                      newData[indexOfFirstItem + index].isChecked =
+                        !newData[indexOfFirstItem + index].isChecked;
+                      setData(newData);
+                    }}
+                    className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
+                  />
+
+                  <Image
+                    src={wk}
+                    width={15}
+                    alt="wk"
+                    className="mr-[5px]"
+                  />
+                  {user.name}
+                  <BiDotsVerticalRounded
+                    className="mx-2 cursor-pointer"
+                    onClick={() => handleDropdownClick(index)}
+                  />
+                  {/* Render the dropdown conditionally based on the openDropdownIndex */}
+                  {openDropdownIndex === index && (
+                    <div className="absolute pop lg:text-xs xl:text-sm rounded-md border w-[13vw] lg:w-[10vw] h-28 -mb-20">
+                      {/* Dropdown content here */}
+                      <div className="flex w-full flex-col h-full rounded-md justify-around px-4 bg-white text-black shadow-md">
+                        <p
+                          onClick={() => {
+                            editboxopen();
                           }}
-                          className="w-4 h-4 mx-6 text-blue-600 bg-[#6528F7] border-[#6528F7] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-[#6528F7] focus:ring-2 dark:bg-[#6528F7] dark:border-[#6528F7]"
-                        />
+                          className="flex flex-1 items-center cursor-pointer"
+                        >
+                          {" "}
+                          <FaRegEdit className="mx-1" />
+                          Edit
+                        </p>
+                        <p
+                          onClick={() => {
+                            createboxshow();
+                          }}
+                          className="flex flex-1 items-center cursor-pointer"
+                        >
+                          <LuInfo className="mx-1" />
+                          View detail
+                        </p>
+                        <p
+                          onClick={() => handleDelete(index)}
+                          className="flex flex-1 items-center cursor-pointer"
+                        >
+                          <RiDeleteBin6Line className="mx-1" />
+                          Delete
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </span>
+              </div>
+            </td>
+            <td className="py-3 xl:px-6 text-left">
+              <div className="flex text-[#161616] font-medium mx-1 text-sm h-full justify-start items-center">
+                <span>{user.size}</span>
+              </div>
+            </td>
+            <td className="py-3 xl:px-6 text-center">
+              <span className="flex text-[#161616] w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                {user.external}
+              </span>
+            </td>
 
-                        <Image
-                          src={wk}
-                          width={15}
-                          alt="wk"
-                          className="mr-[5px]"
-                        />
-                        {user.name}
-                        <BiDotsVerticalRounded
-                          className="mx-2 cursor-pointer"
-                          onClick={() => handleDropdownClick(index)}
-                        />
-                        {/* Render the dropdown conditionally based on the openDropdownIndex */}
-                        {openDropdownIndex === index && (
-                          <div className="absolute pop lg:text-xs xl:text-sm rounded-md border w-[13vw] lg:w-[10vw] h-28 -mb-20">
-                            {/* Dropdown content here */}
-                            <div className="flex w-full flex-col h-full rounded-md justify-around px-4 bg-white text-black shadow-md">
-                              <p
-                                onClick={() => {
-                                  editboxopen();
-                                }}
-                                className="flex flex-1 items-center cursor-pointer"
-                              >
-                                {" "}
-                                <FaRegEdit className="mx-1" />
-                                Edit
-                              </p>
-                              <p
-                                onClick={() => {
-                                  createboxshow();
-                                }}
-                                className="flex flex-1 items-center cursor-pointer"
-                              >
-                                <LuInfo className="mx-1" />
-                                View detail
-                              </p>
-                              <p
-                                onClick={() => handleDelete(index)}
-                                className="flex flex-1 items-center cursor-pointer"
-                              >
-                                <RiDeleteBin6Line className="mx-1" />
-                                Delete
-                              </p>
-                            </div>
-                          </div>
-                        )}
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-3 xl:px-6 text-left">
-                    <div className="flex text-[#161616] font-medium mx-1 text-sm h-full justify-start items-center">
-                      <span>{user.size}</span>
-                    </div>
-                  </td>
-                  <td className="py-3 xl:px-6 text-center">
-                    <span className="flex text-[#161616] w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
-                      {user.external}
-                    </span>
-                  </td>
-
-                  <td className="py-3 xl:px-6 text-center">
-                    <div className="flex item-center justify-center mr-8">
-                      {user.status}
-                    </div>
-                  </td>
-                  <td className="py-3 xl:px-6 text-center">
-                    <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
-                      {user.date}
-                    </span>
-                  </td>
-                  <td className="py-3 xl:px-6 text-center">
-                    <span className="flex text-[#161616] w-10/12 justify-center  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
-                      {user.lastDate}
-                    </span>
-                  </td>
-                  <td className="py-3 xl:px-6 text-center">
-                    <span className="flex text-[#161616] justify-center w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
-                      {user.lastby}
-                    </span>
-                  </td>
-                </tr>
-              ))}
+            <td className="py-3 xl:px-6 text-center">
+              <div className="flex item-center justify-center mr-8">
+                {user.status}
+              </div>
+            </td>
+            <td className="py-3 xl:px-6 text-center">
+              <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
+                {user.date}
+              </span>
+            </td>
+            <td className="py-3 xl:px-6 text-center">
+              <span className="flex text-[#161616] w-10/12 justify-center  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                {user.lastDate}
+              </span>
+            </td>
+            <td className="py-3 xl:px-6 text-center">
+              <span className="flex text-[#161616] justify-center w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                {user.lastby}
+              </span>
+            </td>
+          </tr>
+          ))
+        )}
             </tbody>
           </table>
         </div>
