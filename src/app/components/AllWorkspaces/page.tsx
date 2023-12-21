@@ -117,13 +117,16 @@ const AllWorkspace = () => {
     seteditbox(false);
   };
 
+  
+
+  
   return (
     <div className="flex h-[86vh] 2xl:w-full flex-col">
       <div className="flex py-6 text-2xl mx-3 font-semibold text-black">
         All Workspaces{" "}
       </div>
-      <div className="2xl:h-[90%] lg:h-[90%] overflow-y-scroll  flex bg-white px-3 rounded-md flex-col 2xl:w-full mx-3">
-        <div className="flex py-3 2xl:w-full justify-end px-3 items-center text-black">
+      <div className="2xl:h-[90%] lg:h-[90%] overflow-y-auto flex bg-white px-3 rounded-md flex-col 2xl:w-full mx-3">
+        <div className="flex 2xl:w-full justify-end px-3 items-center text-black">
           <input
             className="flex h-10 shadow-md border rounded-md px-5"
             type="search"
@@ -135,7 +138,7 @@ const AllWorkspace = () => {
           <table className="min-w-max w-full h-full table-auto rounded-md ">
             <thead>
               <tr className="border-b lg:text-[10px] xl:text-[13px] 2xl:text-base  border-gray-200 py-4 text-sm text-black font-bold leading-normal">
-                <th className="py-3 xl:px-6 flex h-12 items-center text-left">
+                <th className="py-3 xl:px-6 flex items-center text-left">
                   <input
                     id={`selectAllCheckbox`}
                     type="checkbox"
@@ -165,12 +168,12 @@ const AllWorkspace = () => {
             </thead>
             <tbody className="text-sm font-light lg:text-[10px] xl:text-sm 2xl:text-base  text-black">
                {/* Step 3: Render tbody content conditionally */}
-        {isCredentialsMatched ? null : (
-          currentItems.map((user, index) => (
+        
+         {currentItems.map((user, index) => (
             <tr className="" key={index}>
             <td className="py-3 xl:px-6 text-left whitespace-nowrap">
               <div className="flex items-center">
-                <span className="font-bold lg:w-auto justify-between flex h-12 items-center">
+                <span className="font-semibold text-sm lg:w-auto justify-between flex items-center">
                   <input
                     id={`checkbox-${index}`}
                     type="checkbox"
@@ -265,8 +268,8 @@ const AllWorkspace = () => {
               </span>
             </td>
           </tr>
-          ))
-        )}
+          ))}
+        
             </tbody>
           </table>
         </div>
