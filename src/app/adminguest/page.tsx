@@ -1,5 +1,5 @@
 "use client";
-import Header from "../components/Navbar/page";
+import Header from "../Admin/header";
 import { BsPersonFillAdd } from "react-icons/bs";
 import SideBar from "../Admin/sidebar";
 import { RiArrowDropDownLine } from "react-icons/ri";

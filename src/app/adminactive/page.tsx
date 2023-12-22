@@ -1,5 +1,5 @@
 "use client";
-import Header from "../components/Navbar/page";
+import Header from "../Admin/header";
 import SideBar from "../Admin/sidebar";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RxCrossCircled } from "react-icons/rx";

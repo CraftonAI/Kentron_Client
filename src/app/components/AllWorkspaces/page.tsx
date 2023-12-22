@@ -217,7 +217,7 @@ const AllWorkspace = () => {
                         />
                         {/* Render the dropdown conditionally based on the openDropdownIndex */}
                         {openDropdownIndex === index && (
-                          <div className="absolute pop lg:text-xs xl:text-sm rounded-md border w-[13vw] lg:w-[10vw] h-28 -mb-20">
+                          <div className="absolute pop pap lg:text-xs xl:text-sm rounded-md border w-[13vw] lg:w-[10vw] h-28 -mb-20">
                             {/* Dropdown content here */}
                             <div className="flex w-full flex-col h-full rounded-md justify-around px-4 bg-white text-black shadow-md">
                               <p

@@ -33,7 +33,7 @@ const Page = () => {
       <div className="items">
         <Image src={navitem2} width={30} alt="none" className="comma" />
         <BiCommentDetail className="notifications" size={25} />
-        {/* <Image src={navitem1} width={20} alt="none" className="notifications" /> */}
+        {/* <Image src={navitem1} width={20} alt="none" className="notificationss" /> */}
 
         {/* <div className="user-container cursor-pointer" onClick={togglePopup}> */}
         <Dropdown className="flex flex-col text-[10px] text-black">

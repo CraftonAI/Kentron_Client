@@ -1,5 +1,5 @@
 "use client";
-import Header from "../components/Navbar/page";
+import Header from "../Admin/header";
 import SideBar from "@/app/Admin/sidebar";
 import SsoPopup from '@/app/Admin/popups/sso';
 import {useState} from "react";

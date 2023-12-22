@@ -1,6 +1,6 @@
 "use client";
 
-import Header from "../components/Navbar/page";
+import Header from "../Admin/header";
 import SideBar from "@/app/Admin/sidebar";
 
 const OrganizationInfo = () => {

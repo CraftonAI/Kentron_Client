@@ -46,48 +46,82 @@ body {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .pop {
-    left: 0px;
+@media screen and (min-width: 1024px) and (max-width: 1160px) {
+  .pap {
+    margin-left: 160px;
+    left: 100px;
+  }
+}
+@media screen and (min-width: 1161px) and (max-width: 1279px) {
+  .pap {
+    margin-left: 168.7px;
+    left: 100px;
   }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1480px) {
-  .pop {
+
+@media screen and (min-width: 1280px) and (max-width: 1420px) {
+  .pap {
+    margin-left: 160px;
     left: 284px;
   }
 }
 
-@media screen and (min-width: 1480px) and (max-width: 1618px) {
-  .pop {
+@media screen and (min-width: 1421px) and (max-width: 1480px) {
+  .pap {
+    margin-left: 165px;
+    left: 284px;
+  }
+}
+
+@media screen and (min-width: 1480px) and (max-width: 1525px) {
+  .pap {
+    margin-left: 170px;
+    left: 255px;
+  }
+}
+@media screen and (min-width: 1526px) and (max-width: 1618px) {
+  .pap {
+    margin-left: 177px;
     left: 255px;
   }
 }
 
 @media screen and (min-width: 1619px) and (max-width: 1658px) {
-  .pop {
+  .pap {
+    margin-left: 184px;
     left: 250px;
   }
 }
 @media screen and (min-width: 1659px) and (max-width: 1840px) {
-  .pop {
+  .pap {
+    margin-left: 193px;
     left: 241px;
   }
 }
 
-@media screen and (min-width: 1840px) and (max-width: 2400px) {
-  .pop {
+@media screen and (min-width: 1840px) and (max-width: 1980px) {
+  .pap {
+    margin-left: 208px;
+    left: 238px;
+  }
+}
+@media screen and (min-width: 1980px) and (max-width: 2400px) {
+  .pap {
+    margin-left: 230px;
     left: 238px;
   }
 }
 @media screen and (min-width: 2400px) and (max-width: 2800px) {
-  .pop {
+  .pap {
+    margin-left: 290px;
     left: 235px;
   }
 }
 
 @media screen and (min-width: 2800px) and (max-width: 3500px) {
-  .pop {
+  .pap {
+    margin-left: 150px;
     left: 228px;
   }
 }
