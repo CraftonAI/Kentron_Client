@@ -18,29 +18,11 @@ import {
 
 const Page = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
-  const [userName, setUserName] = useState("Jennifer Steve");
-
-  useEffect(() => {
-    // Check if email and password are in localStorage
-    const storedEmail = localStorage.getItem('email');
-    const storedPassword = localStorage.getItem('password');
-
-    if (storedEmail === 'nikhil73@gmail.com' && storedPassword === 'niks123') {
-      setUserName('Nikhil Kumar');
-    }
-  }, []);
 
   const togglePopup = () => {
     setPopupVisible(!isPopupVisible);
   };
 
-  const handleSignOut = () => {
-    // Clear localStorage
-    localStorage.removeItem('email');
-    localStorage.removeItem('password');
-    // Redirect to the desired location after sign out
-    window.location.href = '/'; // Change the URL as needed
-  };
 
   return (
     <nav className="Navbar">
@@ -79,7 +61,7 @@ const Page = () => {
                 </p>
                 <p className="flex flex-col h-[4vh] text-black flex-1">
                   <p className="flex w-full mx-2 items-center font-bold">
-                  {userName}
+                  Jennifer steve
                   </p>
                   <p className="flex w-full mx-2 h-full items-center font-normal">
                     <GrStatusGood
@@ -101,7 +83,7 @@ const Page = () => {
             <DropdownItem className="flex text-black h-[3vh] p-2" key="edit">
               {" "}
               <Link href="/">
-              <p className="flex h-full items-center" onClick={handleSignOut}>
+              <p className="flex h-full items-center">
             SignOut
           </p>
               </Link>

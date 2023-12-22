@@ -38,8 +38,8 @@ const AdminUsage = () => {
                     <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
-                <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
-                  <div className="flex rounded-md text-lg h-10 w-10 font-bold justify-center items-center -mr-1">
+                <div className="flex w-[15.3vw] items-center h-16 border-r px-7 ">
+                  <div className="flex  flex-1rounded-md overflow-hidden text-lg h-10 w-10 font-bold justify-center items-center -mr-1">
                     <Image
                       src={workspace}
                       width={30}
@@ -47,14 +47,14 @@ const AdminUsage = () => {
                       className="adds"
                     />
                   </div>
-                  <div className="flex flex-col mx-3">
+                  <div className="flex flex-1 flex-col mx-3">
                     <p className="flex text-[10px] 2xl:text-[10px] text-[#1616168A]">
                       Workspace
                     </p>
                     <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
-                <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
+                <div className="flex w-[16vw] items-center h-16 border-r px-7 ">
                   <div className="flex rounded-md text-lg h-10 w-10 font-bold justify-center items-center -mr-1">
                     <Image
                       src={connections}
@@ -70,7 +70,7 @@ const AdminUsage = () => {
                     <p className="flex text-xs 2xl:text-base font-bold">12,000</p>
                   </div>
                 </div>
-                <div className="flex w-[14vw] items-center h-16 border-r px-7 ">
+                <div className="flex w-[16vw] items-center h-16 border-r px-7 ">
                   <div className="flex rounded-md text-lg h-10 w-10 font-bold justify-center items-center -mr-1">
                     <Image src={data} width={30} alt="none" className="adds" />
                   </div>
@@ -102,7 +102,7 @@ const AdminUsage = () => {
             <div className="flex justify-center h-24 w-full">
               <div className="flex bg-white rounded-lg justify-around w-full items-center mx-7">
                 <div className="flex 2xl:w-[14vw] items-center h-16 border-r px-7 ">
-                  <div className="flex rounded-full border text-lg 2xl:h-10 2xl:w-10 font-bold justify-center items-center -mr-1">
+                  <div className="flex rounded-full h-10 xl:w-10 lg:w-12 border text-lg 2xl:h-10 2xl:w-10 font-bold justify-center items-center -mr-1">
                     <Image src={slack} width={30} alt="none" className="adds" />
                   </div>
                   <div className="flex flex-col mx-3">
@@ -113,7 +113,7 @@ const AdminUsage = () => {
                   </div>
                 </div>
                 <div className="flex xl:w-[14vw] items-center h-16 border-r px-7 ">
-                  <div className="flex rounded-full border text-lg xl:h-10 xl:w-10 font-bold justify-center items-center -mr-1">
+                  <div className="flex rounded-full border h-10 w-10  text-lg xl:h-10 xl:w-10 font-bold justify-center items-center -mr-1">
                     <Image
                       src={google}
                       width={30}

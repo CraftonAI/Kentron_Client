@@ -110,12 +110,12 @@ export const Export = () => {
                   <th className="py-3 2xl:px-5 justify-start">Created Date</th>
                 </tr>
               </thead>
-              <tbody className="lg:text-[11px] xl:text-[13.4px] 2xl:text-base  font-light">
+              <tbody className="lg:text-[11px] xl:text-[13.4px] font-light">
                 {currentItems.map((user, index) => (
                   <tr className="" key={index}>
                     <td className="py-3 2xl:px-6 text-left whitespace-nowrap">
                       <div className="flex items-center">
-                        <span className="font-bold flex h-12 items-center">
+                        <span className="font-bold flex items-center">
                           <input
                             id={`checkbox-${index}`}
                             type="checkbox"
@@ -156,7 +156,7 @@ export const Export = () => {
                       </div>
                     </td>
                     <td className="py-3 2xl:px-6 text-center">
-                      <span className="flex text-[#161616] w-9/12 2xl:w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                      <span className="flex text-[#161616] w-9/12 2xl:w-10/12 lg:-mr-24 xl:-mr-0 h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
                         {user.comment}
                       </span>
                     </td>

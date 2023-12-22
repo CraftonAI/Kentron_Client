@@ -22,7 +22,7 @@ const OrganizationInfo = () => {
               Organization Information{" "}
             </span>
             <div className="flex justify-center h-24">
-              <div className="flex bg-white rounded-lg justify-start w-full items-center mx-7">
+              <div className="flex bg-white rounded-lg justify-start w-full items-center mx-6">
                 <div className="flex text-sm 2xl:text-base font-bold w-[14vw] items-center h-16 border-r px-7 mx-5">
                   Detail
                 </div>
