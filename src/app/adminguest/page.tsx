@@ -15,7 +15,7 @@ const ActiveGuest = () => {
   }));
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10; // Adjust as needed
+  const itemsPerPage = 6; // Adjust as needed
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -57,12 +57,12 @@ const ActiveGuest = () => {
   const isAllChecked = currentItems.every((user) => selectAll);
 
   return (
-    <div className="flex text-black flex-col bg-[#ede4ff] overflow-y-scroll h-[100vh] justify-between w-full">
+    <div className="flex text-black flex-col bg-[#ede4ff] overflow-y-scroll h-screen justify-between w-full">
       <div className="flex h-20 bg-black text-white">
         <Header />
       </div>
-      <div className="flex w-full flex-1">
-        <div className="flex w-[20%] 2xl:w-[16%]">
+      <div className="flex w-full flex-1 overflow-y-scroll">
+        <div className="flex w-[20%] 2xl:w-[16%]  overflow-y-scroll">
           <SideBar />
         </div>
         <div className="flex flex-col flex-1">

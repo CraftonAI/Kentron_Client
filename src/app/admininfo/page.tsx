@@ -1,10 +1,7 @@
-"use client"
-
+"use client";
 
 import Header from "../components/Navbar/page";
 import SideBar from "@/app/Admin/sidebar";
-
-
 
 const OrganizationInfo = () => {
   return (
@@ -26,12 +23,10 @@ const OrganizationInfo = () => {
                 <div className="flex text-sm 2xl:text-base font-bold w-[14vw] items-center h-16 border-r px-7 mx-5">
                   Detail
                 </div>
-                <div className="flex w-[25vw] items-center h-16 border-r px-7 mx-7 ">
-                <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 aspect-w-1 aspect-h-1 overflow-hidden -mr-1"></div>
+                <div className="flex lg:w-[42vw] xl:w-[32vw]  items-center h-16 border-r px-7 mx-7 ">
+                  <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 aspect-w-1 aspect-h-1 overflow-hidden -mr-1"></div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-sm font-bold">
-                      Slack Enterprise
-                    </p>
+                    <p className="flex text-sm font-bold">Slack Enterprise</p>
                     <p className="flex -mt-1 text-xs text-[#1616168A]">
                       example@example.com
                     </p>
@@ -52,11 +47,11 @@ const OrganizationInfo = () => {
                 <div className="flex lg:w-[42vw] xl:w-[32vw] items-center h-16 border-r px-7 mx-7 ">
                   <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-base font-bold">
-                      Company name
-                    </p>
+                    <p className="flex text-base font-bold">Company name</p>
                     <p className="flex -mt-1 text-[9px] text-[#1616168A]">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.                    </p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.{" "}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -66,12 +61,10 @@ const OrganizationInfo = () => {
                 <div className="flex font-bold w-[14vw] text-sm 2xl:text-base items-center h-16 border-r px-7 mx-5">
                   Username
                 </div>
-                <div className="flex lg:w-[30vw] xl:w-[22vw] items-center h-16 border-r px-7 mx-7 ">
+                <div className="flex lg:w-[42vw] xl:w-[32vw] items-center h-16 border-r px-7 mx-7 ">
                   <div className="flex bg-[#D9D9D9] rounded-full h-10 w-10 -mr-1"></div>
                   <div className="flex flex-col mx-3">
-                    <p className="flex text-sm font-bold">
-                      Slack Enterprise
-                    </p>
+                    <p className="flex text-sm font-bold">Slack Enterprise</p>
                     <p className="flex -mt-1 text-xs text-[#1616168A]">
                       example@example.com
                     </p>

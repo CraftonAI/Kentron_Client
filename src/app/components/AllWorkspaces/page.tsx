@@ -44,7 +44,7 @@ const AllWorkspace = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [selectAll, setSelectAll] = useState(false); // Added state for "Select All" checkbox
-  const itemsPerPage = 10; // Adjust as needed
+  const itemsPerPage = 5; // Adjust as needed
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -141,7 +141,7 @@ const AllWorkspace = () => {
       <div className="flex py-6 text-2xl mx-3 font-semibold text-black">
         All Workspaces{" "}
       </div>
-      <div className="2xl:h-[90%] lg:h-[90%] overflow-y-auto flex bg-white px-3 rounded-md flex-col 2xl:w-full mx-3" >
+      <div className="2xl:h-[500px] bg-white lg:h-[500px] overflow-y-auto flex px-3 rounded-md flex-col 2xl:w-full mx-3" >
         <div className="flex 2xl:w-full justify-end mt-2 -mb-3 px-3 items-center text-black">
           <input
             className="flex h-10 shadow-md border rounded-md px-5"
@@ -252,34 +252,34 @@ const AllWorkspace = () => {
                       </span>
                     </div>
                   </td>
-                  <td className="lg:py-3 xl:px-6 text-left">
+                  <td className="lg:py-2 xl:px-6 text-left">
                     <div className="flex text-[#161616] font-medium mx-1 text-sm h-full justify-start items-center">
                       <span>{user.size}</span>
                     </div>
                   </td>
-                  <td className="lg:py-3 xl:px-6 text-center">
-                    <span className="flex text-[#161616] w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                  <td className="lg:py-2 xl:px-6 text-center">
+                    <span className="flex text-[#161616] w-10/12  h-full items-center text-left font-medium py-1 px-3 rounded-full text-xs">
                       {user.external}
                     </span>
                   </td>
 
-                  <td className="lg:py-3 xl:px-6 text-center">
+                  <td className="lg:py-2 xl:px-6 text-center">
                     <div className="flex item-center justify-center mr-8">
                       {user.status}
                     </div>
                   </td>
-                  <td className="lg:py-3 xl:px-6 text-center">
-                    <span className="flex text-[#161616] justify-center font-medium py-2 px-3 rounded-full text-xs">
+                  <td className="lg:py-2 xl:px-6 text-center">
+                    <span className="flex text-[#161616] justify-center font-medium py-2 px-1 rounded-full text-xs">
                       {user.date}
                     </span>
                   </td>
-                  <td className="lg:py-3 xl:px-6 text-center">
-                    <span className="flex text-[#161616] w-10/12 justify-center  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                  <td className="lg:py-2 xl:px-6 text-center">
+                    <span className="flex text-[#161616] w-10/12 justify-center  h-full items-center text-left font-medium py-1 px-3 rounded-full text-xs">
                       {user.lastDate}
                     </span>
                   </td>
-                  <td className="lg:py-3 xl:px-6 text-center">
-                    <span className="flex text-[#161616] justify-center w-10/12  h-full items-center text-left font-medium py-2 px-3 rounded-full text-xs">
+                  <td className="lg:py-2 xl:px-6 text-center">
+                    <span className="flex text-[#161616] justify-center w-10/12  h-full items-center text-left font-medium py-1 px-3 rounded-full text-xs">
                       {user.lastby}
                     </span>
                   </td>
@@ -288,7 +288,7 @@ const AllWorkspace = () => {
             </tbody>
           </table>
         </div>
-        <div className="flex justify-between -mt-6 bg-white lg:border py-2 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
+        <div className="flex justify-between -mt-6 bg-white lg:border py-1 2xl:border-none lg:mb-2 2xl:mb-1 items-center px-2  rounded-md ">
           <div className="flex">
             <span className="text-sm text-gray-700">
               Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}

@@ -7,7 +7,7 @@ interface SsoPopupProps {
 
 const SsoPopup: React.FC<SsoPopupProps> = ({ onClose }) => {
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] 2xl:w-[30%] h-[88vh] rounded-lg p-2 shadow-md z-50">
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[40%] 2xl:w-[30%] h-[600px] rounded-lg p-2 shadow-md z-50">
     <div className="flex w-full flex-col h-full">
       <div className="flex w-full justify-between my-1 2xl:my-4">
         <span className="flex font-bold text-base 2xl:text-lg mx-4">Add SSO</span>

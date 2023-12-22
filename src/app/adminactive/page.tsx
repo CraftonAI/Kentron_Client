@@ -44,7 +44,7 @@ const ActiveUsers = () => {
   }));
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10; // Adjust as needed
+  const itemsPerPage = 6; // Adjust as needed
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -62,12 +62,12 @@ const ActiveUsers = () => {
   };
   const isAllChecked = currentItems.every((user) => selectAll);
   return (
-    <div className="flex text-black flex-col bg-[#ede4ff] h-[100vh] overflow-y-scroll justify-between w-full">
+    <div className="flex text-black flex-col bg-[#ede4ff] h-screen overflow-y-scroll justify-between w-full">
       <div className="flex h-20 bg-black text-white">
         <Header />
       </div>
-      <div className="flex w-full flex-1">
-        <div className="flex w-[20%] 2xl:w-[16%]">
+      <div className="flex w-full flex-1 overflow-y-scroll h-screen">
+        <div className="flex w-[20%] 2xl:w-[16%] overflow-y-scroll">
           <SideBar />
         </div>
         <div className="flex flex-col flex-1">
@@ -75,7 +75,7 @@ const ActiveUsers = () => {
             <div className="flex text-xl font-bold">Active Users</div>
             <button
               onClick={openPopup}
-              className="flex bg-[#6528F7] h-11 rounded-lg items-center text-xs px-1 2xl:text-sm justify-center text-white font-bold w-[9vw]"
+              className="flex bg-[#6528F7] h-9 rounded-lg items-center text-xs px-1 2xl:text-sm justify-center text-white font-bold w-[9vw]"
             >
               <MdPersonAddAlt size={22} className="mx-1" /> Add User
             </button>

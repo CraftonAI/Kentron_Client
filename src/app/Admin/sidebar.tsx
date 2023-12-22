@@ -34,7 +34,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="flex w-[110%] xl:w-full flex-col items-end bg-white h-[100vh]">
+    <div className="flex w-[110%] xl:w-full flex-col items-end bg-white h-screen">
       <div className="flex flex-col h-full w-full xl:w-[87%] text-base my-5">
         <span className="flex mx-4 xl:mx-0 xl:w-[11vw] hover:text-black my-2 hover:cursor-pointer hover:bg-[#E6E6E6] h-10 rounded-lg items-center">
           <span className="flex mx-4 font-bold">
